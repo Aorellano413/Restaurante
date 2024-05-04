@@ -16,5 +16,10 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        private void buttonClose2_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
     }
 }

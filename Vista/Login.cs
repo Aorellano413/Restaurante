@@ -18,11 +18,12 @@ namespace Vista
         private readonly Dictionary<string, string> usuarios = new Dictionary<string, string>()
         {
             { "admin", "12345" },
-            // Puedes agregar más usuarios según necesites
+
         };
         public Login()
         {
             InitializeComponent();
+            textContraseña.UseSystemPasswordChar = true;
         }   
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -32,7 +33,8 @@ namespace Vista
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-
+            textUsuario.Text = "";
+            textContraseña.Text = "";
         }
 
         private void buttonContinuar_Click(object sender, EventArgs e)
