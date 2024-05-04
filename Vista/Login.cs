@@ -24,6 +24,8 @@ namespace Vista
         {
             InitializeComponent();
             textContraseña.UseSystemPasswordChar = true;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }   
 
         private void buttonClose_Click(object sender, EventArgs e)

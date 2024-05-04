@@ -15,6 +15,7 @@ namespace Vista
         public MenuGeneral()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonClose2_Click(object sender, EventArgs e)
