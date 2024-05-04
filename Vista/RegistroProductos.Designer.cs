@@ -41,7 +41,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.buttoClose4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +102,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 225);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 197);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(453, 150);
             this.dataGridView1.TabIndex = 6;
@@ -134,7 +133,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(197, 388);
+            this.button2.Location = new System.Drawing.Point(196, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 50);
             this.button2.TabIndex = 9;
@@ -146,7 +145,7 @@
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(369, 388);
+            this.button3.Location = new System.Drawing.Point(369, 353);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 50);
             this.button3.TabIndex = 10;
@@ -158,7 +157,7 @@
             // 
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(43, 388);
+            this.button4.Location = new System.Drawing.Point(43, 353);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 50);
             this.button4.TabIndex = 11;
@@ -166,24 +165,12 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // buttoClose4
-            // 
-            this.buttoClose4.BackColor = System.Drawing.Color.Red;
-            this.buttoClose4.Image = ((System.Drawing.Image)(resources.GetObject("buttoClose4.Image")));
-            this.buttoClose4.Location = new System.Drawing.Point(764, 0);
-            this.buttoClose4.Name = "buttoClose4";
-            this.buttoClose4.Size = new System.Drawing.Size(34, 29);
-            this.buttoClose4.TabIndex = 12;
-            this.buttoClose4.UseVisualStyleBackColor = false;
-            this.buttoClose4.Click += new System.EventHandler(this.buttoClose4_Click);
-            // 
             // RegistroProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttoClose4);
+            this.ClientSize = new System.Drawing.Size(825, 472);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -222,6 +209,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button buttoClose4;
     }
 }

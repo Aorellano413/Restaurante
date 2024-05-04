@@ -22,5 +22,45 @@ namespace Vista
         {
             this.Close();   
         }
+
+        private void mENUDEPRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+     
+            panelGeneral.Controls.Clear();
+
+
+            MenuProductos menuProductos = new MenuProductos();
+            menuProductos.TopLevel = false;
+            menuProductos.FormBorderStyle = FormBorderStyle.None;
+            menuProductos.Dock = DockStyle.Fill;
+
+
+            panelGeneral.Controls.Add(menuProductos);
+
+
+            menuProductos.Show();
+        }
+
+        private void rEGISTRODEPRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+      
+            panelGeneral.Controls.Clear();
+
+
+            RegistroProductos registroProductosForm = new RegistroProductos();
+            registroProductosForm.TopLevel = false;
+            registroProductosForm.FormBorderStyle = FormBorderStyle.None;
+            registroProductosForm.Dock = DockStyle.Fill;
+
+            panelGeneral.Controls.Add(registroProductosForm);
+
+
+            registroProductosForm.Show();
+        }
+
+        private void panelGeneral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -17,9 +17,6 @@ namespace Vista
             InitializeComponent();
         }
 
-        private void buttoClose4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

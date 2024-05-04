@@ -105,21 +105,21 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(0, 45);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(788, 20);
+            this.textBox1.Size = new System.Drawing.Size(485, 20);
             this.textBox1.TabIndex = 4;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 78);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(485, 252);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(485, 294);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 336);
+            this.button1.Location = new System.Drawing.Point(12, 378);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 50);
             this.button1.TabIndex = 6;
@@ -131,7 +131,7 @@
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(177, 336);
+            this.button2.Location = new System.Drawing.Point(177, 378);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 50);
             this.button2.TabIndex = 7;
@@ -143,7 +143,7 @@
             // 
             this.buttonFactura.Image = ((System.Drawing.Image)(resources.GetObject("buttonFactura.Image")));
             this.buttonFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonFactura.Location = new System.Drawing.Point(327, 336);
+            this.buttonFactura.Location = new System.Drawing.Point(327, 378);
             this.buttonFactura.Name = "buttonFactura";
             this.buttonFactura.Size = new System.Drawing.Size(158, 50);
             this.buttonFactura.TabIndex = 8;
@@ -156,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(824, 472);
             this.Controls.Add(this.buttonFactura);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
