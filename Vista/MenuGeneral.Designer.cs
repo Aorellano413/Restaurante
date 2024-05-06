@@ -36,7 +36,10 @@
             this.rEGISTRODEPRODUCTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelGeneral = new System.Windows.Forms.Panel();
             this.buttonClose2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            this.panelGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -82,6 +85,7 @@
             // 
             // panelGeneral
             // 
+            this.panelGeneral.Controls.Add(this.pictureBox2);
             this.panelGeneral.Location = new System.Drawing.Point(0, 27);
             this.panelGeneral.Name = "panelGeneral";
             this.panelGeneral.Size = new System.Drawing.Size(825, 472);
@@ -100,6 +104,16 @@
             this.buttonClose2.UseVisualStyleBackColor = false;
             this.buttonClose2.Click += new System.EventHandler(this.buttonClose2_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(172, 54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(475, 338);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // MenuGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +129,8 @@
             this.Text = "MenuGeneral";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelGeneral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +145,6 @@
         private System.Windows.Forms.ToolStripMenuItem rEGISTROToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rEGISTRODEPRODUCTOSToolStripMenuItem;
         private System.Windows.Forms.Button buttonClose2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
