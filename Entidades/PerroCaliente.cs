@@ -9,7 +9,6 @@ namespace Entidades
 
     class PerroCaliente : Producto
     {
-        // Constructor
         public PerroCaliente(string nombre, int id, string ingredientes, string descripcion, double valor)
             : base(nombre, id, ingredientes, descripcion, valor)
         {

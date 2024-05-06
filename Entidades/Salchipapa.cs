@@ -9,7 +9,6 @@ namespace Entidades
 
     class Salchipapa : Producto
     {
-        // Constructor
         public Salchipapa(string nombre, int id, string ingredientes, string descripcion, double valor)
             : base(nombre, id, ingredientes, descripcion, valor)
         {

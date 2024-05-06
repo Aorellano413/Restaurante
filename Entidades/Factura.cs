@@ -8,12 +8,14 @@ namespace Entidades
 {
     internal class Factura
     {
+        public int Id_Factura { get; private set; } 
         public Pedido Pedido { get; set; }
         public double Total { get; set; }
-        public string CedulaCliente { get; set; } 
+        public string CedulaCliente { get; set; }
 
-        public Factura(Pedido pedido, string cedulaCliente)
+        public Factura(int idFactura, Pedido pedido, string cedulaCliente)
         {
+            Id_Factura = idFactura;
             Pedido = pedido;
             Total = pedido.CalcularTotal();
             CedulaCliente = cedulaCliente;
@@ -22,6 +24,7 @@ namespace Entidades
         public void ImprimirFactura()
         {
             Console.WriteLine("Factura:");
+            Console.WriteLine($"ID de Factura: {Id_Factura}");
             Console.WriteLine($"Cédula del Cliente: {CedulaCliente}");
             foreach (var producto in Pedido.Productos)
             {
@@ -31,4 +34,3 @@ namespace Entidades
         }
     }
 }
-

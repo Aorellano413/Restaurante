@@ -8,7 +8,6 @@ namespace Entidades
 {
     class Hamburguesa : Producto
     {
-        // Constructor
         public Hamburguesa(string nombre, int id, string ingredientes, string descripcion, double valor)
             : base(nombre, id, ingredientes, descripcion, valor)
         {

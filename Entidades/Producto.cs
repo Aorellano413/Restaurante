@@ -14,7 +14,6 @@ namespace Entidades
         public string Descripcion { get; set; }
         public double Valor { get; set; }
 
-        // Constructor
         public Producto(string nombre, int id, string ingredientes, string descripcion, double valor)
         {
             Nombre = nombre;
