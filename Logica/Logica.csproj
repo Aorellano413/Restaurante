@@ -48,5 +48,15 @@
     <Compile Include="ServicioProducto.cs" />
     <Compile Include="ServicioUsuario.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{c4148461-5b81-4150-a46c-5a1f13024bf9}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
+      <Project>{bf933162-e56a-4d54-9859-505dd75d9271}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

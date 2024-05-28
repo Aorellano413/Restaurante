@@ -6,10 +6,21 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{C4148461-5B81-4150-A46C-5A1F13024BF9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{77B3E3FB-1A35-4FDC-B34A-3D6CF8B9871E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF933162-E56A-4D54-9859-505DD75D9271} = {BF933162-E56A-4D54-9859-505DD75D9271}
+		{C4148461-5B81-4150-A46C-5A1F13024BF9} = {C4148461-5B81-4150-A46C-5A1F13024BF9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{BF933162-E56A-4D54-9859-505DD75D9271}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4148461-5B81-4150-A46C-5A1F13024BF9} = {C4148461-5B81-4150-A46C-5A1F13024BF9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{6C5F4EDA-AF2A-48FA-91BC-DEB39488CE9A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{77B3E3FB-1A35-4FDC-B34A-3D6CF8B9871E} = {77B3E3FB-1A35-4FDC-B34A-3D6CF8B9871E}
+		{C4148461-5B81-4150-A46C-5A1F13024BF9} = {C4148461-5B81-4150-A46C-5A1F13024BF9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
