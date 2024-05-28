@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,13 +15,9 @@ namespace Vista
     public partial class Login : Form
 
     {
+        private ServicioUsuario servicioUsuario = new ServicioUsuario();
         
    
-        private readonly Dictionary<string, string> usuarios = new Dictionary<string, string>()
-        {
-            { "admin", "12345" },
-
-        };
         public Login()
         {
             InitializeComponent();
@@ -39,21 +37,26 @@ namespace Vista
             textContraseña.Text = "";
         }
 
+        
         private void buttonContinuar_Click(object sender, EventArgs e)
         {
-            string usuario = textUsuario.Text;
+            string nombreUsuario = textUsuario.Text;
             string contraseña = textContraseña.Text;
+            Usuario usuario =  servicioUsuario.Autenticar(nombreUsuario, contraseña);
 
-           
-            if (usuarios.ContainsKey(usuario) && usuarios[usuario] == contraseña)
+
+            if (usuario != null)
             {
-                MessageBox.Show("Inicio de sesión exitoso");
-
-
-                MenuGeneral menuPrincipal = new MenuGeneral();
-                menuPrincipal.Show();
-
-       
+                if (usuario.Rol == "Administrador")
+                {
+                    RegistroProductos registroProductos = new RegistroProductos();
+                    registroProductos.Show();
+                }
+                else if (usuario.Rol == "Cliente")
+                {
+                    MenuProductos menuProductos = new MenuProductos();
+                    menuProductos.Show();
+                }
                 this.Hide();
             }
             else
@@ -61,6 +64,7 @@ namespace Vista
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
+           
 
         private void Horafecha_Tick(object sender, EventArgs e)
         {

@@ -17,6 +17,9 @@ namespace Vista
             InitializeComponent();
         }
 
-        
+        private void btnCerrarRegistroProducto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
