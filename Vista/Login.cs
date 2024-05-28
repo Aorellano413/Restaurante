@@ -62,6 +62,9 @@ namespace Vista
             }
         }
 
-       
+        private void Horafecha_Tick(object sender, EventArgs e)
+        {
+            labelHora.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

@@ -53,9 +53,9 @@
             this.labelId.Location = new System.Drawing.Point(48, 49);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(28, 20);
+            this.labelId.Size = new System.Drawing.Size(33, 20);
             this.labelId.TabIndex = 0;
-            this.labelId.Text = "ID";
+            this.labelId.Text = "ID:";
             // 
             // labelPrecio
             // 
@@ -63,9 +63,9 @@
             this.labelPrecio.Location = new System.Drawing.Point(39, 163);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(76, 20);
+            this.labelPrecio.Size = new System.Drawing.Size(81, 20);
             this.labelPrecio.TabIndex = 1;
-            this.labelPrecio.Text = "PRECIO";
+            this.labelPrecio.Text = "PRECIO:";
             // 
             // labelNombre
             // 
@@ -73,12 +73,15 @@
             this.labelNombre.Location = new System.Drawing.Point(39, 108);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(85, 20);
+            this.labelNombre.Size = new System.Drawing.Size(90, 20);
             this.labelNombre.TabIndex = 2;
-            this.labelNombre.Text = "NOMBRE";
+            this.labelNombre.Text = "NOMBRE:";
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(180, 49);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
@@ -87,6 +90,9 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(180, 163);
             this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
@@ -95,6 +101,9 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(180, 105);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
@@ -113,7 +122,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(395, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(369, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,11 +131,14 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(590, 70);
+            this.button1.Location = new System.Drawing.Point(541, 84);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 44);
+            this.button1.Size = new System.Drawing.Size(176, 44);
             this.button1.TabIndex = 8;
             this.button1.Text = "SELECCIONAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,11 +146,14 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(196, 353);
+            this.button2.Location = new System.Drawing.Point(196, 372);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 50);
+            this.button2.Size = new System.Drawing.Size(148, 50);
             this.button2.TabIndex = 9;
             this.button2.Text = "GUARDAR";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,9 +161,12 @@
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(369, 353);
+            this.button3.Location = new System.Drawing.Point(369, 372);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 50);
             this.button3.TabIndex = 10;
@@ -158,9 +176,12 @@
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(43, 353);
+            this.button4.Location = new System.Drawing.Point(43, 372);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 50);
             this.button4.TabIndex = 11;
@@ -172,7 +193,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(524, 263);
+            this.label1.Location = new System.Drawing.Point(551, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 29);
             this.label1.TabIndex = 12;
@@ -182,7 +203,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(556, 212);
+            this.label2.Location = new System.Drawing.Point(565, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 29);
             this.label2.TabIndex = 13;
