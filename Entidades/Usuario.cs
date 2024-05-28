@@ -10,16 +10,6 @@ namespace Entidades
     {
         public string NombreUsuario { get; set; }
         public string Contraseña { get; set; }
-
-        public Usuario(string cliente, string contraseña)
-        {
-            NombreUsuario = cliente;
-            Contraseña = contraseña;
-        }
-
-        public bool ValidarCredenciales(string cliente, string contraseña)
-        {
-            return NombreUsuario == cliente && Contraseña == contraseña;
-        }
+        public string Rol { get; set; }
     }
 }
