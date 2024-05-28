@@ -54,7 +54,7 @@
             this.labelId.Location = new System.Drawing.Point(48, 49);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(45, 29);
+            this.labelId.Size = new System.Drawing.Size(33, 20);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID:";
             // 
@@ -64,7 +64,7 @@
             this.labelPrecio.Location = new System.Drawing.Point(39, 163);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(117, 29);
+            this.labelPrecio.Size = new System.Drawing.Size(81, 20);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "PRECIO:";
             // 
@@ -74,7 +74,7 @@
             this.labelNombre.Location = new System.Drawing.Point(39, 108);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(132, 29);
+            this.labelNombre.Size = new System.Drawing.Size(90, 20);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "NOMBRE:";
             // 
@@ -86,7 +86,7 @@
             this.textBox1.Location = new System.Drawing.Point(180, 49);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 35);
+            this.textBox1.Size = new System.Drawing.Size(164, 26);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
@@ -97,7 +97,7 @@
             this.textBox2.Location = new System.Drawing.Point(180, 163);
             this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 35);
+            this.textBox2.Size = new System.Drawing.Size(164, 26);
             this.textBox2.TabIndex = 4;
             // 
             // textBox3
@@ -108,7 +108,7 @@
             this.textBox3.Location = new System.Drawing.Point(180, 105);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 35);
+            this.textBox3.Size = new System.Drawing.Size(164, 26);
             this.textBox3.TabIndex = 5;
             // 
             // dataGridView1
@@ -160,6 +160,7 @@
             this.button2.Text = "GUARDAR";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -197,7 +198,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(551, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 40);
+            this.label1.Size = new System.Drawing.Size(229, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "PRODUCTOS AJS";
             // 
@@ -207,7 +208,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(565, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 40);
+            this.label2.Size = new System.Drawing.Size(188, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "REGISTRO DE";
             // 
@@ -226,7 +227,7 @@
             // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(944, 514);
