@@ -15,6 +15,7 @@ namespace Vista
         public MenuProductos()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void btnCerrarMenuProductos_Click(object sender, EventArgs e)
