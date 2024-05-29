@@ -36,6 +36,10 @@
             this.textPrecio = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FOTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSeleccionar = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
@@ -43,10 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCerrarRegistroProducto = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FOTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,7 +58,7 @@
             this.labelId.Location = new System.Drawing.Point(48, 49);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(33, 20);
+            this.labelId.Size = new System.Drawing.Size(45, 29);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID:";
             // 
@@ -68,7 +68,7 @@
             this.labelPrecio.Location = new System.Drawing.Point(39, 163);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(81, 20);
+            this.labelPrecio.Size = new System.Drawing.Size(117, 29);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "PRECIO:";
             // 
@@ -78,7 +78,7 @@
             this.labelNombre.Location = new System.Drawing.Point(39, 108);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(90, 20);
+            this.labelNombre.Size = new System.Drawing.Size(132, 29);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "NOMBRE:";
             // 
@@ -90,7 +90,7 @@
             this.textId.Location = new System.Drawing.Point(180, 49);
             this.textId.Margin = new System.Windows.Forms.Padding(5);
             this.textId.Name = "textId";
-            this.textId.Size = new System.Drawing.Size(164, 26);
+            this.textId.Size = new System.Drawing.Size(164, 35);
             this.textId.TabIndex = 3;
             // 
             // textPrecio
@@ -101,7 +101,7 @@
             this.textPrecio.Location = new System.Drawing.Point(180, 163);
             this.textPrecio.Margin = new System.Windows.Forms.Padding(5);
             this.textPrecio.Name = "textPrecio";
-            this.textPrecio.Size = new System.Drawing.Size(164, 26);
+            this.textPrecio.Size = new System.Drawing.Size(164, 35);
             this.textPrecio.TabIndex = 4;
             // 
             // textNombre
@@ -112,7 +112,7 @@
             this.textNombre.Location = new System.Drawing.Point(180, 105);
             this.textNombre.Margin = new System.Windows.Forms.Padding(5);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(164, 26);
+            this.textNombre.Size = new System.Drawing.Size(164, 35);
             this.textNombre.TabIndex = 5;
             // 
             // dataGridView1
@@ -132,6 +132,34 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(402, 150);
             this.dataGridView1.TabIndex = 6;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.Width = 150;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.MinimumWidth = 8;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.Width = 150;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.MinimumWidth = 8;
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.Width = 150;
+            // 
+            // FOTO
+            // 
+            this.FOTO.HeaderText = "FOTO";
+            this.FOTO.MinimumWidth = 8;
+            this.FOTO.Name = "FOTO";
+            this.FOTO.Width = 150;
             // 
             // buttonSeleccionar
             // 
@@ -202,7 +230,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(564, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.Size = new System.Drawing.Size(336, 40);
             this.label1.TabIndex = 12;
             this.label1.Text = "PRODUCTOS AJS";
             // 
@@ -212,7 +240,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(592, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 29);
+            this.label2.Size = new System.Drawing.Size(275, 40);
             this.label2.TabIndex = 13;
             this.label2.Text = "REGISTRO DE";
             // 
@@ -229,26 +257,6 @@
             this.btnCerrarRegistroProducto.UseVisualStyleBackColor = false;
             this.btnCerrarRegistroProducto.Click += new System.EventHandler(this.btnCerrarRegistroProducto_Click);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.Name = "NOMBRE";
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "PRECIO";
-            this.PRECIO.Name = "PRECIO";
-            // 
-            // FOTO
-            // 
-            this.FOTO.HeaderText = "FOTO";
-            this.FOTO.Name = "FOTO";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -261,7 +269,7 @@
             // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(944, 514);

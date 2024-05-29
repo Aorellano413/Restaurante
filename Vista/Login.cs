@@ -35,14 +35,36 @@ namespace Vista
         {
             textUsuario.Text = "";
             textContraseña.Text = "";
+            cmbRol.SelectedIndex = -1;
         }
 
         
         private void buttonContinuar_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(textUsuario.Text))
+            {
+                MessageBox.Show("Por favor, ingrese el nombre de usuario.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(textContraseña.Text))
+            {
+                MessageBox.Show("Por favor, ingrese la contraseña.");
+                return;
+            }
+
+            if (cmbRol.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un rol.");
+                return;
+            }
+
             string nombreUsuario = textUsuario.Text;
             string contraseña = textContraseña.Text;
-            Usuario usuario =  servicioUsuario.Autenticar(nombreUsuario, contraseña);
+            string rolSeleccionado = cmbRol.SelectedItem.ToString();
+
+            Usuario usuario =  servicioUsuario.Autenticar(nombreUsuario, contraseña, rolSeleccionado);
 
 
             if (usuario != null)
@@ -70,5 +92,7 @@ namespace Vista
         {
             labelHora.Text = DateTime.Now.ToLongTimeString();
         }
+
+
     }
 }

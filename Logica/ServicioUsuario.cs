@@ -12,9 +12,19 @@ namespace Logica
     {
         private DatosUsuario datosUsuario = new DatosUsuario();
 
-        public Usuario Autenticar(string nombreUsuario, string contraseña)
+        public Usuario Autenticar(string nombreUsuario, string contraseña, string rol)
         {
-            return datosUsuario.ObtenerUsuario(nombreUsuario, contraseña);
+           // return datosUsuario.ObtenerUsuario(nombreUsuario, contraseña);
+
+            Usuario usuario = datosUsuario.ObtenerUsuario(nombreUsuario, contraseña);
+
+            if (usuario != null && usuario.Rol == rol)
+            {
+                return usuario;
+            }
+            return null;
+
+
         }
     }
 }
