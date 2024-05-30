@@ -48,6 +48,7 @@
             this.btnCerrarRegistroProducto = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,7 +60,7 @@
             this.labelId.Location = new System.Drawing.Point(14, 95);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(33, 20);
+            this.labelId.Size = new System.Drawing.Size(45, 29);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID:";
             // 
@@ -69,7 +70,7 @@
             this.labelPrecio.Location = new System.Drawing.Point(14, 231);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(81, 20);
+            this.labelPrecio.Size = new System.Drawing.Size(117, 29);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "PRECIO:";
             // 
@@ -79,7 +80,7 @@
             this.labelNombre.Location = new System.Drawing.Point(14, 163);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(90, 20);
+            this.labelNombre.Size = new System.Drawing.Size(132, 29);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "NOMBRE:";
             // 
@@ -91,7 +92,7 @@
             this.textId.Location = new System.Drawing.Point(180, 95);
             this.textId.Margin = new System.Windows.Forms.Padding(5);
             this.textId.Name = "textId";
-            this.textId.Size = new System.Drawing.Size(164, 26);
+            this.textId.Size = new System.Drawing.Size(164, 35);
             this.textId.TabIndex = 3;
             // 
             // textPrecio
@@ -102,7 +103,7 @@
             this.textPrecio.Location = new System.Drawing.Point(180, 225);
             this.textPrecio.Margin = new System.Windows.Forms.Padding(5);
             this.textPrecio.Name = "textPrecio";
-            this.textPrecio.Size = new System.Drawing.Size(164, 26);
+            this.textPrecio.Size = new System.Drawing.Size(164, 35);
             this.textPrecio.TabIndex = 4;
             // 
             // textNombre
@@ -113,7 +114,7 @@
             this.textNombre.Location = new System.Drawing.Point(180, 163);
             this.textNombre.Margin = new System.Windows.Forms.Padding(5);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(164, 26);
+            this.textNombre.Size = new System.Drawing.Size(164, 35);
             this.textNombre.TabIndex = 5;
             // 
             // dataGridView1
@@ -231,7 +232,7 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(459, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 35);
+            this.label2.Size = new System.Drawing.Size(442, 53);
             this.label2.TabIndex = 13;
             this.label2.Text = "REGISTRO DE PRODUCTOS AJS";
             // 
@@ -260,7 +261,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnCerrarRegistroProducto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -269,11 +271,24 @@
             this.panel1.Size = new System.Drawing.Size(1160, 51);
             this.panel1.TabIndex = 16;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.Khaki;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
+            this.btnRegresar.Location = new System.Drawing.Point(1069, 2);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(45, 40);
+            this.btnRegresar.TabIndex = 27;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Khaki;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1160, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
@@ -323,5 +338,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FOTO;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

@@ -71,9 +71,9 @@ namespace Vista
             {
                 if (usuario.Rol == "Administrador")
                 {
-                    RegistoGramos registoGramos = new RegistoGramos();
+                    MenuGeneral menuGeneral = new MenuGeneral();
 
-                    registoGramos.Show();
+                    menuGeneral.Show();
 
                 }
                 else if (usuario.Rol == "Cliente")

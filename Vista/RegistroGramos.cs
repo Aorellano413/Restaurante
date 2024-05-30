@@ -12,10 +12,11 @@ namespace Vista
 {
     public partial class RegistoGramos : Form
     {
-        public RegistoGramos()
+        private MenuGeneral menuGeneral;
+        public RegistoGramos(MenuGeneral menuGeneral)
         {
             InitializeComponent();
-
+            this.menuGeneral = menuGeneral;
             comboRegistro.Items.AddRange(new object[] { });
         }
 
@@ -53,6 +54,16 @@ namespace Vista
 
         private void btnCerraGramos_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            /*MenuGeneral menuGeneral = new MenuGeneral();
+            menuGeneral.Show();
+            this.Close(); */
+
+            menuGeneral.Show();
             this.Close();
         }
     }

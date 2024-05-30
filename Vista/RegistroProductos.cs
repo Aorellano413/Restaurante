@@ -14,10 +14,13 @@ namespace Vista
 {
     public partial class RegistroProductos : Form
     {
+        private MenuGeneral menuGeneral;
         OpenFileDialog openFileDialog = new OpenFileDialog();
-        public RegistroProductos()
+        public RegistroProductos(MenuGeneral menuGeneral)
         {
+
             InitializeComponent();
+            this.menuGeneral = menuGeneral;
             this.CenterToScreen();
 
             buttonNuevo2.Click += buttonNuevo2_Click;
@@ -75,8 +78,16 @@ namespace Vista
            
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            /*MenuGeneral menuGeneral = new MenuGeneral();
+            menuGeneral.Show();
+            this.Close();*/
 
-       }
+            menuGeneral.Show();
+            this.Close();
+        }
+    }
 
         
     }

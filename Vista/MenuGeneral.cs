@@ -23,44 +23,32 @@ namespace Vista
             this.Close();   
         }
 
-        private void mENUDEPRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-     
-            panelGeneral.Controls.Clear();
-
-
-            MenuProductos menuProductos = new MenuProductos();
-            menuProductos.TopLevel = false;
-            menuProductos.FormBorderStyle = FormBorderStyle.None;
-            menuProductos.Dock = DockStyle.Fill;
-
-
-            panelGeneral.Controls.Add(menuProductos);
-
-
-            menuProductos.Show();
-        }
-
-        private void rEGISTRODEPRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-      
-            panelGeneral.Controls.Clear();
-
-
-            RegistroProductos registroProductosForm = new RegistroProductos();
-            registroProductosForm.TopLevel = false;
-            registroProductosForm.FormBorderStyle = FormBorderStyle.None;
-            registroProductosForm.Dock = DockStyle.Fill;
-
-            panelGeneral.Controls.Add(registroProductosForm);
-
-
-            registroProductosForm.Show();
-        }
 
         private void panelGeneral_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnRegistrarGramos_Click(object sender, EventArgs e)
+        {
+            RegistoGramos registoGramos = new RegistoGramos(this);
+            registoGramos.Show();
+            this.Hide();
+            
+        }
+
+        private void btnRegistrarProductos_Click(object sender, EventArgs e)
+        {
+            RegistroProductos registroProductos = new RegistroProductos(this);  
+            registroProductos.Show();
+            this.Hide();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }
