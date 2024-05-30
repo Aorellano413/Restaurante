@@ -71,8 +71,10 @@ namespace Vista
             {
                 if (usuario.Rol == "Administrador")
                 {
-                    RegistroProductos registroProductos = new RegistroProductos();
-                    registroProductos.Show();
+                    RegistoGramos registoGramos = new RegistoGramos();
+
+                    registoGramos.Show();
+
                 }
                 else if (usuario.Rol == "Cliente")
                 {
