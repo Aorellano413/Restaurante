@@ -59,9 +59,7 @@ namespace Vista
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            /*MenuGeneral menuGeneral = new MenuGeneral();
-            menuGeneral.Show();
-            this.Close(); */
+            
 
             menuGeneral.Show();
             this.Close();

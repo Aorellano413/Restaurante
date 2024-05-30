@@ -71,15 +71,16 @@ namespace Vista
             {
                 if (usuario.Rol == "Administrador")
                 {
-                    MenuGeneral menuGeneral = new MenuGeneral();
-
+                    MenuGeneral menuGeneral = new MenuGeneral(this);
                     menuGeneral.Show();
+                    this.Hide();
 
                 }
                 else if (usuario.Rol == "Cliente")
                 {
-                    MenuProductos menuProductos = new MenuProductos();
+                    MenuProductos menuProductos = new MenuProductos(this);
                     menuProductos.Show();
+                    this.Hide();
                 }
                 this.Hide();
             }

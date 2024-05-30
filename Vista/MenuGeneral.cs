@@ -12,10 +12,12 @@ namespace Vista
 {
     public partial class MenuGeneral : Form
     {
-        public MenuGeneral()
+        private Login login;
+        public MenuGeneral(Login login)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.login = login;
         }
 
         private void buttonClose2_Click(object sender, EventArgs e)
@@ -46,7 +48,8 @@ namespace Vista
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+          
+
             login.Show();
             this.Close();
         }
