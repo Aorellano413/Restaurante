@@ -36,11 +36,7 @@
             this.textPrecio = new System.Windows.Forms.TextBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FOTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonSeleccionar = new System.Windows.Forms.Button();
+            this.buttonSeleccionarJPG = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
             this.buttonNuevo2 = new System.Windows.Forms.Button();
@@ -49,6 +45,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FOTO = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -135,48 +135,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(668, 255);
             this.dataGridView1.TabIndex = 6;
             // 
-            // ID
+            // buttonSeleccionarJPG
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 8;
-            this.ID.Name = "ID";
-            this.ID.Width = 150;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.MinimumWidth = 8;
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.Width = 150;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "PRECIO";
-            this.PRECIO.MinimumWidth = 8;
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.Width = 150;
-            // 
-            // FOTO
-            // 
-            this.FOTO.HeaderText = "FOTO";
-            this.FOTO.MinimumWidth = 8;
-            this.FOTO.Name = "FOTO";
-            this.FOTO.Width = 150;
-            // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.buttonSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.buttonSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSeleccionar.Image")));
-            this.buttonSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSeleccionar.Location = new System.Drawing.Point(779, 538);
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.Size = new System.Drawing.Size(297, 50);
-            this.buttonSeleccionar.TabIndex = 8;
-            this.buttonSeleccionar.Text = "SELECCIONAR IMAGEN";
-            this.buttonSeleccionar.UseVisualStyleBackColor = true;
-            this.buttonSeleccionar.Click += new System.EventHandler(this.buttonSeleccionar_Click);
+            this.buttonSeleccionarJPG.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.buttonSeleccionarJPG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.buttonSeleccionarJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSeleccionarJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSeleccionarJPG.Image")));
+            this.buttonSeleccionarJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSeleccionarJPG.Location = new System.Drawing.Point(779, 538);
+            this.buttonSeleccionarJPG.Name = "buttonSeleccionarJPG";
+            this.buttonSeleccionarJPG.Size = new System.Drawing.Size(297, 50);
+            this.buttonSeleccionarJPG.TabIndex = 8;
+            this.buttonSeleccionarJPG.Text = "SELECCIONAR IMAGEN";
+            this.buttonSeleccionarJPG.UseVisualStyleBackColor = true;
+            this.buttonSeleccionarJPG.Click += new System.EventHandler(this.buttonSeleccionarJPG_Click);
             // 
             // buttonGuardar
             // 
@@ -284,6 +256,32 @@
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.Width = 150;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.MinimumWidth = 8;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.Width = 150;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.MinimumWidth = 8;
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.Width = 150;
+            // 
+            // FOTO
+            // 
+            this.FOTO.HeaderText = "FOTO";
+            this.FOTO.Name = "FOTO";
+            // 
             // RegistroProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -295,7 +293,7 @@
             this.Controls.Add(this.buttonNuevo2);
             this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.buttonGuardar);
-            this.Controls.Add(this.buttonSeleccionar);
+            this.Controls.Add(this.buttonSeleccionarJPG);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.textPrecio);
@@ -326,18 +324,18 @@
         private System.Windows.Forms.TextBox textPrecio;
         private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonSeleccionar;
+        private System.Windows.Forms.Button buttonSeleccionarJPG;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.Button buttonBorrar;
         private System.Windows.Forms.Button buttonNuevo2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCerrarRegistroProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FOTO;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
+        private System.Windows.Forms.DataGridViewImageColumn FOTO;
     }
 }
