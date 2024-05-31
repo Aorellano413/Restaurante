@@ -35,10 +35,13 @@ namespace Vista
             textPrecio.KeyPress += TextBoxPrecio_KeyPress;
 
             // Configurar el DataGridView para manejar imágenes
+            dataGridView1.Columns.Add("ID", "ID");
+            dataGridView1.Columns.Add("NOMBRE", "NOMBRE");
+            dataGridView1.Columns.Add("PRECIO", "PRECIO");
             DataGridViewImageColumn imgColumn = new DataGridViewImageColumn
             {
-                Name = "Foto",
-                HeaderText = "Foto",
+                Name = "IMAGEN",
+                HeaderText = "IMAGEN",
                 ImageLayout = DataGridViewImageCellLayout.Zoom
             };
             dataGridView1.Columns.Add(imgColumn);
@@ -96,18 +99,38 @@ namespace Vista
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
+            // Validar que los campos no están vacíos antes de guardar
+            if (!ValidarCampos())
+            {
+                return;
+            }
+
+            // Cargar la imagen desde la ruta seleccionada
+            Image imagen = Image.FromFile(imagenSeleccionada);
+
+            // Añadir fila especificando columnas
+            dataGridView1.Rows.Add(textId.Text, textNombre.Text, textPrecio.Text, imagen);
+
+            // Limpiar campos
+            LimpiarCampos();
+
+            MessageBox.Show("Datos guardados correctamente.");
+        }
+
+        private bool ValidarCampos()
+        {
             // Validar ID
             if (textId.Text.Length != 3)
             {
                 MessageBox.Show("El ID debe tener exactamente 3 dígitos.");
-                return;
+                return false;
             }
 
             // Validar Nombre
             if (textNombre.Text.Length == 0 || textNombre.Text.Length > 30 || !Regex.IsMatch(textNombre.Text, @"^[a-zA-Z\s]+$"))
             {
                 MessageBox.Show("El Nombre debe tener entre 1 y 30 caracteres y solo puede contener letras y espacios.");
-                return;
+                return false;
             }
 
             // Validar Precio
@@ -116,41 +139,36 @@ namespace Vista
                 if (precio <= 0)
                 {
                     MessageBox.Show("El Precio debe ser mayor a 0.");
-                    return;
+                    return false;
                 }
             }
             else
             {
                 MessageBox.Show("El Precio debe ser un número válido.");
-                return;
+                return false;
             }
 
             // Validar que se haya seleccionado una imagen
             if (string.IsNullOrEmpty(imagenSeleccionada))
             {
                 MessageBox.Show("Por favor, seleccione una imagen.");
-                return;
+                return false;
             }
 
-            // Cargar la imagen desde la ruta seleccionada
-            Image imagen = Image.FromFile(imagenSeleccionada);
-
-            dataGridView1.Rows.Add(textId.Text, textNombre.Text, textPrecio.Text, imagen);
-
-            textId.Clear();
-            textNombre.Clear();
-            textPrecio.Clear();
-            imagenSeleccionada = string.Empty;
-
-            MessageBox.Show("Datos guardados correctamente.");
+            return true;
         }
 
-        private void buttonNuevo2_Click(object sender, EventArgs e)
+        private void LimpiarCampos()
         {
             textId.Clear();
             textNombre.Clear();
             textPrecio.Clear();
             imagenSeleccionada = string.Empty;
+        }
+
+        private void buttonNuevo2_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
 
         private void buttonSeleccionarJPG_Click(object sender, EventArgs e)
