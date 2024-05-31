@@ -60,7 +60,7 @@
             this.labelId.Location = new System.Drawing.Point(14, 95);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(45, 29);
+            this.labelId.Size = new System.Drawing.Size(33, 20);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID:";
             // 
@@ -70,7 +70,7 @@
             this.labelPrecio.Location = new System.Drawing.Point(14, 231);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(117, 29);
+            this.labelPrecio.Size = new System.Drawing.Size(81, 20);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "PRECIO:";
             // 
@@ -80,7 +80,7 @@
             this.labelNombre.Location = new System.Drawing.Point(14, 163);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(132, 29);
+            this.labelNombre.Size = new System.Drawing.Size(90, 20);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "NOMBRE:";
             // 
@@ -92,7 +92,7 @@
             this.textId.Location = new System.Drawing.Point(180, 95);
             this.textId.Margin = new System.Windows.Forms.Padding(5);
             this.textId.Name = "textId";
-            this.textId.Size = new System.Drawing.Size(164, 35);
+            this.textId.Size = new System.Drawing.Size(164, 26);
             this.textId.TabIndex = 3;
             // 
             // textPrecio
@@ -103,7 +103,7 @@
             this.textPrecio.Location = new System.Drawing.Point(180, 225);
             this.textPrecio.Margin = new System.Windows.Forms.Padding(5);
             this.textPrecio.Name = "textPrecio";
-            this.textPrecio.Size = new System.Drawing.Size(164, 35);
+            this.textPrecio.Size = new System.Drawing.Size(164, 26);
             this.textPrecio.TabIndex = 4;
             // 
             // textNombre
@@ -114,7 +114,7 @@
             this.textNombre.Location = new System.Drawing.Point(180, 163);
             this.textNombre.Margin = new System.Windows.Forms.Padding(5);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(164, 35);
+            this.textNombre.Size = new System.Drawing.Size(164, 26);
             this.textNombre.TabIndex = 5;
             // 
             // dataGridView1
@@ -132,7 +132,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 265);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(668, 255);
             this.dataGridView1.TabIndex = 6;
             // 
             // ID
@@ -165,14 +165,14 @@
             // 
             // buttonSeleccionar
             // 
-            this.buttonSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.buttonSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSeleccionar.Image")));
             this.buttonSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSeleccionar.Location = new System.Drawing.Point(870, 544);
+            this.buttonSeleccionar.Location = new System.Drawing.Point(779, 538);
             this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.Size = new System.Drawing.Size(277, 44);
+            this.buttonSeleccionar.Size = new System.Drawing.Size(297, 50);
             this.buttonSeleccionar.TabIndex = 8;
             this.buttonSeleccionar.Text = "SELECCIONAR IMAGEN";
             this.buttonSeleccionar.UseVisualStyleBackColor = true;
@@ -180,12 +180,12 @@
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.buttonGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
             this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(257, 526);
+            this.buttonGuardar.Location = new System.Drawing.Point(257, 538);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(148, 50);
             this.buttonGuardar.TabIndex = 9;
@@ -196,12 +196,12 @@
             // 
             // buttonBorrar
             // 
-            this.buttonBorrar.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.buttonBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBorrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrar.Image")));
             this.buttonBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBorrar.Location = new System.Drawing.Point(548, 526);
+            this.buttonBorrar.Location = new System.Drawing.Point(548, 538);
             this.buttonBorrar.Name = "buttonBorrar";
             this.buttonBorrar.Size = new System.Drawing.Size(127, 50);
             this.buttonBorrar.TabIndex = 10;
@@ -212,12 +212,12 @@
             // 
             // buttonNuevo2
             // 
-            this.buttonNuevo2.FlatAppearance.BorderColor = System.Drawing.Color.Khaki;
+            this.buttonNuevo2.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonNuevo2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonNuevo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNuevo2.Image = ((System.Drawing.Image)(resources.GetObject("buttonNuevo2.Image")));
             this.buttonNuevo2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNuevo2.Location = new System.Drawing.Point(18, 526);
+            this.buttonNuevo2.Location = new System.Drawing.Point(18, 538);
             this.buttonNuevo2.Name = "buttonNuevo2";
             this.buttonNuevo2.Size = new System.Drawing.Size(116, 50);
             this.buttonNuevo2.TabIndex = 11;
@@ -232,7 +232,7 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(459, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(442, 53);
+            this.label2.Size = new System.Drawing.Size(292, 35);
             this.label2.TabIndex = 13;
             this.label2.Text = "REGISTRO DE PRODUCTOS AJS";
             // 
@@ -286,7 +286,7 @@
             // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1160, 600);

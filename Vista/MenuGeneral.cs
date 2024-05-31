@@ -53,5 +53,11 @@ namespace Vista
             login.Show();
             this.Close();
         }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            labelHora1.Text = DateTime.Now.ToLongTimeString();
+            labelDia.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }
