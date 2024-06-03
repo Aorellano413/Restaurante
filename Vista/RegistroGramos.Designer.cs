@@ -28,6 +28,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoGramos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCerraGramos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -103,29 +107,67 @@
             // 
             // dataGridViewGramos
             // 
+            this.dataGridViewGramos.AllowUserToAddRows = false;
+            this.dataGridViewGramos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F);
+            this.dataGridViewGramos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewGramos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewGramos.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewGramos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewGramos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewGramos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGramos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewGramos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGramos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PRODUCTO,
             this.GRAMOS});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGramos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewGramos.Location = new System.Drawing.Point(17, 216);
             this.dataGridViewGramos.Name = "dataGridViewGramos";
+            this.dataGridViewGramos.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGramos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewGramos.RowHeadersVisible = false;
             this.dataGridViewGramos.RowHeadersWidth = 62;
-            this.dataGridViewGramos.Size = new System.Drawing.Size(366, 98);
+            this.dataGridViewGramos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewGramos.Size = new System.Drawing.Size(428, 98);
             this.dataGridViewGramos.TabIndex = 19;
             // 
             // PRODUCTO
             // 
+            this.PRODUCTO.FillWeight = 82.41758F;
             this.PRODUCTO.HeaderText = "PRODUCTO";
             this.PRODUCTO.MinimumWidth = 8;
             this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.Width = 150;
+            this.PRODUCTO.ReadOnly = true;
             // 
             // GRAMOS
             // 
+            this.GRAMOS.FillWeight = 117.5824F;
             this.GRAMOS.HeaderText = "GRAMOS";
             this.GRAMOS.MinimumWidth = 8;
             this.GRAMOS.Name = "GRAMOS";
-            this.GRAMOS.Width = 150;
+            this.GRAMOS.ReadOnly = true;
             // 
             // comboRegistro
             // 

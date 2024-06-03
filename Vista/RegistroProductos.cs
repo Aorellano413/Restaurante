@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Vista
 {
@@ -33,18 +26,6 @@ namespace Vista
             textId.KeyPress += TextBoxID_KeyPress;
             textNombre.KeyPress += TextBoxNombre_KeyPress;
             textPrecio.KeyPress += TextBoxPrecio_KeyPress;
-
-            // Configurar el DataGridView para manejar imágenes
-            dataGridView1.Columns.Add("ID", "ID");
-            dataGridView1.Columns.Add("NOMBRE", "NOMBRE");
-            dataGridView1.Columns.Add("PRECIO", "PRECIO");
-            DataGridViewImageColumn imgColumn = new DataGridViewImageColumn
-            {
-                Name = "IMAGEN",
-                HeaderText = "IMAGEN",
-                ImageLayout = DataGridViewImageCellLayout.Zoom
-            };
-            dataGridView1.Columns.Add(imgColumn);
         }
 
         private void btnCerrarRegistroProducto_Click(object sender, EventArgs e)
@@ -83,11 +64,11 @@ namespace Vista
 
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridProducto.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                foreach (DataGridViewRow row in dataGridProducto.SelectedRows)
                 {
-                    dataGridView1.Rows.RemoveAt(row.Index);
+                    dataGridProducto.Rows.RemoveAt(row.Index);
                 }
                 MessageBox.Show("Fila(s) borrada(s) correctamente.");
             }
@@ -109,7 +90,7 @@ namespace Vista
             Image imagen = Image.FromFile(imagenSeleccionada);
 
             // Añadir fila especificando columnas
-            dataGridView1.Rows.Add(textId.Text, textNombre.Text, textPrecio.Text, imagen);
+            dataGridProducto.Rows.Add(textId.Text, textNombre.Text, textPrecio.Text, imagen);
 
             // Limpiar campos
             LimpiarCampos();

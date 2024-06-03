@@ -18,6 +18,7 @@ namespace Vista
             InitializeComponent();
             this.menuGeneral = menuGeneral;
             comboRegistro.Items.AddRange(new object[] { });
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         
