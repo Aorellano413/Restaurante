@@ -59,5 +59,13 @@ namespace Vista
             labelHora1.Text = DateTime.Now.ToLongTimeString();
             labelDia.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            Inventario inventario= new Inventario();
+            inventario.Show();
+            this.Hide();
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuProductos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,19 +55,30 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PRODUCTO,
             this.CANTIDAD,
             this.PRECIO});
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.Location = new System.Drawing.Point(12, 86);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(454, 289);
@@ -77,21 +89,21 @@
             this.PRODUCTO.HeaderText = "PRODUCTO";
             this.PRODUCTO.MinimumWidth = 8;
             this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.Width = 150;
+            this.PRODUCTO.ReadOnly = true;
             // 
             // CANTIDAD
             // 
             this.CANTIDAD.HeaderText = "CANTIDAD";
             this.CANTIDAD.MinimumWidth = 8;
             this.CANTIDAD.Name = "CANTIDAD";
-            this.CANTIDAD.Width = 150;
+            this.CANTIDAD.ReadOnly = true;
             // 
             // PRECIO
             // 
             this.PRECIO.HeaderText = "PRECIO";
             this.PRECIO.MinimumWidth = 8;
             this.PRECIO.Name = "PRECIO";
-            this.PRECIO.Width = 150;
+            this.PRECIO.ReadOnly = true;
             // 
             // label2
             // 
@@ -131,7 +143,7 @@
             // 
             this.buttonNuevo1.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonNuevo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNuevo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNuevo1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNuevo1.Image = ((System.Drawing.Image)(resources.GetObject("buttonNuevo1.Image")));
             this.buttonNuevo1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNuevo1.Location = new System.Drawing.Point(472, 524);
@@ -147,7 +159,7 @@
             this.buttonBorrar1.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonBorrar1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonBorrar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBorrar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrar1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBorrar1.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrar1.Image")));
             this.buttonBorrar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBorrar1.Location = new System.Drawing.Point(742, 524);
@@ -162,7 +174,7 @@
             // 
             this.buttonFactura.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFactura.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFactura.Image = ((System.Drawing.Image)(resources.GetObject("buttonFactura.Image")));
             this.buttonFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFactura.Location = new System.Drawing.Point(990, 524);

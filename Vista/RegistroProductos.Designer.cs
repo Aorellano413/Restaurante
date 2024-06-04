@@ -60,30 +60,33 @@
             // labelId
             // 
             this.labelId.AutoSize = true;
+            this.labelId.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelId.Location = new System.Drawing.Point(14, 95);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(33, 20);
+            this.labelId.Size = new System.Drawing.Size(24, 23);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID:";
             // 
             // labelPrecio
             // 
             this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrecio.Location = new System.Drawing.Point(14, 231);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(81, 20);
+            this.labelPrecio.Size = new System.Drawing.Size(57, 23);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "PRECIO:";
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.Location = new System.Drawing.Point(14, 163);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(90, 20);
+            this.labelNombre.Size = new System.Drawing.Size(65, 23);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "NOMBRE:";
             // 
@@ -133,7 +136,7 @@
             this.dataGridProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -148,7 +151,7 @@
             this.dataGridProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -194,11 +197,12 @@
             this.buttonSeleccionarJPG.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonSeleccionarJPG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonSeleccionarJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSeleccionarJPG.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSeleccionarJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSeleccionarJPG.Image")));
             this.buttonSeleccionarJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSeleccionarJPG.Location = new System.Drawing.Point(779, 538);
             this.buttonSeleccionarJPG.Name = "buttonSeleccionarJPG";
-            this.buttonSeleccionarJPG.Size = new System.Drawing.Size(297, 50);
+            this.buttonSeleccionarJPG.Size = new System.Drawing.Size(221, 50);
             this.buttonSeleccionarJPG.TabIndex = 8;
             this.buttonSeleccionarJPG.Text = "SELECCIONAR IMAGEN";
             this.buttonSeleccionarJPG.UseVisualStyleBackColor = true;
@@ -209,11 +213,12 @@
             this.buttonGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuardar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
             this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGuardar.Location = new System.Drawing.Point(257, 538);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(148, 50);
+            this.buttonGuardar.Size = new System.Drawing.Size(109, 50);
             this.buttonGuardar.TabIndex = 9;
             this.buttonGuardar.Text = "GUARDAR";
             this.buttonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -225,11 +230,12 @@
             this.buttonBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBorrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBorrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBorrar.Image")));
             this.buttonBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBorrar.Location = new System.Drawing.Point(548, 538);
             this.buttonBorrar.Name = "buttonBorrar";
-            this.buttonBorrar.Size = new System.Drawing.Size(127, 50);
+            this.buttonBorrar.Size = new System.Drawing.Size(102, 50);
             this.buttonBorrar.TabIndex = 10;
             this.buttonBorrar.Text = "BORRAR";
             this.buttonBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,11 +247,12 @@
             this.buttonNuevo2.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.buttonNuevo2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.buttonNuevo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNuevo2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNuevo2.Image = ((System.Drawing.Image)(resources.GetObject("buttonNuevo2.Image")));
             this.buttonNuevo2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNuevo2.Location = new System.Drawing.Point(18, 538);
             this.buttonNuevo2.Name = "buttonNuevo2";
-            this.buttonNuevo2.Size = new System.Drawing.Size(116, 50);
+            this.buttonNuevo2.Size = new System.Drawing.Size(92, 50);
             this.buttonNuevo2.TabIndex = 11;
             this.buttonNuevo2.Text = "NUEVO";
             this.buttonNuevo2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
