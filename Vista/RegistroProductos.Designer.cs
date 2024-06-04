@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroProductos));
             this.labelId = new System.Windows.Forms.Label();
             this.labelPrecio = new System.Windows.Forms.Label();
@@ -127,21 +127,21 @@
             // 
             this.dataGridProducto.AllowUserToAddRows = false;
             this.dataGridProducto.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dataGridProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridProducto.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridProducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("HelveticaNeueLT Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -149,14 +149,14 @@
             this.PRECIO,
             this.IMAGEN});
             this.dataGridProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridProducto.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProducto.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridProducto.EnableHeadersVisualStyles = false;
             this.dataGridProducto.Location = new System.Drawing.Point(18, 268);
             this.dataGridProducto.Name = "dataGridProducto";
@@ -200,9 +200,9 @@
             this.buttonSeleccionarJPG.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSeleccionarJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSeleccionarJPG.Image")));
             this.buttonSeleccionarJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSeleccionarJPG.Location = new System.Drawing.Point(779, 538);
+            this.buttonSeleccionarJPG.Location = new System.Drawing.Point(718, 538);
             this.buttonSeleccionarJPG.Name = "buttonSeleccionarJPG";
-            this.buttonSeleccionarJPG.Size = new System.Drawing.Size(221, 50);
+            this.buttonSeleccionarJPG.Size = new System.Drawing.Size(216, 50);
             this.buttonSeleccionarJPG.TabIndex = 8;
             this.buttonSeleccionarJPG.Text = "SELECCIONAR IMAGEN";
             this.buttonSeleccionarJPG.UseVisualStyleBackColor = true;
@@ -271,10 +271,12 @@
             // 
             // btnCerrarRegistroProducto
             // 
-            this.btnCerrarRegistroProducto.BackColor = System.Drawing.Color.Red;
+            this.btnCerrarRegistroProducto.BackColor = System.Drawing.Color.Khaki;
             this.btnCerrarRegistroProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarRegistroProducto.FlatAppearance.BorderSize = 0;
+            this.btnCerrarRegistroProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarRegistroProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarRegistroProducto.Image")));
-            this.btnCerrarRegistroProducto.Location = new System.Drawing.Point(1122, 5);
+            this.btnCerrarRegistroProducto.Location = new System.Drawing.Point(1122, 10);
             this.btnCerrarRegistroProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrarRegistroProducto.Name = "btnCerrarRegistroProducto";
             this.btnCerrarRegistroProducto.Size = new System.Drawing.Size(34, 35);
@@ -308,11 +310,15 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.ForeColor = System.Drawing.Color.Black;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(1069, 2);
+            this.btnRegresar.Location = new System.Drawing.Point(1072, 9);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(45, 40);
+            this.btnRegresar.Size = new System.Drawing.Size(42, 37);
             this.btnRegresar.TabIndex = 27;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);

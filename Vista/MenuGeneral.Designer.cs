@@ -104,7 +104,7 @@
             // 
             this.pictureRegistrarProductos.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegistrarProductos.Image")));
             this.pictureRegistrarProductos.Location = new System.Drawing.Point(601, 40);
-            this.pictureRegistrarProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureRegistrarProductos.Margin = new System.Windows.Forms.Padding(2);
             this.pictureRegistrarProductos.Name = "pictureRegistrarProductos";
             this.pictureRegistrarProductos.Size = new System.Drawing.Size(200, 162);
             this.pictureRegistrarProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,7 +115,7 @@
             // 
             this.pictureRegistrarGramos.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegistrarGramos.Image")));
             this.pictureRegistrarGramos.Location = new System.Drawing.Point(323, 40);
-            this.pictureRegistrarGramos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureRegistrarGramos.Margin = new System.Windows.Forms.Padding(2);
             this.pictureRegistrarGramos.Name = "pictureRegistrarGramos";
             this.pictureRegistrarGramos.Size = new System.Drawing.Size(200, 162);
             this.pictureRegistrarGramos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,7 +126,7 @@
             // 
             this.pictureInventario.Image = ((System.Drawing.Image)(resources.GetObject("pictureInventario.Image")));
             this.pictureInventario.Location = new System.Drawing.Point(23, 40);
-            this.pictureInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureInventario.Margin = new System.Windows.Forms.Padding(2);
             this.pictureInventario.Name = "pictureInventario";
             this.pictureInventario.Size = new System.Drawing.Size(200, 162);
             this.pictureInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,10 +136,10 @@
             // btnRegistrarProductos
             // 
             this.btnRegistrarProductos.BackColor = System.Drawing.Color.Khaki;
-            this.btnRegistrarProductos.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarProductos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarProductos.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnRegistrarProductos.Location = new System.Drawing.Point(601, 206);
-            this.btnRegistrarProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarProductos.Name = "btnRegistrarProductos";
             this.btnRegistrarProductos.Size = new System.Drawing.Size(200, 84);
             this.btnRegistrarProductos.TabIndex = 2;
@@ -150,10 +150,10 @@
             // btnRegistrarGramos
             // 
             this.btnRegistrarGramos.BackColor = System.Drawing.Color.Khaki;
-            this.btnRegistrarGramos.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarGramos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarGramos.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnRegistrarGramos.Location = new System.Drawing.Point(312, 206);
-            this.btnRegistrarGramos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarGramos.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarGramos.Name = "btnRegistrarGramos";
             this.btnRegistrarGramos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnRegistrarGramos.Size = new System.Drawing.Size(200, 84);
@@ -165,10 +165,10 @@
             // btnInventario
             // 
             this.btnInventario.BackColor = System.Drawing.Color.Khaki;
-            this.btnInventario.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnInventario.Location = new System.Drawing.Point(23, 206);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(200, 84);
             this.btnInventario.TabIndex = 0;
@@ -178,8 +178,9 @@
             // 
             // buttonClose2
             // 
-            this.buttonClose2.BackColor = System.Drawing.Color.Red;
+            this.buttonClose2.BackColor = System.Drawing.Color.Khaki;
             this.buttonClose2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose2.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose2.Image")));
             this.buttonClose2.Location = new System.Drawing.Point(799, 1);
             this.buttonClose2.Name = "buttonClose2";
@@ -192,10 +193,13 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.ForeColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.Location = new System.Drawing.Point(763, -1);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(31, 27);
+            this.btnRegresar.Size = new System.Drawing.Size(31, 31);
             this.btnRegresar.TabIndex = 27;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);

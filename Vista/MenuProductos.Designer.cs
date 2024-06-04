@@ -108,28 +108,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 397);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 20);
+            this.label2.Size = new System.Drawing.Size(109, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "TOTAL A PAGAR :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(173, 397);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(132, 397);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 20);
+            this.label3.Size = new System.Drawing.Size(18, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = "-";
+            this.label3.Text = "0";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 54);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 20);
+            this.textBox1.Size = new System.Drawing.Size(138, 20);
             this.textBox1.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -148,7 +148,7 @@
             this.buttonNuevo1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNuevo1.Location = new System.Drawing.Point(472, 524);
             this.buttonNuevo1.Name = "buttonNuevo1";
-            this.buttonNuevo1.Size = new System.Drawing.Size(88, 50);
+            this.buttonNuevo1.Size = new System.Drawing.Size(92, 50);
             this.buttonNuevo1.TabIndex = 6;
             this.buttonNuevo1.Text = "NUEVO";
             this.buttonNuevo1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -187,16 +187,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 459);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 20);
+            this.label4.Size = new System.Drawing.Size(73, 23);
             this.label4.TabIndex = 9;
             this.label4.Text = "EFECTIVO :";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 461);
+            this.textBox2.Location = new System.Drawing.Point(91, 462);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 10;
@@ -204,27 +204,29 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 524);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 20);
+            this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 11;
             this.label5.Text = "DEVOLUCION :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(155, 524);
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(110, 524);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(15, 20);
+            this.label6.Size = new System.Drawing.Size(18, 23);
             this.label6.TabIndex = 12;
-            this.label6.Text = "-";
+            this.label6.Text = "0";
             // 
             // btnCerrarMenuProductos
             // 
-            this.btnCerrarMenuProductos.BackColor = System.Drawing.Color.Red;
+            this.btnCerrarMenuProductos.BackColor = System.Drawing.Color.Khaki;
             this.btnCerrarMenuProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarMenuProductos.FlatAppearance.BorderSize = 0;
+            this.btnCerrarMenuProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarMenuProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarMenuProductos.Image")));
             this.btnCerrarMenuProductos.Location = new System.Drawing.Point(1115, 3);
             this.btnCerrarMenuProductos.Name = "btnCerrarMenuProductos";
@@ -249,6 +251,8 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.Location = new System.Drawing.Point(1057, 3);
             this.btnRegresar.Name = "btnRegresar";

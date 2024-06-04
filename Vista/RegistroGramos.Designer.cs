@@ -51,10 +51,12 @@
             // 
             // btnCerraGramos
             // 
-            this.btnCerraGramos.BackColor = System.Drawing.Color.Red;
+            this.btnCerraGramos.BackColor = System.Drawing.Color.Khaki;
             this.btnCerraGramos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerraGramos.FlatAppearance.BorderSize = 0;
+            this.btnCerraGramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerraGramos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerraGramos.Image")));
-            this.btnCerraGramos.Location = new System.Drawing.Point(755, 3);
+            this.btnCerraGramos.Location = new System.Drawing.Point(764, 3);
             this.btnCerraGramos.Name = "btnCerraGramos";
             this.btnCerraGramos.Size = new System.Drawing.Size(33, 32);
             this.btnCerraGramos.TabIndex = 16;
@@ -77,8 +79,10 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(707, 3);
+            this.btnRegresar.Location = new System.Drawing.Point(725, 3);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(33, 32);
             this.btnRegresar.TabIndex = 26;
@@ -98,10 +102,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(87, 29);
             this.label1.TabIndex = 18;
             this.label1.Text = " GRAMOS:";
             // 
@@ -185,14 +189,14 @@
             "MAIZ TIERNO",
             "CARNE",
             "QUESO"});
-            this.comboRegistro.Location = new System.Drawing.Point(217, 71);
+            this.comboRegistro.Location = new System.Drawing.Point(125, 71);
             this.comboRegistro.Name = "comboRegistro";
             this.comboRegistro.Size = new System.Drawing.Size(121, 21);
             this.comboRegistro.TabIndex = 20;
             // 
             // textGramos
             // 
-            this.textGramos.Location = new System.Drawing.Point(217, 160);
+            this.textGramos.Location = new System.Drawing.Point(125, 160);
             this.textGramos.Name = "textGramos";
             this.textGramos.Size = new System.Drawing.Size(100, 20);
             this.textGramos.TabIndex = 21;
@@ -200,10 +204,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 29);
+            this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 22;
             this.label2.Text = "PRODUCTOS:";
             // 

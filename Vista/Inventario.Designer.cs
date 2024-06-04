@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonClose5 = new System.Windows.Forms.Button();
+            this.btnRegresar5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewInventario = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +44,6 @@
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar5 = new System.Windows.Forms.Button();
-            this.btnRegresar5 = new System.Windows.Forms.Button();
-            this.buttonClose5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventario)).BeginInit();
             this.SuspendLayout();
@@ -60,12 +60,39 @@
             this.panel1.Size = new System.Drawing.Size(800, 39);
             this.panel1.TabIndex = 0;
             // 
+            // buttonClose5
+            // 
+            this.buttonClose5.BackColor = System.Drawing.Color.Red;
+            this.buttonClose5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose5.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose5.Image")));
+            this.buttonClose5.Location = new System.Drawing.Point(765, 5);
+            this.buttonClose5.Name = "buttonClose5";
+            this.buttonClose5.Size = new System.Drawing.Size(23, 23);
+            this.buttonClose5.TabIndex = 29;
+            this.buttonClose5.UseVisualStyleBackColor = false;
+            this.buttonClose5.Click += new System.EventHandler(this.buttonClose5_Click);
+            // 
+            // btnRegresar5
+            // 
+            this.btnRegresar5.BackColor = System.Drawing.Color.Khaki;
+            this.btnRegresar5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar5.FlatAppearance.BorderSize = 0;
+            this.btnRegresar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar5.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar5.Image")));
+            this.btnRegresar5.Location = new System.Drawing.Point(720, 3);
+            this.btnRegresar5.Name = "btnRegresar5";
+            this.btnRegresar5.Size = new System.Drawing.Size(31, 31);
+            this.btnRegresar5.TabIndex = 28;
+            this.btnRegresar5.UseVisualStyleBackColor = false;
+            this.btnRegresar5.Click += new System.EventHandler(this.btnRegresar5_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Khaki;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(324, 9);
+            this.label1.Location = new System.Drawing.Point(342, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 0;
@@ -138,6 +165,8 @@
             // 
             // buttonAgregar
             // 
+            this.buttonAgregar.FlatAppearance.BorderSize = 0;
+            this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAgregar.Image")));
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,6 +181,8 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.FlatAppearance.BorderSize = 0;
+            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.Image = ((System.Drawing.Image)(resources.GetObject("buttonModificar.Image")));
             this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,6 +197,8 @@
             // 
             // buttonEliminar5
             // 
+            this.buttonEliminar5.FlatAppearance.BorderSize = 0;
+            this.buttonEliminar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar5.Image = ((System.Drawing.Image)(resources.GetObject("buttonEliminar5.Image")));
             this.buttonEliminar5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,30 +210,6 @@
             this.buttonEliminar5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonEliminar5.UseVisualStyleBackColor = true;
             this.buttonEliminar5.Click += new System.EventHandler(this.buttonEliminar5_Click);
-            // 
-            // btnRegresar5
-            // 
-            this.btnRegresar5.BackColor = System.Drawing.Color.Khaki;
-            this.btnRegresar5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegresar5.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar5.Image")));
-            this.btnRegresar5.Location = new System.Drawing.Point(720, 3);
-            this.btnRegresar5.Name = "btnRegresar5";
-            this.btnRegresar5.Size = new System.Drawing.Size(31, 27);
-            this.btnRegresar5.TabIndex = 28;
-            this.btnRegresar5.UseVisualStyleBackColor = false;
-            this.btnRegresar5.Click += new System.EventHandler(this.btnRegresar5_Click);
-            // 
-            // buttonClose5
-            // 
-            this.buttonClose5.BackColor = System.Drawing.Color.Red;
-            this.buttonClose5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClose5.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose5.Image")));
-            this.buttonClose5.Location = new System.Drawing.Point(765, 5);
-            this.buttonClose5.Name = "buttonClose5";
-            this.buttonClose5.Size = new System.Drawing.Size(23, 23);
-            this.buttonClose5.TabIndex = 29;
-            this.buttonClose5.UseVisualStyleBackColor = false;
-            this.buttonClose5.Click += new System.EventHandler(this.buttonClose5_Click);
             // 
             // Inventario
             // 
