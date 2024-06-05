@@ -57,7 +57,7 @@ namespace Vista
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            Inventario inventario= new Inventario();
+            Inventario inventario= new Inventario(this);
             inventario.Show();
             this.Hide();
 
@@ -65,7 +65,7 @@ namespace Vista
 
         private void btnInventariosPlatos_Click(object sender, EventArgs e)
         {
-            InventariosPlatos inventtariosplatos = new InventariosPlatos();
+            InventariosPlatos inventtariosplatos = new InventariosPlatos(this);
             inventtariosplatos.Show();
             this.Hide();
         }

@@ -7,12 +7,14 @@ namespace Vista
     public partial class InventariosPlatos : Form
     {
         PlatosBD platosBD = new PlatosBD();
+        private MenuGeneral menuGeneral;
 
-        public InventariosPlatos()
+        public InventariosPlatos(MenuGeneral menuGeneral)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             MostrarPlatos();
+            this.menuGeneral = menuGeneral;
         }
 
         public void MostrarPlatos()
@@ -33,6 +35,17 @@ namespace Vista
         private void buttonGuardar7_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void btnRegresar5_Click(object sender, EventArgs e)
+        {
+            menuGeneral.Show();
+            this.Close();
+        }
+
+        private void btnCerrarInventarioPlatos_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

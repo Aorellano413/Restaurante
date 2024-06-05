@@ -50,8 +50,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 39);
+            this.panel1.Size = new System.Drawing.Size(1200, 60);
             this.panel1.TabIndex = 0;
             // 
             // buttonClose5
@@ -60,9 +61,10 @@
             this.buttonClose5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose5.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose5.Image")));
-            this.buttonClose5.Location = new System.Drawing.Point(765, 5);
+            this.buttonClose5.Location = new System.Drawing.Point(1148, 8);
+            this.buttonClose5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonClose5.Name = "buttonClose5";
-            this.buttonClose5.Size = new System.Drawing.Size(23, 23);
+            this.buttonClose5.Size = new System.Drawing.Size(34, 35);
             this.buttonClose5.TabIndex = 29;
             this.buttonClose5.UseVisualStyleBackColor = false;
             this.buttonClose5.Click += new System.EventHandler(this.buttonClose5_Click);
@@ -74,9 +76,10 @@
             this.btnRegresar5.FlatAppearance.BorderSize = 0;
             this.btnRegresar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar5.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar5.Image")));
-            this.btnRegresar5.Location = new System.Drawing.Point(720, 3);
+            this.btnRegresar5.Location = new System.Drawing.Point(1080, 5);
+            this.btnRegresar5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegresar5.Name = "btnRegresar5";
-            this.btnRegresar5.Size = new System.Drawing.Size(31, 31);
+            this.btnRegresar5.Size = new System.Drawing.Size(46, 48);
             this.btnRegresar5.TabIndex = 28;
             this.btnRegresar5.UseVisualStyleBackColor = false;
             this.btnRegresar5.Click += new System.EventHandler(this.btnRegresar5_Click);
@@ -86,11 +89,12 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Khaki;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 9);
+            this.label1.Location = new System.Drawing.Point(482, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.Size = new System.Drawing.Size(287, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "INVENTARIO";
+            this.label1.Text = "INVENTARIO INGREDIENTES";
             // 
             // buttonAgregar
             // 
@@ -99,9 +103,10 @@
             this.buttonAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAgregar.Image")));
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(12, 90);
+            this.buttonAgregar.Location = new System.Drawing.Point(18, 138);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(104, 45);
+            this.buttonAgregar.Size = new System.Drawing.Size(156, 69);
             this.buttonAgregar.TabIndex = 2;
             this.buttonAgregar.Text = "AGREGAR";
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -115,9 +120,10 @@
             this.buttonModificar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.Image = ((System.Drawing.Image)(resources.GetObject("buttonModificar.Image")));
             this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonModificar.Location = new System.Drawing.Point(148, 90);
+            this.buttonModificar.Location = new System.Drawing.Point(222, 138);
+            this.buttonModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(114, 45);
+            this.buttonModificar.Size = new System.Drawing.Size(171, 69);
             this.buttonModificar.TabIndex = 3;
             this.buttonModificar.Text = "MODIFICAR";
             this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,9 +137,10 @@
             this.buttonEliminar5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar5.Image = ((System.Drawing.Image)(resources.GetObject("buttonEliminar5.Image")));
             this.buttonEliminar5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar5.Location = new System.Drawing.Point(291, 90);
+            this.buttonEliminar5.Location = new System.Drawing.Point(436, 138);
+            this.buttonEliminar5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEliminar5.Name = "buttonEliminar5";
-            this.buttonEliminar5.Size = new System.Drawing.Size(112, 45);
+            this.buttonEliminar5.Size = new System.Drawing.Size(168, 69);
             this.buttonEliminar5.TabIndex = 4;
             this.buttonEliminar5.Text = "ELIMINAR";
             this.buttonEliminar5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,27 +165,29 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 157);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 242);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(1164, 365);
             this.dataGridView1.TabIndex = 5;
-
             // 
             // Inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonEliminar5);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Inventario";
             this.Text = "Inventario";
             this.panel1.ResumeLayout(false);

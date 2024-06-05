@@ -14,7 +14,9 @@ using System.Windows.Forms;
 namespace Vista
 {
     public partial class Inventario : Form
-    {   
+    {
+
+        private MenuGeneral menuGeneral;
         InventarioBD inventario = new InventarioBD();
 
         public void mostrar()
@@ -22,12 +24,14 @@ namespace Vista
             dataGridView1.DataSource = inventario.MostrarInventario();
             
         }
-        public Inventario()
+        public Inventario(MenuGeneral menuGeneral)
         {
             InitializeComponent();
             
             this.StartPosition = FormStartPosition.CenterScreen;
             mostrar();
+            this.menuGeneral = menuGeneral;
+         
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -48,7 +52,9 @@ namespace Vista
 
         private void btnRegresar5_Click(object sender, EventArgs e)
         {
-         
+            menuGeneral.Show();
+            this.Close();
+
         }
 
         private void buttonClose5_Click(object sender, EventArgs e)
