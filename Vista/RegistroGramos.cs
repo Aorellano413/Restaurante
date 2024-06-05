@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace Vista
@@ -62,6 +63,16 @@ namespace Vista
         {
             menuGeneral.Show();
             this.Close();
+        }
+
+        private void dataGridViewGramos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void RegistoGramos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

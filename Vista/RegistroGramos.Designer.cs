@@ -38,13 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewGramos = new System.Windows.Forms.DataGridView();
-            this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRAMOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboRegistro = new System.Windows.Forms.ComboBox();
             this.textGramos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBorrar3 = new System.Windows.Forms.Button();
             this.buttonGuardar3 = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRAMOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGramos)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +131,7 @@
             this.dataGridViewGramos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewGramos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGramos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.PRODUCTO,
             this.GRAMOS});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -154,24 +156,9 @@
             this.dataGridViewGramos.RowHeadersVisible = false;
             this.dataGridViewGramos.RowHeadersWidth = 62;
             this.dataGridViewGramos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewGramos.Size = new System.Drawing.Size(428, 98);
+            this.dataGridViewGramos.Size = new System.Drawing.Size(492, 98);
             this.dataGridViewGramos.TabIndex = 19;
-            // 
-            // PRODUCTO
-            // 
-            this.PRODUCTO.FillWeight = 82.41758F;
-            this.PRODUCTO.HeaderText = "PRODUCTO";
-            this.PRODUCTO.MinimumWidth = 8;
-            this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.ReadOnly = true;
-            // 
-            // GRAMOS
-            // 
-            this.GRAMOS.FillWeight = 117.5824F;
-            this.GRAMOS.HeaderText = "GRAMOS";
-            this.GRAMOS.MinimumWidth = 8;
-            this.GRAMOS.Name = "GRAMOS";
-            this.GRAMOS.ReadOnly = true;
+            this.dataGridViewGramos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGramos_CellContentClick);
             // 
             // comboRegistro
             // 
@@ -247,6 +234,28 @@
             this.buttonGuardar3.UseVisualStyleBackColor = true;
             this.buttonGuardar3.Click += new System.EventHandler(this.buttonGuardar3_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // PRODUCTO
+            // 
+            this.PRODUCTO.FillWeight = 82.41758F;
+            this.PRODUCTO.HeaderText = "PRODUCTO";
+            this.PRODUCTO.MinimumWidth = 8;
+            this.PRODUCTO.Name = "PRODUCTO";
+            this.PRODUCTO.ReadOnly = true;
+            // 
+            // GRAMOS
+            // 
+            this.GRAMOS.FillWeight = 117.5824F;
+            this.GRAMOS.HeaderText = "GRAMOS";
+            this.GRAMOS.MinimumWidth = 8;
+            this.GRAMOS.Name = "GRAMOS";
+            this.GRAMOS.ReadOnly = true;
+            // 
             // RegistoGramos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +273,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistoGramos";
             this.Text = "RegistroGramos";
+            this.Load += new System.EventHandler(this.RegistoGramos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGramos)).EndInit();
@@ -282,10 +292,11 @@
         private System.Windows.Forms.TextBox textGramos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBorrar3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GRAMOS;
         private System.Windows.Forms.Button buttonGuardar3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRAMOS;
     }
 }
