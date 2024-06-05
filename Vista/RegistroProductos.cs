@@ -64,11 +64,11 @@ namespace Vista
 
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
-            if (dataGridProducto.SelectedRows.Count > 0)
+            if (dataGridView4.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in dataGridProducto.SelectedRows)
+                foreach (DataGridViewRow row in dataGridView4.SelectedRows)
                 {
-                    dataGridProducto.Rows.RemoveAt(row.Index);
+                    dataGridView4.Rows.RemoveAt(row.Index);
                 }
                 MessageBox.Show("Fila(s) borrada(s) correctamente.");
             }
@@ -90,7 +90,7 @@ namespace Vista
             Image imagen = Image.FromFile(imagenSeleccionada);
 
             // Añadir fila especificando columnas
-            dataGridProducto.Rows.Add(textId.Text, textNombre.Text, textPrecio.Text, imagen);
+            dataGridView4.Rows.Add(textId.Text, textNombre.Text, textPrecio.Text, imagen);
 
             // Limpiar campos
             LimpiarCampos();

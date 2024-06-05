@@ -26,10 +26,7 @@ namespace Vista
         }
 
 
-        private void panelGeneral_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btnRegistrarGramos_Click(object sender, EventArgs e)
         {
@@ -48,8 +45,6 @@ namespace Vista
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-          
-
             login.Show();
             this.Close();
         }
@@ -66,6 +61,13 @@ namespace Vista
             inventario.Show();
             this.Hide();
 
+        }
+
+        private void btnInventariosPlatos_Click(object sender, EventArgs e)
+        {
+            InventariosPlatos inventtariosplatos = new InventariosPlatos();
+            inventtariosplatos.Show();
+            this.Hide();
         }
     }
 }

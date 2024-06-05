@@ -32,7 +32,7 @@ namespace Vista
                 string gramos = textGramos.Text;
 
 
-                dataGridViewGramos.Rows.Add(item, gramos);
+                dataGridView3.Rows.Add(item, gramos);
             }
             else
             {
@@ -43,10 +43,10 @@ namespace Vista
         private void buttonBorrar3_Click(object sender, EventArgs e)
         {
 
-            if (dataGridViewGramos.SelectedRows.Count > 0)
+            if (dataGridView3.SelectedRows.Count > 0)
             {
 
-                dataGridViewGramos.Rows.RemoveAt(dataGridViewGramos.SelectedRows[0].Index);
+                dataGridView3.Rows.RemoveAt(dataGridView3.SelectedRows[0].Index);
             }
             else
             {
