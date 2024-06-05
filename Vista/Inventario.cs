@@ -32,37 +32,17 @@ namespace Vista
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add();
-            dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0];
-            dataGridView1.BeginEdit(true);
+            
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-
-                
-            }
-            else
-            {
-                MessageBox.Show("Por favor selecciona una fila para modificar.");
-            }
+            
         }
 
         private void buttonEliminar5_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                
-                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-            }
-            else
-            {
-                MessageBox.Show("Por favor selecciona una fila para eliminar.");
-            }
+            
         }
 
 
@@ -75,5 +55,7 @@ namespace Vista
         {
             this.Close();
         }
+
+        
     }
 }
