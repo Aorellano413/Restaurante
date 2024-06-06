@@ -34,10 +34,7 @@ namespace Vista
          
         }
 
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-            
-        }
+  
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonClose5 = new System.Windows.Forms.Button();
             this.btnRegresar5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonAgregar = new System.Windows.Forms.Button();
-            this.buttonModificar = new System.Windows.Forms.Button();
-            this.buttonEliminar5 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.buttonEliminar5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -96,56 +96,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "INVENTARIO INGREDIENTES";
             // 
-            // buttonAgregar
+            // btnBuscar
             // 
-            this.buttonAgregar.FlatAppearance.BorderSize = 0;
-            this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAgregar.Image")));
-            this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(18, 138);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(156, 69);
-            this.buttonAgregar.TabIndex = 2;
-            this.buttonAgregar.Text = "AGREGAR";
-            this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAgregar.UseVisualStyleBackColor = true;
-            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
-            // 
-            // buttonModificar
-            // 
-            this.buttonModificar.FlatAppearance.BorderSize = 0;
-            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModificar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Image = ((System.Drawing.Image)(resources.GetObject("buttonModificar.Image")));
-            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonModificar.Location = new System.Drawing.Point(222, 138);
-            this.buttonModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(171, 69);
-            this.buttonModificar.TabIndex = 3;
-            this.buttonModificar.Text = "MODIFICAR";
-            this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonModificar.UseVisualStyleBackColor = true;
-            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
-            // 
-            // buttonEliminar5
-            // 
-            this.buttonEliminar5.FlatAppearance.BorderSize = 0;
-            this.buttonEliminar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminar5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar5.Image = ((System.Drawing.Image)(resources.GetObject("buttonEliminar5.Image")));
-            this.buttonEliminar5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar5.Location = new System.Drawing.Point(436, 138);
-            this.buttonEliminar5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonEliminar5.Name = "buttonEliminar5";
-            this.buttonEliminar5.Size = new System.Drawing.Size(168, 69);
-            this.buttonEliminar5.TabIndex = 4;
-            this.buttonEliminar5.Text = "ELIMINAR";
-            this.buttonEliminar5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEliminar5.UseVisualStyleBackColor = true;
-            this.buttonEliminar5.Click += new System.EventHandler(this.buttonEliminar5_Click);
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.Location = new System.Drawing.Point(46, 138);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(135, 69);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -157,14 +122,14 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(18, 242);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
@@ -175,16 +140,39 @@
             this.dataGridView1.Size = new System.Drawing.Size(1164, 365);
             this.dataGridView1.TabIndex = 5;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(210, 165);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(286, 26);
+            this.txtBuscar.TabIndex = 6;
+            // 
+            // buttonEliminar5
+            // 
+            this.buttonEliminar5.FlatAppearance.BorderSize = 0;
+            this.buttonEliminar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar5.Image = ((System.Drawing.Image)(resources.GetObject("buttonEliminar5.Image")));
+            this.buttonEliminar5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEliminar5.Location = new System.Drawing.Point(919, 138);
+            this.buttonEliminar5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonEliminar5.Name = "buttonEliminar5";
+            this.buttonEliminar5.Size = new System.Drawing.Size(207, 69);
+            this.buttonEliminar5.TabIndex = 4;
+            this.buttonEliminar5.Text = "RESTABLECER";
+            this.buttonEliminar5.UseVisualStyleBackColor = true;
+            this.buttonEliminar5.Click += new System.EventHandler(this.buttonEliminar5_Click);
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonEliminar5);
-            this.Controls.Add(this.buttonModificar);
-            this.Controls.Add(this.buttonAgregar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -194,6 +182,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -201,11 +190,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonAgregar;
-        private System.Windows.Forms.Button buttonModificar;
-        private System.Windows.Forms.Button buttonEliminar5;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnRegresar5;
         private System.Windows.Forms.Button buttonClose5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button buttonEliminar5;
     }
 }
