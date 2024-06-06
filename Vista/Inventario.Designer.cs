@@ -37,7 +37,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.buttonEliminar5 = new System.Windows.Forms.Button();
+            this.buttonRestablecer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,7 @@
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dataGridView1
             // 
@@ -147,21 +148,21 @@
             this.txtBuscar.Size = new System.Drawing.Size(286, 26);
             this.txtBuscar.TabIndex = 6;
             // 
-            // buttonEliminar5
+            // buttonRestablecer
             // 
-            this.buttonEliminar5.FlatAppearance.BorderSize = 0;
-            this.buttonEliminar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminar5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar5.Image = ((System.Drawing.Image)(resources.GetObject("buttonEliminar5.Image")));
-            this.buttonEliminar5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEliminar5.Location = new System.Drawing.Point(919, 138);
-            this.buttonEliminar5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonEliminar5.Name = "buttonEliminar5";
-            this.buttonEliminar5.Size = new System.Drawing.Size(207, 69);
-            this.buttonEliminar5.TabIndex = 4;
-            this.buttonEliminar5.Text = "RESTABLECER";
-            this.buttonEliminar5.UseVisualStyleBackColor = true;
-            this.buttonEliminar5.Click += new System.EventHandler(this.buttonEliminar5_Click);
+            this.buttonRestablecer.FlatAppearance.BorderSize = 0;
+            this.buttonRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestablecer.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestablecer.Image = ((System.Drawing.Image)(resources.GetObject("buttonRestablecer.Image")));
+            this.buttonRestablecer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRestablecer.Location = new System.Drawing.Point(919, 138);
+            this.buttonRestablecer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonRestablecer.Name = "buttonRestablecer";
+            this.buttonRestablecer.Size = new System.Drawing.Size(207, 69);
+            this.buttonRestablecer.TabIndex = 4;
+            this.buttonRestablecer.Text = "RESTABLECER";
+            this.buttonRestablecer.UseVisualStyleBackColor = true;
+            this.buttonRestablecer.Click += new System.EventHandler(this.buttonRestablecer_Click);
             // 
             // Inventario
             // 
@@ -171,7 +172,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.buttonEliminar5);
+            this.Controls.Add(this.buttonRestablecer);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -195,6 +196,6 @@
         private System.Windows.Forms.Button buttonClose5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button buttonEliminar5;
+        private System.Windows.Forms.Button buttonRestablecer;
     }
 }

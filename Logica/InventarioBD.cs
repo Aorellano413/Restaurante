@@ -10,11 +10,17 @@ namespace Logica
 {
     public class InventarioBD
     {    DatosInventario datos = new DatosInventario();
+
         public DataTable MostrarInventario() 
         {
 
             return datos.MostrarInventario(); 
          }
+
+        public DataTable BuscarInventarioPorNombre(string nombre)
+        {
+            return datos.BuscarInventarioPorNombre(nombre);
+        }
 
     }
 }

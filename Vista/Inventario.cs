@@ -36,17 +36,6 @@ namespace Vista
 
   
 
-        private void buttonModificar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonEliminar5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
         private void btnRegresar5_Click(object sender, EventArgs e)
         {
             menuGeneral.Show();
@@ -59,6 +48,27 @@ namespace Vista
             this.Close();
         }
 
-        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtBuscar.Text.Trim();
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                DataTable dt = inventario.BuscarInventarioPorNombre(nombre);
+                dataGridView1.DataSource = dt;  
+            }
+            
+        }
+
+        private void InventarioForm_Load(object sender, EventArgs e)
+        {
+            DataTable dt = inventario.MostrarInventario();
+            dataGridView1.DataSource = dt;
+        }
+
+        private void buttonRestablecer_Click(object sender, EventArgs e)
+        {
+            DataTable dt = inventario.MostrarInventario();
+            dataGridView1.DataSource = dt;  
+        }
     }
 }
