@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Windows.Forms;
+using Vista.GestionIngredientes;
 
 namespace Vista
 {
@@ -24,6 +25,12 @@ namespace Vista
         
        
 
+
+
+
+
+
+
         private void btnCerraGramos_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,14 +42,22 @@ namespace Vista
             this.Close();
         }
 
-        private void dataGridViewGramos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnRegistrarIngrediente_Click(object sender, EventArgs e)
         {
-
+            RegistrarIngrediente registrarIngrediente = new RegistrarIngrediente(this);
+            registrarIngrediente.Show();
         }
 
-        private void RegistoGramos_Load(object sender, EventArgs e)
+        private void btnModificarIngrediente_Click_1(object sender, EventArgs e)
         {
+            ModificarIngrediente modificarIngrediente = new ModificarIngrediente(this);
+            modificarIngrediente.Show();
+        }
 
+        private void btnEliminarIngrediente_Click(object sender, EventArgs e)
+        {
+            EliminarIngrediente eliminarIngrediente = new EliminarIngrediente(this);
+            eliminarIngrediente.Show();
         }
     }
 }

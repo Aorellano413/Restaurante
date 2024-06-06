@@ -266,10 +266,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(459, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 53);
+            this.label2.Size = new System.Drawing.Size(263, 43);
             this.label2.TabIndex = 13;
             this.label2.Text = "REGISTRO DE PLATOS";
             // 

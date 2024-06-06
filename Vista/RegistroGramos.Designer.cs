@@ -91,6 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.label3.Location = new System.Drawing.Point(438, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -109,6 +110,7 @@
             this.btnRegistrarIngrediente.TabIndex = 18;
             this.btnRegistrarIngrediente.Text = "REGISTRAR INGREDIENTE";
             this.btnRegistrarIngrediente.UseVisualStyleBackColor = false;
+            this.btnRegistrarIngrediente.Click += new System.EventHandler(this.btnRegistrarIngrediente_Click);
             // 
             // btnModificarIngrediente
             // 
@@ -121,6 +123,7 @@
             this.btnModificarIngrediente.TabIndex = 19;
             this.btnModificarIngrediente.Text = "MODIFICAR INGREDIENTE";
             this.btnModificarIngrediente.UseVisualStyleBackColor = false;
+            this.btnModificarIngrediente.Click += new System.EventHandler(this.btnModificarIngrediente_Click_1);
             // 
             // btnEliminarIngrediente
             // 
@@ -133,6 +136,7 @@
             this.btnEliminarIngrediente.TabIndex = 20;
             this.btnEliminarIngrediente.Text = "ELIMINAR INGREDIENTE";
             this.btnEliminarIngrediente.UseVisualStyleBackColor = false;
+            this.btnEliminarIngrediente.Click += new System.EventHandler(this.btnEliminarIngrediente_Click);
             // 
             // pictureInventario
             // 
@@ -181,7 +185,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegistoGramos";
             this.Text = "RegistroGramos";
-            this.Load += new System.EventHandler(this.RegistoGramos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureInventario)).EndInit();

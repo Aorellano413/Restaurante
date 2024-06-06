@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionIngredientes\EliminarIngrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionIngredientes\EliminarIngrediente.Designer.cs">
+      <DependentUpon>EliminarIngrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionIngredientes\ModificarIngrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionIngredientes\ModificarIngrediente.Designer.cs">
+      <DependentUpon>ModificarIngrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionIngredientes\RegistrarIngrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionIngredientes\RegistrarIngrediente.Designer.cs">
+      <DependentUpon>RegistrarIngrediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +108,15 @@
     <Compile Include="RegistroProductos.Designer.cs">
       <DependentUpon>RegistroProductos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GestionIngredientes\EliminarIngrediente.resx">
+      <DependentUpon>EliminarIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionIngredientes\ModificarIngrediente.resx">
+      <DependentUpon>ModificarIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionIngredientes\RegistrarIngrediente.resx">
+      <DependentUpon>RegistrarIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,5 +170,6 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
