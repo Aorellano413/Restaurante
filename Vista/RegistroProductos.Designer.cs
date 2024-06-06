@@ -64,7 +64,7 @@
             this.labelId.Location = new System.Drawing.Point(14, 95);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(24, 23);
+            this.labelId.Size = new System.Drawing.Size(37, 35);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "ID:";
             // 
@@ -75,7 +75,7 @@
             this.labelPrecio.Location = new System.Drawing.Point(14, 231);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(57, 23);
+            this.labelPrecio.Size = new System.Drawing.Size(86, 35);
             this.labelPrecio.TabIndex = 1;
             this.labelPrecio.Text = "PRECIO:";
             // 
@@ -86,7 +86,7 @@
             this.labelNombre.Location = new System.Drawing.Point(14, 163);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(65, 23);
+            this.labelNombre.Size = new System.Drawing.Size(98, 35);
             this.labelNombre.TabIndex = 2;
             this.labelNombre.Text = "NOMBRE:";
             // 
@@ -98,7 +98,7 @@
             this.textId.Location = new System.Drawing.Point(180, 95);
             this.textId.Margin = new System.Windows.Forms.Padding(5);
             this.textId.Name = "textId";
-            this.textId.Size = new System.Drawing.Size(164, 26);
+            this.textId.Size = new System.Drawing.Size(164, 35);
             this.textId.TabIndex = 3;
             // 
             // textPrecio
@@ -109,7 +109,7 @@
             this.textPrecio.Location = new System.Drawing.Point(180, 225);
             this.textPrecio.Margin = new System.Windows.Forms.Padding(5);
             this.textPrecio.Name = "textPrecio";
-            this.textPrecio.Size = new System.Drawing.Size(164, 26);
+            this.textPrecio.Size = new System.Drawing.Size(164, 35);
             this.textPrecio.TabIndex = 4;
             // 
             // textNombre
@@ -120,7 +120,7 @@
             this.textNombre.Location = new System.Drawing.Point(180, 163);
             this.textNombre.Margin = new System.Windows.Forms.Padding(5);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(164, 26);
+            this.textNombre.Size = new System.Drawing.Size(164, 35);
             this.textNombre.TabIndex = 5;
             // 
             // dataGridView4
@@ -170,18 +170,21 @@
             // ID
             // 
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 8;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // NOMBRE
             // 
             this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.MinimumWidth = 8;
             this.NOMBRE.Name = "NOMBRE";
             this.NOMBRE.ReadOnly = true;
             // 
             // PRECIO
             // 
             this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.MinimumWidth = 8;
             this.PRECIO.Name = "PRECIO";
             this.PRECIO.ReadOnly = true;
             // 
@@ -189,6 +192,7 @@
             // 
             this.IMAGEN.HeaderText = "IMAGEN";
             this.IMAGEN.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.IMAGEN.MinimumWidth = 8;
             this.IMAGEN.Name = "IMAGEN";
             this.IMAGEN.ReadOnly = true;
             // 
@@ -265,9 +269,9 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(459, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 35);
+            this.label2.Size = new System.Drawing.Size(321, 53);
             this.label2.TabIndex = 13;
-            this.label2.Text = "REGISTRO DE PRODUCTOS AJS";
+            this.label2.Text = "REGISTRO DE PLATOS";
             // 
             // btnCerrarRegistroProducto
             // 
@@ -325,7 +329,7 @@
             // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1160, 600);

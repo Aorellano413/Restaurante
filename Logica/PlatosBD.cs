@@ -16,5 +16,10 @@ namespace Logica
         {
             return datos.MostrarNuevaTabla();
         }
+
+        public DataTable BuscarInventarioPlatosNombre(string nombre)
+        {
+            return datos.BuscarInventarioPlatosPorNombre(nombre);
+        }
     }
 }
