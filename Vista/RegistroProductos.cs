@@ -28,5 +28,7 @@ namespace Vista
             menuGeneral.Show();
             this.Close();
         }
+
+       
     }
 }

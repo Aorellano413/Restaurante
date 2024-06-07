@@ -93,6 +93,7 @@
             // 
             this.btnCerrarInventarioPlatos.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrarInventarioPlatos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarInventarioPlatos.FlatAppearance.BorderSize = 0;
             this.btnCerrarInventarioPlatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarInventarioPlatos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarInventarioPlatos.Image")));
             this.btnCerrarInventarioPlatos.Location = new System.Drawing.Point(765, 9);
@@ -145,7 +146,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(122, 83);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(192, 20);
             this.txtBuscar.TabIndex = 7;
