@@ -51,9 +51,10 @@
             this.btnCerraGramos.FlatAppearance.BorderSize = 0;
             this.btnCerraGramos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerraGramos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerraGramos.Image")));
-            this.btnCerraGramos.Location = new System.Drawing.Point(764, 3);
+            this.btnCerraGramos.Location = new System.Drawing.Point(1146, 5);
+            this.btnCerraGramos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerraGramos.Name = "btnCerraGramos";
-            this.btnCerraGramos.Size = new System.Drawing.Size(33, 32);
+            this.btnCerraGramos.Size = new System.Drawing.Size(50, 49);
             this.btnCerraGramos.TabIndex = 16;
             this.btnCerraGramos.UseVisualStyleBackColor = false;
             this.btnCerraGramos.Click += new System.EventHandler(this.btnCerraGramos_Click);
@@ -66,8 +67,9 @@
             this.panel1.Controls.Add(this.btnCerraGramos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 43);
+            this.panel1.Size = new System.Drawing.Size(1200, 66);
             this.panel1.TabIndex = 17;
             // 
             // btnRegresar
@@ -77,9 +79,10 @@
             this.btnRegresar.FlatAppearance.BorderSize = 0;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(725, 3);
+            this.btnRegresar.Location = new System.Drawing.Point(1088, 5);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(33, 32);
+            this.btnRegresar.Size = new System.Drawing.Size(50, 49);
             this.btnRegresar.TabIndex = 26;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -89,9 +92,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label3.Location = new System.Drawing.Point(292, 6);
+            this.label3.Location = new System.Drawing.Point(438, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 29);
+            this.label3.Size = new System.Drawing.Size(327, 43);
             this.label3.TabIndex = 25;
             this.label3.Text = "GESTION DE INGREDIENTES";
             // 
@@ -100,10 +104,9 @@
             this.btnRegistrarIngrediente.BackColor = System.Drawing.Color.Khaki;
             this.btnRegistrarIngrediente.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarIngrediente.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnRegistrarIngrediente.Location = new System.Drawing.Point(23, 261);
-            this.btnRegistrarIngrediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarIngrediente.Location = new System.Drawing.Point(34, 402);
             this.btnRegistrarIngrediente.Name = "btnRegistrarIngrediente";
-            this.btnRegistrarIngrediente.Size = new System.Drawing.Size(200, 84);
+            this.btnRegistrarIngrediente.Size = new System.Drawing.Size(300, 129);
             this.btnRegistrarIngrediente.TabIndex = 18;
             this.btnRegistrarIngrediente.Text = "REGISTRAR INGREDIENTE";
             this.btnRegistrarIngrediente.UseVisualStyleBackColor = false;
@@ -114,10 +117,9 @@
             this.btnModificarIngrediente.BackColor = System.Drawing.Color.Khaki;
             this.btnModificarIngrediente.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarIngrediente.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnModificarIngrediente.Location = new System.Drawing.Point(310, 261);
-            this.btnModificarIngrediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarIngrediente.Location = new System.Drawing.Point(465, 402);
             this.btnModificarIngrediente.Name = "btnModificarIngrediente";
-            this.btnModificarIngrediente.Size = new System.Drawing.Size(200, 84);
+            this.btnModificarIngrediente.Size = new System.Drawing.Size(300, 129);
             this.btnModificarIngrediente.TabIndex = 19;
             this.btnModificarIngrediente.Text = "MODIFICAR INGREDIENTE";
             this.btnModificarIngrediente.UseVisualStyleBackColor = false;
@@ -128,10 +130,9 @@
             this.btnEliminarIngrediente.BackColor = System.Drawing.Color.Khaki;
             this.btnEliminarIngrediente.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarIngrediente.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnEliminarIngrediente.Location = new System.Drawing.Point(584, 261);
-            this.btnEliminarIngrediente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarIngrediente.Location = new System.Drawing.Point(876, 402);
             this.btnEliminarIngrediente.Name = "btnEliminarIngrediente";
-            this.btnEliminarIngrediente.Size = new System.Drawing.Size(200, 84);
+            this.btnEliminarIngrediente.Size = new System.Drawing.Size(300, 129);
             this.btnEliminarIngrediente.TabIndex = 20;
             this.btnEliminarIngrediente.Text = "ELIMINAR INGREDIENTE";
             this.btnEliminarIngrediente.UseVisualStyleBackColor = false;
@@ -140,10 +141,9 @@
             // pictureInventario
             // 
             this.pictureInventario.Image = ((System.Drawing.Image)(resources.GetObject("pictureInventario.Image")));
-            this.pictureInventario.Location = new System.Drawing.Point(310, 95);
-            this.pictureInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureInventario.Location = new System.Drawing.Point(465, 146);
             this.pictureInventario.Name = "pictureInventario";
-            this.pictureInventario.Size = new System.Drawing.Size(200, 162);
+            this.pictureInventario.Size = new System.Drawing.Size(300, 249);
             this.pictureInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureInventario.TabIndex = 21;
             this.pictureInventario.TabStop = false;
@@ -151,10 +151,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 95);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 146);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 249);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -162,20 +161,19 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(584, 95);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(876, 146);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 162);
+            this.pictureBox2.Size = new System.Drawing.Size(300, 249);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
             // RegistoGramos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureInventario);
@@ -184,6 +182,7 @@
             this.Controls.Add(this.btnRegistrarIngrediente);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegistoGramos";
             this.Text = "RegistroGramos";
             this.panel1.ResumeLayout(false);
