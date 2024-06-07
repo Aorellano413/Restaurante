@@ -41,5 +41,15 @@ namespace Logica
                 throw new Exception("El ingrediente ya existe.");
             }
         }
+
+        public DataTable BuscarIngredientePorNombre(string nombre)
+        {
+            return datos.BuscarIngredientePorNombre(nombre);
+        }
+
+        public void ActualizarIngrediente(Ingrediente ingrediente)
+        {
+            datos.ActualizarIngrediente(ingrediente);
+        }
     }
 }

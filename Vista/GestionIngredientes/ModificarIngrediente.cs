@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Entidades;
+using Logica;
 
 namespace Vista.GestionIngredientes
 {
     public partial class ModificarIngrediente : Form
     {
         private RegistoGramos registoGramos;
+        InventarioBD inventario = new InventarioBD();
+
+
         public ModificarIngrediente(RegistoGramos registoGramos)
         {
             InitializeComponent();
@@ -40,6 +45,52 @@ namespace Vista.GestionIngredientes
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtBuscar.Text.Trim();
+            DataTable dt = inventario.BuscarIngredientePorNombre(nombre);
+            dgvModificarIngrediente.DataSource = dt;
+
+            // Hacer que la columna id_ingrediente sea de solo lectura para que no se pueda modificar
+            if (dgvModificarIngrediente.Columns["id_ingrediente"] != null)
+            {
+                dgvModificarIngrediente.Columns["id_ingrediente"].ReadOnly = true;
+            }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (dgvModificarIngrediente.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvModificarIngrediente.SelectedRows[0];
+
+                int idIngrediente = Convert.ToInt32(selectedRow.Cells["id_ingrediente"].Value);
+                string nombre = selectedRow.Cells["nombre"].Value.ToString();
+                int stock = Convert.ToInt32(selectedRow.Cells["stock"].Value);
+
+                Ingrediente ingrediente = new Ingrediente
+                {
+                    Id = idIngrediente, 
+                    Nombre = nombre,
+                    Stock = stock
+                };
+
+                inventario.ActualizarIngrediente(ingrediente);
+                MessageBox.Show("Ingrediente modificado exitosamente.");
+
+                // Actualizar la vista del inventario
+                Inventario inventarioForm = Application.OpenForms["Inventario"] as Inventario;
+                if (inventarioForm != null)
+                {
+                    inventarioForm.ActualizarInventario();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un ingrediente para modificar.");
+            }
         }
     }
 }
