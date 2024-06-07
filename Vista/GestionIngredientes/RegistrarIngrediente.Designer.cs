@@ -36,7 +36,7 @@
             this.labelStockRI = new System.Windows.Forms.Label();
             this.txtNombreRI = new System.Windows.Forms.TextBox();
             this.txtStockRI = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnRegistrarIngrediente = new System.Windows.Forms.Button();
             this.panelRegistrarIngrediente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,22 +111,23 @@
             this.txtStockRI.Size = new System.Drawing.Size(210, 26);
             this.txtStockRI.TabIndex = 4;
             // 
-            // btnRegistrar
+            // btnRegistrarIngrediente
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
-            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(138, 226);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(243, 132);
-            this.btnRegistrar.TabIndex = 5;
-            this.btnRegistrar.Text = "REGISTRAR";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrarIngrediente.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistrarIngrediente.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarIngrediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarIngrediente.Font = new System.Drawing.Font("Bahnschrift Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarIngrediente.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarIngrediente.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarIngrediente.Image")));
+            this.btnRegistrarIngrediente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarIngrediente.Location = new System.Drawing.Point(138, 226);
+            this.btnRegistrarIngrediente.Name = "btnRegistrarIngrediente";
+            this.btnRegistrarIngrediente.Size = new System.Drawing.Size(243, 132);
+            this.btnRegistrarIngrediente.TabIndex = 5;
+            this.btnRegistrarIngrediente.Text = "REGISTRAR";
+            this.btnRegistrarIngrediente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrarIngrediente.UseVisualStyleBackColor = false;
+            this.btnRegistrarIngrediente.Click += new System.EventHandler(this.btnRegistrarIngrediente_Click);
             // 
             // RegistrarIngrediente
             // 
@@ -134,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(570, 414);
-            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnRegistrarIngrediente);
             this.Controls.Add(this.txtStockRI);
             this.Controls.Add(this.txtNombreRI);
             this.Controls.Add(this.labelStockRI);
@@ -160,6 +161,6 @@
         private System.Windows.Forms.Label labelStockRI;
         private System.Windows.Forms.TextBox txtNombreRI;
         private System.Windows.Forms.TextBox txtStockRI;
-        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnRegistrarIngrediente;
     }
 }

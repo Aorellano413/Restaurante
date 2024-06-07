@@ -1,4 +1,5 @@
-﻿using Persistencia;
+﻿using Entidades;
+using Persistencia;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,9 @@ using System.Threading.Tasks;
 namespace Logica
 {
     public class InventarioBD
-    {    DatosInventario datos = new DatosInventario();
+    {   
+        
+        DatosInventario datos = new DatosInventario();
 
         public DataTable MostrarInventario() 
         {
@@ -22,5 +25,21 @@ namespace Logica
             return datos.BuscarInventarioPorNombre(nombre);
         }
 
+        public bool ExisteIngrediente(string nombre)
+        {
+            return datos.ExisteIngrediente(nombre);
+        }
+
+        public void InsertarIngrediente(Ingrediente ingrediente)
+        {
+            if (!ExisteIngrediente(ingrediente.Nombre))
+            {
+                datos.InsertarIngrediente(ingrediente);
+            }
+            else
+            {
+                throw new Exception("El ingrediente ya existe.");
+            }
+        }
     }
 }

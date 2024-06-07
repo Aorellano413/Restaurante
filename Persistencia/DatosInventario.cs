@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Entidades;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -56,6 +57,35 @@ namespace Persistencia
             }
             return dt;
         }
+
+        public bool ExisteIngrediente(string nombre)
+        {
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = "SELECT COUNT(*) FROM restaurante.ingredientes WHERE nombre = @nombre;";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", nombre);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+        public void InsertarIngrediente(Ingrediente ingrediente)
+        {
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = "INSERT INTO restaurante.ingredientes (nombre, stock) VALUES (@nombre, @stock);";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", ingrediente.Nombre);
+                    cmd.Parameters.AddWithValue("@stock", ingrediente.Stock);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
 

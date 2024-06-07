@@ -70,5 +70,11 @@ namespace Vista
             DataTable dt = inventario.MostrarInventario();
             dataGridView1.DataSource = dt;  
         }
+
+        public void ActualizarInventario()
+        {
+            DataTable dt = inventario.MostrarInventario();
+            dataGridView1.DataSource = dt;
+        }
     }
 }
