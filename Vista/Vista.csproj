@@ -64,6 +64,24 @@
     <Compile Include="GestionIngredientes\RegistrarIngrediente.Designer.cs">
       <DependentUpon>RegistrarIngrediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionPlatos\EliminarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPlatos\EliminarPlato.Designer.cs">
+      <DependentUpon>EliminarPlato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPlatos\ModificarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPlatos\ModificarPlato.Designer.cs">
+      <DependentUpon>ModificarPlato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPlatos\RegistrarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPlatos\RegistrarPlato.Designer.cs">
+      <DependentUpon>RegistrarPlato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +134,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionIngredientes\RegistrarIngrediente.resx">
       <DependentUpon>RegistrarIngrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPlatos\EliminarPlato.resx">
+      <DependentUpon>EliminarPlato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPlatos\ModificarPlato.resx">
+      <DependentUpon>ModificarPlato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPlatos\RegistrarPlato.resx">
+      <DependentUpon>RegistrarPlato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>

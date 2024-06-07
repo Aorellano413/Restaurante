@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Drawing;
+using Vista.GestionPlatos;
 
 namespace Vista
 {
@@ -29,6 +30,22 @@ namespace Vista
             this.Close();
         }
 
-       
+        private void btnRegistrarPlato_Click(object sender, EventArgs e)
+        {
+            RegistrarPlato registrarPlato = new RegistrarPlato(this);
+            registrarPlato.Show();
+        }
+
+        private void btnModificarPlato_Click(object sender, EventArgs e)
+        {
+            ModificarPlato modificarPlato = new ModificarPlato(this);
+            modificarPlato.Show();
+        }
+
+        private void btnEliminarPlato_Click(object sender, EventArgs e)
+        {
+            EliminarPlato eliminarPlato = new EliminarPlato(this);
+            eliminarPlato.Show();
+        }
     }
 }

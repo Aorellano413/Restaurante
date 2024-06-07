@@ -33,12 +33,12 @@
             this.btnCerrarRegistroProducto = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnRegistrarPlato = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnModificarPlato = new System.Windows.Forms.Button();
+            this.btnEliminarPlato = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnModificarPlato = new System.Windows.Forms.Button();
+            this.btnRegistrarPlato = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,7 +52,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(330, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 29);
+            this.label2.Size = new System.Drawing.Size(248, 43);
             this.label2.TabIndex = 13;
             this.label2.Text = "GESTION DE PLATOS";
             // 
@@ -100,29 +100,31 @@
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // btnRegistrarPlato
+            // btnModificarPlato
             // 
-            this.btnRegistrarPlato.BackColor = System.Drawing.Color.Khaki;
-            this.btnRegistrarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnRegistrarPlato.Location = new System.Drawing.Point(313, 283);
-            this.btnRegistrarPlato.Name = "btnRegistrarPlato";
-            this.btnRegistrarPlato.Size = new System.Drawing.Size(200, 84);
-            this.btnRegistrarPlato.TabIndex = 19;
-            this.btnRegistrarPlato.Text = "REGISTRAR PLATO";
-            this.btnRegistrarPlato.UseVisualStyleBackColor = false;
+            this.btnModificarPlato.BackColor = System.Drawing.Color.Khaki;
+            this.btnModificarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnModificarPlato.Location = new System.Drawing.Point(313, 283);
+            this.btnModificarPlato.Name = "btnModificarPlato";
+            this.btnModificarPlato.Size = new System.Drawing.Size(200, 84);
+            this.btnModificarPlato.TabIndex = 19;
+            this.btnModificarPlato.Text = "MODIFICAR PLATO";
+            this.btnModificarPlato.UseVisualStyleBackColor = false;
+            this.btnModificarPlato.Click += new System.EventHandler(this.btnModificarPlato_Click);
             // 
-            // button2
+            // btnEliminarPlato
             // 
-            this.button2.BackColor = System.Drawing.Color.Khaki;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.button2.Location = new System.Drawing.Point(588, 283);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 84);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "ELIMINAR PLATO";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEliminarPlato.BackColor = System.Drawing.Color.Khaki;
+            this.btnEliminarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnEliminarPlato.Location = new System.Drawing.Point(588, 283);
+            this.btnEliminarPlato.Name = "btnEliminarPlato";
+            this.btnEliminarPlato.Size = new System.Drawing.Size(200, 84);
+            this.btnEliminarPlato.TabIndex = 21;
+            this.btnEliminarPlato.Text = "ELIMINAR PLATO";
+            this.btnEliminarPlato.UseVisualStyleBackColor = false;
+            this.btnEliminarPlato.Click += new System.EventHandler(this.btnEliminarPlato_Click);
             // 
             // pictureBox1
             // 
@@ -154,30 +156,31 @@
             this.pictureBox3.TabIndex = 25;
             this.pictureBox3.TabStop = false;
             // 
-            // btnModificarPlato
+            // btnRegistrarPlato
             // 
-            this.btnModificarPlato.BackColor = System.Drawing.Color.Khaki;
-            this.btnModificarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnModificarPlato.Location = new System.Drawing.Point(26, 283);
-            this.btnModificarPlato.Name = "btnModificarPlato";
-            this.btnModificarPlato.Size = new System.Drawing.Size(200, 84);
-            this.btnModificarPlato.TabIndex = 20;
-            this.btnModificarPlato.Text = "MODIFICAR PLATO";
-            this.btnModificarPlato.UseVisualStyleBackColor = false;
+            this.btnRegistrarPlato.BackColor = System.Drawing.Color.Khaki;
+            this.btnRegistrarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnRegistrarPlato.Location = new System.Drawing.Point(26, 283);
+            this.btnRegistrarPlato.Name = "btnRegistrarPlato";
+            this.btnRegistrarPlato.Size = new System.Drawing.Size(200, 84);
+            this.btnRegistrarPlato.TabIndex = 20;
+            this.btnRegistrarPlato.Text = "REGISTRAR PLATO";
+            this.btnRegistrarPlato.UseVisualStyleBackColor = false;
+            this.btnRegistrarPlato.Click += new System.EventHandler(this.btnRegistrarPlato_Click);
             // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnModificarPlato);
+            this.Controls.Add(this.btnEliminarPlato);
             this.Controls.Add(this.btnRegistrarPlato);
+            this.Controls.Add(this.btnModificarPlato);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -198,11 +201,11 @@
         private System.Windows.Forms.Button btnCerrarRegistroProducto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.Button btnRegistrarPlato;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnModificarPlato;
+        private System.Windows.Forms.Button btnEliminarPlato;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnModificarPlato;
+        private System.Windows.Forms.Button btnRegistrarPlato;
     }
 }
