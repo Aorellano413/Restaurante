@@ -47,8 +47,9 @@
             this.panelModificarPlato.Controls.Add(this.labelModificarPlato);
             this.panelModificarPlato.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelModificarPlato.Location = new System.Drawing.Point(0, 0);
+            this.panelModificarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelModificarPlato.Name = "panelModificarPlato";
-            this.panelModificarPlato.Size = new System.Drawing.Size(718, 51);
+            this.panelModificarPlato.Size = new System.Drawing.Size(479, 33);
             this.panelModificarPlato.TabIndex = 0;
             this.panelModificarPlato.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelModificarPlato_MouseDown);
             // 
@@ -59,10 +60,9 @@
             this.btnCerrarRegistrarIngrediente.FlatAppearance.BorderSize = 0;
             this.btnCerrarRegistrarIngrediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarRegistrarIngrediente.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarRegistrarIngrediente.Image")));
-            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(680, 5);
-            this.btnCerrarRegistrarIngrediente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(453, 3);
             this.btnCerrarRegistrarIngrediente.Name = "btnCerrarRegistrarIngrediente";
-            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(34, 35);
+            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(23, 23);
             this.btnCerrarRegistrarIngrediente.TabIndex = 17;
             this.btnCerrarRegistrarIngrediente.UseVisualStyleBackColor = false;
             this.btnCerrarRegistrarIngrediente.Click += new System.EventHandler(this.btnCerrarRegistrarIngrediente_Click);
@@ -71,9 +71,10 @@
             // 
             this.labelModificarPlato.AutoSize = true;
             this.labelModificarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModificarPlato.Location = new System.Drawing.Point(243, 0);
+            this.labelModificarPlato.Location = new System.Drawing.Point(162, 0);
+            this.labelModificarPlato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelModificarPlato.Name = "labelModificarPlato";
-            this.labelModificarPlato.Size = new System.Drawing.Size(223, 43);
+            this.labelModificarPlato.Size = new System.Drawing.Size(151, 29);
             this.labelModificarPlato.TabIndex = 1;
             this.labelModificarPlato.Text = "MODIFICAR PLATO";
             // 
@@ -84,10 +85,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(13, 59);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(9, 38);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(136, 68);
+            this.btnBuscar.Size = new System.Drawing.Size(91, 44);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,23 +95,26 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(156, 86);
+            this.txtBuscar.Location = new System.Drawing.Point(104, 56);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(286, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(192, 20);
             this.txtBuscar.TabIndex = 9;
             // 
             // dgvModificarPlato
             // 
+            this.dgvModificarPlato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvModificarPlato.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvModificarPlato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvModificarPlato.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvModificarPlato.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvModificarPlato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModificarPlato.Location = new System.Drawing.Point(12, 135);
+            this.dgvModificarPlato.Location = new System.Drawing.Point(8, 88);
+            this.dgvModificarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvModificarPlato.Name = "dgvModificarPlato";
             this.dgvModificarPlato.RowHeadersWidth = 62;
             this.dgvModificarPlato.RowTemplate.Height = 28;
-            this.dgvModificarPlato.Size = new System.Drawing.Size(694, 252);
+            this.dgvModificarPlato.Size = new System.Drawing.Size(463, 164);
             this.dgvModificarPlato.TabIndex = 10;
             // 
             // btnRegistrar
@@ -123,9 +126,10 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(199, 404);
+            this.btnRegistrar.Location = new System.Drawing.Point(133, 263);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(243, 123);
+            this.btnRegistrar.Size = new System.Drawing.Size(162, 80);
             this.btnRegistrar.TabIndex = 11;
             this.btnRegistrar.Text = "MODIFICAR";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,16 +137,17 @@
             // 
             // ModificarPlato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(718, 563);
+            this.ClientSize = new System.Drawing.Size(479, 366);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dgvModificarPlato);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panelModificarPlato);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ModificarPlato";
             this.Text = "ModificarPlato";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModificarPlato_MouseDown);

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class MenuProductos : Form
+    public partial class MenuPlatos : Form
     {
         private Login login;
-        public MenuProductos(Login login)
+        public MenuPlatos(Login login)
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -30,5 +30,7 @@ namespace Vista
             login.Show();
             this.Close();
         }
+
+        
     }
 }

@@ -47,8 +47,9 @@
             this.panelEliminarPlato.Controls.Add(this.labelEliminarPlato);
             this.panelEliminarPlato.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEliminarPlato.Location = new System.Drawing.Point(0, 0);
+            this.panelEliminarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelEliminarPlato.Name = "panelEliminarPlato";
-            this.panelEliminarPlato.Size = new System.Drawing.Size(718, 51);
+            this.panelEliminarPlato.Size = new System.Drawing.Size(479, 33);
             this.panelEliminarPlato.TabIndex = 0;
             this.panelEliminarPlato.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelEliminarPlato_MouseDown);
             // 
@@ -59,10 +60,9 @@
             this.btnCerrarEliminarPlato.FlatAppearance.BorderSize = 0;
             this.btnCerrarEliminarPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarEliminarPlato.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarEliminarPlato.Image")));
-            this.btnCerrarEliminarPlato.Location = new System.Drawing.Point(671, 8);
-            this.btnCerrarEliminarPlato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrarEliminarPlato.Location = new System.Drawing.Point(447, 5);
             this.btnCerrarEliminarPlato.Name = "btnCerrarEliminarPlato";
-            this.btnCerrarEliminarPlato.Size = new System.Drawing.Size(34, 35);
+            this.btnCerrarEliminarPlato.Size = new System.Drawing.Size(23, 23);
             this.btnCerrarEliminarPlato.TabIndex = 18;
             this.btnCerrarEliminarPlato.UseVisualStyleBackColor = false;
             this.btnCerrarEliminarPlato.Click += new System.EventHandler(this.btnCerrarEliminarPlato_Click);
@@ -71,9 +71,10 @@
             // 
             this.labelEliminarPlato.AutoSize = true;
             this.labelEliminarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEliminarPlato.Location = new System.Drawing.Point(258, 0);
+            this.labelEliminarPlato.Location = new System.Drawing.Point(172, 0);
+            this.labelEliminarPlato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEliminarPlato.Name = "labelEliminarPlato";
-            this.labelEliminarPlato.Size = new System.Drawing.Size(207, 43);
+            this.labelEliminarPlato.Size = new System.Drawing.Size(141, 29);
             this.labelEliminarPlato.TabIndex = 1;
             this.labelEliminarPlato.Text = "ELIMINAR PLATO";
             // 
@@ -84,10 +85,9 @@
             this.btnBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(13, 68);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(9, 44);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(138, 68);
+            this.btnBuscar.Size = new System.Drawing.Size(92, 44);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,23 +95,26 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(158, 95);
+            this.txtBuscar.Location = new System.Drawing.Point(105, 62);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(286, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(192, 20);
             this.txtBuscar.TabIndex = 10;
             // 
             // dgvEliminarPlato
             // 
+            this.dgvEliminarPlato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEliminarPlato.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvEliminarPlato.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEliminarPlato.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvEliminarPlato.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvEliminarPlato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEliminarPlato.Location = new System.Drawing.Point(13, 144);
+            this.dgvEliminarPlato.Location = new System.Drawing.Point(9, 94);
+            this.dgvEliminarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEliminarPlato.Name = "dgvEliminarPlato";
             this.dgvEliminarPlato.RowHeadersWidth = 62;
             this.dgvEliminarPlato.RowTemplate.Height = 28;
-            this.dgvEliminarPlato.Size = new System.Drawing.Size(693, 260);
+            this.dgvEliminarPlato.Size = new System.Drawing.Size(462, 169);
             this.dgvEliminarPlato.TabIndex = 11;
             // 
             // btnEliminar
@@ -123,9 +126,10 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(239, 429);
+            this.btnEliminar.Location = new System.Drawing.Point(159, 279);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(226, 105);
+            this.btnEliminar.Size = new System.Drawing.Size(151, 68);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,16 +137,17 @@
             // 
             // EliminarPlato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(718, 563);
+            this.ClientSize = new System.Drawing.Size(479, 366);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvEliminarPlato);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panelEliminarPlato);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EliminarPlato";
             this.Text = "EliminarPlato";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EliminarPlato_MouseDown);

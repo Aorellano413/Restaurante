@@ -78,7 +78,7 @@ namespace Vista
                 }
                 else if (usuario.Rol == "Cliente")
                 {
-                    MenuProductos menuProductos = new MenuProductos(this);
+                    MenuPlatos menuProductos = new MenuPlatos(this);
                     menuProductos.Show();
                     this.Hide();
                 }
@@ -94,6 +94,7 @@ namespace Vista
         private void Horafecha_Tick(object sender, EventArgs e)
         {
             labelHora.Text = DateTime.Now.ToLongTimeString();
+            labelfecha.Text = DateTime.Now.ToLongDateString();
         }
 
 

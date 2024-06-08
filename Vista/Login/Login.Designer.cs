@@ -44,10 +44,9 @@
             this.Horafecha = new System.Windows.Forms.Timer(this.components);
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelfecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -148,6 +147,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.Controls.Add(this.labelfecha);
             this.panel1.Controls.Add(this.labelHora);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -194,15 +194,16 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "TIIPO:";
             // 
-            // pictureBox1
+            // labelfecha
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(311, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.labelfecha.AutoSize = true;
+            this.labelfecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfecha.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelfecha.Location = new System.Drawing.Point(21, 376);
+            this.labelfecha.Name = "labelfecha";
+            this.labelfecha.Size = new System.Drawing.Size(72, 35);
+            this.labelfecha.TabIndex = 10;
+            this.labelfecha.Text = "Fecha";
             // 
             // Login
             // 
@@ -210,7 +211,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.panel1);
@@ -228,7 +228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,7 +248,7 @@
         private System.Windows.Forms.Timer Horafecha;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelfecha;
     }
 }
 

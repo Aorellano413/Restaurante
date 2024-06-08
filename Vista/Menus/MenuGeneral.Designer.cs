@@ -75,7 +75,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(306, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,7 +88,7 @@
             this.btnInventariosPlatos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventariosPlatos.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnInventariosPlatos.Location = new System.Drawing.Point(306, 206);
-            this.btnInventariosPlatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventariosPlatos.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventariosPlatos.Name = "btnInventariosPlatos";
             this.btnInventariosPlatos.Size = new System.Drawing.Size(200, 84);
             this.btnInventariosPlatos.TabIndex = 9;
@@ -112,7 +112,7 @@
             this.labelHora1.AutoSize = true;
             this.labelHora1.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHora1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelHora1.Location = new System.Drawing.Point(941, 8);
+            this.labelHora1.Location = new System.Drawing.Point(925, 8);
             this.labelHora1.Name = "labelHora1";
             this.labelHora1.Size = new System.Drawing.Size(85, 45);
             this.labelHora1.TabIndex = 6;
@@ -133,7 +133,7 @@
             // 
             this.pictureRegistrarProductos.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegistrarProductos.Image")));
             this.pictureRegistrarProductos.Location = new System.Drawing.Point(894, 40);
-            this.pictureRegistrarProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureRegistrarProductos.Margin = new System.Windows.Forms.Padding(2);
             this.pictureRegistrarProductos.Name = "pictureRegistrarProductos";
             this.pictureRegistrarProductos.Size = new System.Drawing.Size(200, 162);
             this.pictureRegistrarProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +144,7 @@
             // 
             this.pictureRegistrarGramos.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegistrarGramos.Image")));
             this.pictureRegistrarGramos.Location = new System.Drawing.Point(601, 40);
-            this.pictureRegistrarGramos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureRegistrarGramos.Margin = new System.Windows.Forms.Padding(2);
             this.pictureRegistrarGramos.Name = "pictureRegistrarGramos";
             this.pictureRegistrarGramos.Size = new System.Drawing.Size(200, 162);
             this.pictureRegistrarGramos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +155,7 @@
             // 
             this.pictureInventario.Image = ((System.Drawing.Image)(resources.GetObject("pictureInventario.Image")));
             this.pictureInventario.Location = new System.Drawing.Point(23, 40);
-            this.pictureInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureInventario.Margin = new System.Windows.Forms.Padding(2);
             this.pictureInventario.Name = "pictureInventario";
             this.pictureInventario.Size = new System.Drawing.Size(200, 162);
             this.pictureInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +168,7 @@
             this.btnRegistrarProductos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarProductos.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnRegistrarProductos.Location = new System.Drawing.Point(894, 206);
-            this.btnRegistrarProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarProductos.Name = "btnRegistrarProductos";
             this.btnRegistrarProductos.Size = new System.Drawing.Size(200, 84);
             this.btnRegistrarProductos.TabIndex = 2;
@@ -182,7 +182,7 @@
             this.btnRegistrarGramos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarGramos.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnRegistrarGramos.Location = new System.Drawing.Point(601, 206);
-            this.btnRegistrarGramos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarGramos.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarGramos.Name = "btnRegistrarGramos";
             this.btnRegistrarGramos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnRegistrarGramos.Size = new System.Drawing.Size(200, 84);
@@ -197,7 +197,7 @@
             this.btnInventario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.btnInventario.Location = new System.Drawing.Point(23, 206);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(200, 84);
             this.btnInventario.TabIndex = 0;
@@ -243,7 +243,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(501, 1);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 29);
@@ -255,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(1105, 499);
+            this.ClientSize = new System.Drawing.Size(1106, 499);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.buttonClose2);
