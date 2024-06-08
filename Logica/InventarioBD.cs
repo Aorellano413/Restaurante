@@ -51,5 +51,10 @@ namespace Logica
         {
             datos.ActualizarIngrediente(ingrediente);
         }
+
+        public void EliminarIngrediente(int id)
+        {
+            datos.EliminarIngrediente(id);
+        }
     }
 }

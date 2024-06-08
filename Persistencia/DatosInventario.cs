@@ -118,6 +118,19 @@ namespace Persistencia
             }
         }
 
+        public void EliminarIngrediente(int id)
+        {
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = "DELETE FROM restaurante.ingredientes WHERE id_ingrediente = @id;";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
 
