@@ -37,13 +37,16 @@
             this.txtNombreRP = new System.Windows.Forms.TextBox();
             this.txtStockRP = new System.Windows.Forms.TextBox();
             this.btnRegistrarRP = new System.Windows.Forms.Button();
-            this.btnAñadirRP = new System.Windows.Forms.Button();
+            this.btnAñadirDescripcionRP = new System.Windows.Forms.Button();
             this.labelDescripcionRP = new System.Windows.Forms.Label();
             this.labelPrecioRP = new System.Windows.Forms.Label();
             this.txtPrecioRP = new System.Windows.Forms.TextBox();
             this.cmbDescripcionRP = new System.Windows.Forms.ComboBox();
-            this.dgvRegistrarPlato = new System.Windows.Forms.DataGridView();
             this.btnLimpiarRP = new System.Windows.Forms.Button();
+            this.btnAñadirPrecioRP = new System.Windows.Forms.Button();
+            this.btnAñadirStockRP = new System.Windows.Forms.Button();
+            this.btnAñadirNombreRP = new System.Windows.Forms.Button();
+            this.dgvRegistrarPlato = new System.Windows.Forms.DataGridView();
             this.panelRegistrarPlato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrarPlato)).BeginInit();
             this.SuspendLayout();
@@ -135,20 +138,22 @@
             this.btnRegistrarRP.Text = "REGISTRAR";
             this.btnRegistrarRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrarRP.UseVisualStyleBackColor = false;
+            this.btnRegistrarRP.Click += new System.EventHandler(this.btnRegistrarRP_Click);
             // 
-            // btnAñadirRP
+            // btnAñadirDescripcionRP
             // 
-            this.btnAñadirRP.BackColor = System.Drawing.Color.Transparent;
-            this.btnAñadirRP.FlatAppearance.BorderSize = 0;
-            this.btnAñadirRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirRP.ForeColor = System.Drawing.Color.Black;
-            this.btnAñadirRP.Location = new System.Drawing.Point(461, 145);
-            this.btnAñadirRP.Name = "btnAñadirRP";
-            this.btnAñadirRP.Size = new System.Drawing.Size(99, 43);
-            this.btnAñadirRP.TabIndex = 7;
-            this.btnAñadirRP.Text = "AÑADIR";
-            this.btnAñadirRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAñadirRP.UseVisualStyleBackColor = false;
+            this.btnAñadirDescripcionRP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirDescripcionRP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirDescripcionRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirDescripcionRP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirDescripcionRP.Location = new System.Drawing.Point(461, 145);
+            this.btnAñadirDescripcionRP.Name = "btnAñadirDescripcionRP";
+            this.btnAñadirDescripcionRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirDescripcionRP.TabIndex = 7;
+            this.btnAñadirDescripcionRP.Text = "AÑADIR";
+            this.btnAñadirDescripcionRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirDescripcionRP.UseVisualStyleBackColor = false;
+            this.btnAñadirDescripcionRP.Click += new System.EventHandler(this.btnAñadirDescripcionRP_Click);
             // 
             // labelDescripcionRP
             // 
@@ -185,17 +190,6 @@
             this.cmbDescripcionRP.Size = new System.Drawing.Size(210, 28);
             this.cmbDescripcionRP.TabIndex = 11;
             // 
-            // dgvRegistrarPlato
-            // 
-            this.dgvRegistrarPlato.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvRegistrarPlato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRegistrarPlato.Location = new System.Drawing.Point(12, 360);
-            this.dgvRegistrarPlato.Name = "dgvRegistrarPlato";
-            this.dgvRegistrarPlato.RowHeadersWidth = 62;
-            this.dgvRegistrarPlato.RowTemplate.Height = 28;
-            this.dgvRegistrarPlato.Size = new System.Drawing.Size(779, 160);
-            this.dgvRegistrarPlato.TabIndex = 12;
-            // 
             // btnLimpiarRP
             // 
             this.btnLimpiarRP.BackColor = System.Drawing.Color.Transparent;
@@ -209,6 +203,63 @@
             this.btnLimpiarRP.Text = "LIMPIAR";
             this.btnLimpiarRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarRP.UseVisualStyleBackColor = false;
+            this.btnLimpiarRP.Click += new System.EventHandler(this.btnLimpiarRP_Click);
+            // 
+            // btnAñadirPrecioRP
+            // 
+            this.btnAñadirPrecioRP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirPrecioRP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirPrecioRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirPrecioRP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirPrecioRP.Location = new System.Drawing.Point(461, 220);
+            this.btnAñadirPrecioRP.Name = "btnAñadirPrecioRP";
+            this.btnAñadirPrecioRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirPrecioRP.TabIndex = 14;
+            this.btnAñadirPrecioRP.Text = "AÑADIR";
+            this.btnAñadirPrecioRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirPrecioRP.UseVisualStyleBackColor = false;
+            this.btnAñadirPrecioRP.Click += new System.EventHandler(this.btnAñadirPrecioRP_Click);
+            // 
+            // btnAñadirStockRP
+            // 
+            this.btnAñadirStockRP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirStockRP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirStockRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirStockRP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirStockRP.Location = new System.Drawing.Point(461, 285);
+            this.btnAñadirStockRP.Name = "btnAñadirStockRP";
+            this.btnAñadirStockRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirStockRP.TabIndex = 15;
+            this.btnAñadirStockRP.Text = "AÑADIR";
+            this.btnAñadirStockRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirStockRP.UseVisualStyleBackColor = false;
+            this.btnAñadirStockRP.Click += new System.EventHandler(this.btnAñadirStockRP_Click);
+            // 
+            // btnAñadirNombreRP
+            // 
+            this.btnAñadirNombreRP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirNombreRP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirNombreRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirNombreRP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirNombreRP.Location = new System.Drawing.Point(461, 82);
+            this.btnAñadirNombreRP.Name = "btnAñadirNombreRP";
+            this.btnAñadirNombreRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirNombreRP.TabIndex = 16;
+            this.btnAñadirNombreRP.Text = "AÑADIR";
+            this.btnAñadirNombreRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirNombreRP.UseVisualStyleBackColor = false;
+            this.btnAñadirNombreRP.Click += new System.EventHandler(this.btnAñadirNombreRP_Click);
+            // 
+            // dgvRegistrarPlato
+            // 
+            this.dgvRegistrarPlato.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvRegistrarPlato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistrarPlato.Location = new System.Drawing.Point(12, 341);
+            this.dgvRegistrarPlato.Name = "dgvRegistrarPlato";
+            this.dgvRegistrarPlato.RowHeadersWidth = 62;
+            this.dgvRegistrarPlato.RowTemplate.Height = 28;
+            this.dgvRegistrarPlato.Size = new System.Drawing.Size(779, 179);
+            this.dgvRegistrarPlato.TabIndex = 17;
             // 
             // RegistrarPlato
             // 
@@ -216,13 +267,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(804, 660);
-            this.Controls.Add(this.btnLimpiarRP);
             this.Controls.Add(this.dgvRegistrarPlato);
+            this.Controls.Add(this.btnAñadirNombreRP);
+            this.Controls.Add(this.btnAñadirStockRP);
+            this.Controls.Add(this.btnAñadirPrecioRP);
+            this.Controls.Add(this.btnLimpiarRP);
             this.Controls.Add(this.cmbDescripcionRP);
             this.Controls.Add(this.txtPrecioRP);
             this.Controls.Add(this.labelPrecioRP);
             this.Controls.Add(this.labelDescripcionRP);
-            this.Controls.Add(this.btnAñadirRP);
+            this.Controls.Add(this.btnAñadirDescripcionRP);
             this.Controls.Add(this.btnRegistrarRP);
             this.Controls.Add(this.txtStockRP);
             this.Controls.Add(this.txtNombreRP);
@@ -251,12 +305,15 @@
         private System.Windows.Forms.TextBox txtNombreRP;
         private System.Windows.Forms.TextBox txtStockRP;
         private System.Windows.Forms.Button btnRegistrarRP;
-        private System.Windows.Forms.Button btnAñadirRP;
+        private System.Windows.Forms.Button btnAñadirDescripcionRP;
         private System.Windows.Forms.Label labelDescripcionRP;
         private System.Windows.Forms.Label labelPrecioRP;
         private System.Windows.Forms.TextBox txtPrecioRP;
         private System.Windows.Forms.ComboBox cmbDescripcionRP;
-        private System.Windows.Forms.DataGridView dgvRegistrarPlato;
         private System.Windows.Forms.Button btnLimpiarRP;
+        private System.Windows.Forms.Button btnAñadirPrecioRP;
+        private System.Windows.Forms.Button btnAñadirStockRP;
+        private System.Windows.Forms.Button btnAñadirNombreRP;
+        private System.Windows.Forms.DataGridView dgvRegistrarPlato;
     }
 }

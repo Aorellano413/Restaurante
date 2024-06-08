@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Persistencia;
 using System.Data;
+using Entidades;
 
 namespace Logica
 {
     public class PlatosBD
     {
-        DatosNuevaTabla datos = new DatosNuevaTabla();
+        InventarioPlatos datos = new InventarioPlatos();
 
         public DataTable MostrarNuevaTabla()
         {
@@ -21,5 +22,16 @@ namespace Logica
         {
             return datos.BuscarInventarioPlatosPorNombre(nombre);
         }
+
+        public void InsertarPlato(Plato plato)
+        {
+            datos.InsertarPlato(plato);
+        }
+
+        public List<Ingrediente> ObtenerIngredientes()
+        {
+            return datos.ObtenerIngredientes();
+        }
+
     }
 }
