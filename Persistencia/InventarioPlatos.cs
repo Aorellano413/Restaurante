@@ -191,18 +191,6 @@ namespace Persistencia
                         cmd.Parameters.AddWithValue("@idPlato", idPlato);
                         cmd.ExecuteNonQuery();
                     }
-
-                    // Update ingredient stock in inventory
-                    query = @"
-                        UPDATE INGREDIENTES 
-                        SET stock = stock - @cantidad 
-                        WHERE id_ingrediente = @idIngrediente;";
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@cantidad", platoIngrediente.Cantidad);
-                        cmd.Parameters.AddWithValue("@idIngrediente", platoIngrediente.IdIngrediente);
-                        cmd.ExecuteNonQuery();
-                    }
                 }
             }
         }
