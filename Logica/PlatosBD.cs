@@ -33,5 +33,10 @@ namespace Logica
             return datos.ObtenerIngredientes();
         }
 
+        public void ModificarPlato(Plato plato)
+        {
+            datos.ModificarPlato(plato);
+        }
+
     }
 }

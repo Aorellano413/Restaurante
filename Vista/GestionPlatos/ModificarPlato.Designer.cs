@@ -32,10 +32,26 @@
             this.panelModificarPlato = new System.Windows.Forms.Panel();
             this.btnCerrarRegistrarIngrediente = new System.Windows.Forms.Button();
             this.labelModificarPlato = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscarMP = new System.Windows.Forms.Button();
+            this.txtBuscarPlatoMP = new System.Windows.Forms.TextBox();
+            this.btnModificarMP = new System.Windows.Forms.Button();
             this.dgvModificarPlato = new System.Windows.Forms.DataGridView();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.labelNombreMP = new System.Windows.Forms.Label();
+            this.labelDescripcionMP = new System.Windows.Forms.Label();
+            this.labelPrecioMP = new System.Windows.Forms.Label();
+            this.labelStockMP = new System.Windows.Forms.Label();
+            this.txtNombreMP = new System.Windows.Forms.TextBox();
+            this.txtPrecioMP = new System.Windows.Forms.TextBox();
+            this.txtStockMP = new System.Windows.Forms.TextBox();
+            this.cmbDescripcionMP = new System.Windows.Forms.ComboBox();
+            this.btnAñadirNombreMP = new System.Windows.Forms.Button();
+            this.btnAñadirDescripcionMP = new System.Windows.Forms.Button();
+            this.btnAñadirPrecioMP = new System.Windows.Forms.Button();
+            this.btnAñadirStockMP = new System.Windows.Forms.Button();
+            this.btnLimpiarNombreMP = new System.Windows.Forms.Button();
+            this.btnLimpiarDescripcionMP = new System.Windows.Forms.Button();
+            this.btnLimpiarPrecioMP = new System.Windows.Forms.Button();
+            this.btnLimpiarStockMP = new System.Windows.Forms.Button();
             this.panelModificarPlato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModificarPlato)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +63,8 @@
             this.panelModificarPlato.Controls.Add(this.labelModificarPlato);
             this.panelModificarPlato.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelModificarPlato.Location = new System.Drawing.Point(0, 0);
-            this.panelModificarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelModificarPlato.Name = "panelModificarPlato";
-            this.panelModificarPlato.Size = new System.Drawing.Size(479, 33);
+            this.panelModificarPlato.Size = new System.Drawing.Size(804, 51);
             this.panelModificarPlato.TabIndex = 0;
             this.panelModificarPlato.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelModificarPlato_MouseDown);
             // 
@@ -60,9 +75,10 @@
             this.btnCerrarRegistrarIngrediente.FlatAppearance.BorderSize = 0;
             this.btnCerrarRegistrarIngrediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarRegistrarIngrediente.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarRegistrarIngrediente.Image")));
-            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(453, 3);
+            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(766, 0);
+            this.btnCerrarRegistrarIngrediente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrarRegistrarIngrediente.Name = "btnCerrarRegistrarIngrediente";
-            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(23, 23);
+            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(34, 35);
             this.btnCerrarRegistrarIngrediente.TabIndex = 17;
             this.btnCerrarRegistrarIngrediente.UseVisualStyleBackColor = false;
             this.btnCerrarRegistrarIngrediente.Click += new System.EventHandler(this.btnCerrarRegistrarIngrediente_Click);
@@ -71,83 +87,282 @@
             // 
             this.labelModificarPlato.AutoSize = true;
             this.labelModificarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModificarPlato.Location = new System.Drawing.Point(162, 0);
-            this.labelModificarPlato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelModificarPlato.Location = new System.Drawing.Point(278, 0);
             this.labelModificarPlato.Name = "labelModificarPlato";
-            this.labelModificarPlato.Size = new System.Drawing.Size(151, 29);
+            this.labelModificarPlato.Size = new System.Drawing.Size(223, 43);
             this.labelModificarPlato.TabIndex = 1;
             this.labelModificarPlato.Text = "MODIFICAR PLATO";
             // 
-            // btnBuscar
+            // btnBuscarMP
             // 
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(9, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(91, 44);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscarMP.FlatAppearance.BorderSize = 0;
+            this.btnBuscarMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarMP.Image")));
+            this.btnBuscarMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarMP.Location = new System.Drawing.Point(14, 58);
+            this.btnBuscarMP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscarMP.Name = "btnBuscarMP";
+            this.btnBuscarMP.Size = new System.Drawing.Size(136, 68);
+            this.btnBuscarMP.TabIndex = 5;
+            this.btnBuscarMP.Text = "BUSCAR";
+            this.btnBuscarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarMP.UseVisualStyleBackColor = true;
+            this.btnBuscarMP.Click += new System.EventHandler(this.btnBuscarMP_Click);
             // 
-            // txtBuscar
+            // txtBuscarPlatoMP
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(104, 56);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(192, 20);
-            this.txtBuscar.TabIndex = 9;
+            this.txtBuscarPlatoMP.Location = new System.Drawing.Point(156, 86);
+            this.txtBuscarPlatoMP.Name = "txtBuscarPlatoMP";
+            this.txtBuscarPlatoMP.Size = new System.Drawing.Size(286, 26);
+            this.txtBuscarPlatoMP.TabIndex = 9;
+            // 
+            // btnModificarMP
+            // 
+            this.btnModificarMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnModificarMP.FlatAppearance.BorderSize = 0;
+            this.btnModificarMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarMP.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarMP.Image")));
+            this.btnModificarMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarMP.Location = new System.Drawing.Point(251, 618);
+            this.btnModificarMP.Name = "btnModificarMP";
+            this.btnModificarMP.Size = new System.Drawing.Size(250, 132);
+            this.btnModificarMP.TabIndex = 11;
+            this.btnModificarMP.Text = "MODIFICAR";
+            this.btnModificarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificarMP.UseVisualStyleBackColor = false;
+            this.btnModificarMP.Click += new System.EventHandler(this.btnModificarMP_Click);
             // 
             // dgvModificarPlato
             // 
-            this.dgvModificarPlato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvModificarPlato.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvModificarPlato.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvModificarPlato.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvModificarPlato.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvModificarPlato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModificarPlato.Location = new System.Drawing.Point(8, 88);
-            this.dgvModificarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvModificarPlato.Location = new System.Drawing.Point(12, 134);
             this.dgvModificarPlato.Name = "dgvModificarPlato";
             this.dgvModificarPlato.RowHeadersWidth = 62;
             this.dgvModificarPlato.RowTemplate.Height = 28;
-            this.dgvModificarPlato.Size = new System.Drawing.Size(463, 164);
-            this.dgvModificarPlato.TabIndex = 10;
+            this.dgvModificarPlato.Size = new System.Drawing.Size(779, 179);
+            this.dgvModificarPlato.TabIndex = 12;
             // 
-            // btnRegistrar
+            // labelNombreMP
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
-            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(133, 263);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(162, 80);
-            this.btnRegistrar.TabIndex = 11;
-            this.btnRegistrar.Text = "MODIFICAR";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.labelNombreMP.AutoSize = true;
+            this.labelNombreMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreMP.Location = new System.Drawing.Point(34, 344);
+            this.labelNombreMP.Name = "labelNombreMP";
+            this.labelNombreMP.Size = new System.Drawing.Size(145, 34);
+            this.labelNombreMP.TabIndex = 13;
+            this.labelNombreMP.Text = "NOMBRE        :";
+            // 
+            // labelDescripcionMP
+            // 
+            this.labelDescripcionMP.AutoSize = true;
+            this.labelDescripcionMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescripcionMP.Location = new System.Drawing.Point(35, 403);
+            this.labelDescripcionMP.Name = "labelDescripcionMP";
+            this.labelDescripcionMP.Size = new System.Drawing.Size(144, 34);
+            this.labelDescripcionMP.TabIndex = 14;
+            this.labelDescripcionMP.Text = "DESCRIPCION :";
+            // 
+            // labelPrecioMP
+            // 
+            this.labelPrecioMP.AutoSize = true;
+            this.labelPrecioMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecioMP.Location = new System.Drawing.Point(39, 463);
+            this.labelPrecioMP.Name = "labelPrecioMP";
+            this.labelPrecioMP.Size = new System.Drawing.Size(140, 34);
+            this.labelPrecioMP.TabIndex = 15;
+            this.labelPrecioMP.Text = "PRECIO         :";
+            // 
+            // labelStockMP
+            // 
+            this.labelStockMP.AutoSize = true;
+            this.labelStockMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStockMP.Location = new System.Drawing.Point(41, 525);
+            this.labelStockMP.Name = "labelStockMP";
+            this.labelStockMP.Size = new System.Drawing.Size(138, 34);
+            this.labelStockMP.TabIndex = 16;
+            this.labelStockMP.Text = "STOCK          :";
+            // 
+            // txtNombreMP
+            // 
+            this.txtNombreMP.Location = new System.Drawing.Point(185, 353);
+            this.txtNombreMP.Name = "txtNombreMP";
+            this.txtNombreMP.Size = new System.Drawing.Size(210, 26);
+            this.txtNombreMP.TabIndex = 17;
+            // 
+            // txtPrecioMP
+            // 
+            this.txtPrecioMP.Location = new System.Drawing.Point(185, 472);
+            this.txtPrecioMP.Name = "txtPrecioMP";
+            this.txtPrecioMP.Size = new System.Drawing.Size(210, 26);
+            this.txtPrecioMP.TabIndex = 18;
+            // 
+            // txtStockMP
+            // 
+            this.txtStockMP.Location = new System.Drawing.Point(185, 534);
+            this.txtStockMP.Name = "txtStockMP";
+            this.txtStockMP.Size = new System.Drawing.Size(210, 26);
+            this.txtStockMP.TabIndex = 19;
+            // 
+            // cmbDescripcionMP
+            // 
+            this.cmbDescripcionMP.FormattingEnabled = true;
+            this.cmbDescripcionMP.Location = new System.Drawing.Point(185, 409);
+            this.cmbDescripcionMP.Name = "cmbDescripcionMP";
+            this.cmbDescripcionMP.Size = new System.Drawing.Size(210, 28);
+            this.cmbDescripcionMP.TabIndex = 20;
+            // 
+            // btnAñadirNombreMP
+            // 
+            this.btnAñadirNombreMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirNombreMP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirNombreMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirNombreMP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirNombreMP.Location = new System.Drawing.Point(426, 340);
+            this.btnAñadirNombreMP.Name = "btnAñadirNombreMP";
+            this.btnAñadirNombreMP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirNombreMP.TabIndex = 21;
+            this.btnAñadirNombreMP.Text = "AÑADIR";
+            this.btnAñadirNombreMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirNombreMP.UseVisualStyleBackColor = false;
+            this.btnAñadirNombreMP.Click += new System.EventHandler(this.btnAñadirNombreMP_Click);
+            // 
+            // btnAñadirDescripcionMP
+            // 
+            this.btnAñadirDescripcionMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirDescripcionMP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirDescripcionMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirDescripcionMP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirDescripcionMP.Location = new System.Drawing.Point(426, 396);
+            this.btnAñadirDescripcionMP.Name = "btnAñadirDescripcionMP";
+            this.btnAñadirDescripcionMP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirDescripcionMP.TabIndex = 22;
+            this.btnAñadirDescripcionMP.Text = "AÑADIR";
+            this.btnAñadirDescripcionMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirDescripcionMP.UseVisualStyleBackColor = false;
+            this.btnAñadirDescripcionMP.Click += new System.EventHandler(this.btnAñadirDescripcionMP_Click);
+            // 
+            // btnAñadirPrecioMP
+            // 
+            this.btnAñadirPrecioMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirPrecioMP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirPrecioMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirPrecioMP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirPrecioMP.Location = new System.Drawing.Point(426, 459);
+            this.btnAñadirPrecioMP.Name = "btnAñadirPrecioMP";
+            this.btnAñadirPrecioMP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirPrecioMP.TabIndex = 23;
+            this.btnAñadirPrecioMP.Text = "AÑADIR";
+            this.btnAñadirPrecioMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirPrecioMP.UseVisualStyleBackColor = false;
+            this.btnAñadirPrecioMP.Click += new System.EventHandler(this.btnAñadirPrecioMP_Click);
+            // 
+            // btnAñadirStockMP
+            // 
+            this.btnAñadirStockMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAñadirStockMP.FlatAppearance.BorderSize = 0;
+            this.btnAñadirStockMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirStockMP.ForeColor = System.Drawing.Color.Black;
+            this.btnAñadirStockMP.Location = new System.Drawing.Point(426, 521);
+            this.btnAñadirStockMP.Name = "btnAñadirStockMP";
+            this.btnAñadirStockMP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirStockMP.TabIndex = 24;
+            this.btnAñadirStockMP.Text = "AÑADIR";
+            this.btnAñadirStockMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirStockMP.UseVisualStyleBackColor = false;
+            this.btnAñadirStockMP.Click += new System.EventHandler(this.btnAñadirStockMP_Click);
+            // 
+            // btnLimpiarNombreMP
+            // 
+            this.btnLimpiarNombreMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiarNombreMP.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarNombreMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarNombreMP.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarNombreMP.Location = new System.Drawing.Point(565, 340);
+            this.btnLimpiarNombreMP.Name = "btnLimpiarNombreMP";
+            this.btnLimpiarNombreMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarNombreMP.TabIndex = 25;
+            this.btnLimpiarNombreMP.Text = "LIMPIAR";
+            this.btnLimpiarNombreMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarNombreMP.UseVisualStyleBackColor = false;
+            this.btnLimpiarNombreMP.Click += new System.EventHandler(this.btnLimpiarNombreMP_Click);
+            // 
+            // btnLimpiarDescripcionMP
+            // 
+            this.btnLimpiarDescripcionMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiarDescripcionMP.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarDescripcionMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarDescripcionMP.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarDescripcionMP.Location = new System.Drawing.Point(565, 399);
+            this.btnLimpiarDescripcionMP.Name = "btnLimpiarDescripcionMP";
+            this.btnLimpiarDescripcionMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarDescripcionMP.TabIndex = 26;
+            this.btnLimpiarDescripcionMP.Text = "LIMPIAR";
+            this.btnLimpiarDescripcionMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarDescripcionMP.UseVisualStyleBackColor = false;
+            this.btnLimpiarDescripcionMP.Click += new System.EventHandler(this.btnLimpiarDescripcionMP_Click);
+            // 
+            // btnLimpiarPrecioMP
+            // 
+            this.btnLimpiarPrecioMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiarPrecioMP.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarPrecioMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPrecioMP.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarPrecioMP.Location = new System.Drawing.Point(565, 463);
+            this.btnLimpiarPrecioMP.Name = "btnLimpiarPrecioMP";
+            this.btnLimpiarPrecioMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarPrecioMP.TabIndex = 27;
+            this.btnLimpiarPrecioMP.Text = "LIMPIAR";
+            this.btnLimpiarPrecioMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarPrecioMP.UseVisualStyleBackColor = false;
+            this.btnLimpiarPrecioMP.Click += new System.EventHandler(this.btnLimpiarPrecioMP_Click);
+            // 
+            // btnLimpiarStockMP
+            // 
+            this.btnLimpiarStockMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiarStockMP.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarStockMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarStockMP.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarStockMP.Location = new System.Drawing.Point(565, 525);
+            this.btnLimpiarStockMP.Name = "btnLimpiarStockMP";
+            this.btnLimpiarStockMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarStockMP.TabIndex = 28;
+            this.btnLimpiarStockMP.Text = "LIMPIAR";
+            this.btnLimpiarStockMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarStockMP.UseVisualStyleBackColor = false;
+            this.btnLimpiarStockMP.Click += new System.EventHandler(this.btnLimpiarStockMP_Click);
             // 
             // ModificarPlato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(479, 366);
-            this.Controls.Add(this.btnRegistrar);
+            this.ClientSize = new System.Drawing.Size(804, 762);
+            this.Controls.Add(this.btnLimpiarStockMP);
+            this.Controls.Add(this.btnLimpiarPrecioMP);
+            this.Controls.Add(this.btnLimpiarDescripcionMP);
+            this.Controls.Add(this.btnLimpiarNombreMP);
+            this.Controls.Add(this.btnAñadirStockMP);
+            this.Controls.Add(this.btnAñadirPrecioMP);
+            this.Controls.Add(this.btnAñadirDescripcionMP);
+            this.Controls.Add(this.btnAñadirNombreMP);
+            this.Controls.Add(this.cmbDescripcionMP);
+            this.Controls.Add(this.txtStockMP);
+            this.Controls.Add(this.txtPrecioMP);
+            this.Controls.Add(this.txtNombreMP);
+            this.Controls.Add(this.labelStockMP);
+            this.Controls.Add(this.labelPrecioMP);
+            this.Controls.Add(this.labelDescripcionMP);
+            this.Controls.Add(this.labelNombreMP);
             this.Controls.Add(this.dgvModificarPlato);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnModificarMP);
+            this.Controls.Add(this.txtBuscarPlatoMP);
+            this.Controls.Add(this.btnBuscarMP);
             this.Controls.Add(this.panelModificarPlato);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ModificarPlato";
             this.Text = "ModificarPlato";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModificarPlato_MouseDown);
@@ -164,9 +379,25 @@
         private System.Windows.Forms.Panel panelModificarPlato;
         private System.Windows.Forms.Label labelModificarPlato;
         private System.Windows.Forms.Button btnCerrarRegistrarIngrediente;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnBuscarMP;
+        private System.Windows.Forms.TextBox txtBuscarPlatoMP;
+        private System.Windows.Forms.Button btnModificarMP;
         private System.Windows.Forms.DataGridView dgvModificarPlato;
-        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label labelNombreMP;
+        private System.Windows.Forms.Label labelDescripcionMP;
+        private System.Windows.Forms.Label labelPrecioMP;
+        private System.Windows.Forms.Label labelStockMP;
+        private System.Windows.Forms.TextBox txtNombreMP;
+        private System.Windows.Forms.TextBox txtPrecioMP;
+        private System.Windows.Forms.TextBox txtStockMP;
+        private System.Windows.Forms.ComboBox cmbDescripcionMP;
+        private System.Windows.Forms.Button btnAñadirNombreMP;
+        private System.Windows.Forms.Button btnAñadirDescripcionMP;
+        private System.Windows.Forms.Button btnAñadirPrecioMP;
+        private System.Windows.Forms.Button btnAñadirStockMP;
+        private System.Windows.Forms.Button btnLimpiarNombreMP;
+        private System.Windows.Forms.Button btnLimpiarDescripcionMP;
+        private System.Windows.Forms.Button btnLimpiarPrecioMP;
+        private System.Windows.Forms.Button btnLimpiarStockMP;
     }
 }

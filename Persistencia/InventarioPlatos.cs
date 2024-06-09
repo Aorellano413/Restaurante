@@ -102,5 +102,33 @@ namespace Persistencia
             }
             return ingredientes;
         }
+
+        public void ModificarPlato(Plato plato)
+        {
+            using (MySqlConnection conn = conexion.AbrirConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand("UPDATE PLATOS SET nombre = @nombre, descripcion = @descripcion, precio = @precio, stock = @stock WHERE id_plato = @idPlato", conn);
+                cmd.Parameters.AddWithValue("@nombre", plato.Nombre);
+                cmd.Parameters.AddWithValue("@descripcion", plato.Descripcion);
+                cmd.Parameters.AddWithValue("@precio", plato.Precio);
+                cmd.Parameters.AddWithValue("@stock", plato.Stock);
+                cmd.Parameters.AddWithValue("@idPlato", plato.Id);
+                cmd.ExecuteNonQuery();
+
+                // Eliminar los ingredientes actuales del plato
+                MySqlCommand cmdDeleteIngredientes = new MySqlCommand("DELETE FROM INGREDIENTES_PLATOS WHERE id_plato = @idPlato", conn);
+                cmdDeleteIngredientes.Parameters.AddWithValue("@idPlato", plato.Id);
+                cmdDeleteIngredientes.ExecuteNonQuery();
+
+                // Insertar los nuevos ingredientes
+                foreach (var ingrediente in plato.Ingredientes)
+                {
+                    MySqlCommand cmdIng = new MySqlCommand("INSERT INTO INGREDIENTES_PLATOS (id_ingrediente, id_plato) VALUES (@idIngrediente, @idPlato)", conn);
+                    cmdIng.Parameters.AddWithValue("@idIngrediente", ingrediente.Id);
+                    cmdIng.Parameters.AddWithValue("@idPlato", plato.Id);
+                    cmdIng.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
