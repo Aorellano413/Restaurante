@@ -58,8 +58,9 @@
             this.panelRegistrarPlato.Controls.Add(this.labelRegistrarPlato);
             this.panelRegistrarPlato.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRegistrarPlato.Location = new System.Drawing.Point(0, 0);
+            this.panelRegistrarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelRegistrarPlato.Name = "panelRegistrarPlato";
-            this.panelRegistrarPlato.Size = new System.Drawing.Size(804, 51);
+            this.panelRegistrarPlato.Size = new System.Drawing.Size(800, 33);
             this.panelRegistrarPlato.TabIndex = 0;
             this.panelRegistrarPlato.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRegistrarPlato_MouseDown);
             // 
@@ -70,10 +71,9 @@
             this.btnCerrarRegistrarIngrediente.FlatAppearance.BorderSize = 0;
             this.btnCerrarRegistrarIngrediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarRegistrarIngrediente.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarRegistrarIngrediente.Image")));
-            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(757, 8);
-            this.btnCerrarRegistrarIngrediente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(766, 3);
             this.btnCerrarRegistrarIngrediente.Name = "btnCerrarRegistrarIngrediente";
-            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(34, 35);
+            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(23, 23);
             this.btnCerrarRegistrarIngrediente.TabIndex = 18;
             this.btnCerrarRegistrarIngrediente.UseVisualStyleBackColor = false;
             this.btnCerrarRegistrarIngrediente.Click += new System.EventHandler(this.btnCerrarRegistrarIngrediente_Click);
@@ -82,9 +82,10 @@
             // 
             this.labelRegistrarPlato.AutoSize = true;
             this.labelRegistrarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistrarPlato.Location = new System.Drawing.Point(278, 0);
+            this.labelRegistrarPlato.Location = new System.Drawing.Point(185, 0);
+            this.labelRegistrarPlato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRegistrarPlato.Name = "labelRegistrarPlato";
-            this.labelRegistrarPlato.Size = new System.Drawing.Size(227, 43);
+            this.labelRegistrarPlato.Size = new System.Drawing.Size(153, 29);
             this.labelRegistrarPlato.TabIndex = 17;
             this.labelRegistrarPlato.Text = "REGISTRAR PLATO";
             // 
@@ -92,9 +93,10 @@
             // 
             this.labelNombreRP.AutoSize = true;
             this.labelNombreRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreRP.Location = new System.Drawing.Point(63, 82);
+            this.labelNombreRP.Location = new System.Drawing.Point(42, 53);
+            this.labelNombreRP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNombreRP.Name = "labelNombreRP";
-            this.labelNombreRP.Size = new System.Drawing.Size(145, 34);
+            this.labelNombreRP.Size = new System.Drawing.Size(97, 23);
             this.labelNombreRP.TabIndex = 2;
             this.labelNombreRP.Text = "NOMBRE        :";
             // 
@@ -102,24 +104,27 @@
             // 
             this.labelStockRP.AutoSize = true;
             this.labelStockRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockRP.Location = new System.Drawing.Point(64, 276);
+            this.labelStockRP.Location = new System.Drawing.Point(43, 179);
+            this.labelStockRP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStockRP.Name = "labelStockRP";
-            this.labelStockRP.Size = new System.Drawing.Size(138, 34);
+            this.labelStockRP.Size = new System.Drawing.Size(93, 23);
             this.labelStockRP.TabIndex = 3;
             this.labelStockRP.Text = "STOCK          :";
             // 
             // txtNombreRP
             // 
-            this.txtNombreRP.Location = new System.Drawing.Point(226, 90);
+            this.txtNombreRP.Location = new System.Drawing.Point(151, 58);
+            this.txtNombreRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreRP.Name = "txtNombreRP";
-            this.txtNombreRP.Size = new System.Drawing.Size(210, 26);
+            this.txtNombreRP.Size = new System.Drawing.Size(141, 20);
             this.txtNombreRP.TabIndex = 4;
             // 
             // txtStockRP
             // 
-            this.txtStockRP.Location = new System.Drawing.Point(226, 285);
+            this.txtStockRP.Location = new System.Drawing.Point(151, 185);
+            this.txtStockRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStockRP.Name = "txtStockRP";
-            this.txtStockRP.Size = new System.Drawing.Size(210, 26);
+            this.txtStockRP.Size = new System.Drawing.Size(141, 20);
             this.txtStockRP.TabIndex = 5;
             // 
             // btnRegistrarRP
@@ -131,9 +136,10 @@
             this.btnRegistrarRP.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrarRP.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarRP.Image")));
             this.btnRegistrarRP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarRP.Location = new System.Drawing.Point(255, 526);
+            this.btnRegistrarRP.Location = new System.Drawing.Point(346, 342);
+            this.btnRegistrarRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrarRP.Name = "btnRegistrarRP";
-            this.btnRegistrarRP.Size = new System.Drawing.Size(250, 132);
+            this.btnRegistrarRP.Size = new System.Drawing.Size(167, 86);
             this.btnRegistrarRP.TabIndex = 6;
             this.btnRegistrarRP.Text = "REGISTRAR";
             this.btnRegistrarRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,9 +152,10 @@
             this.btnAñadirDescripcionRP.FlatAppearance.BorderSize = 0;
             this.btnAñadirDescripcionRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirDescripcionRP.ForeColor = System.Drawing.Color.Black;
-            this.btnAñadirDescripcionRP.Location = new System.Drawing.Point(461, 145);
+            this.btnAñadirDescripcionRP.Location = new System.Drawing.Point(307, 94);
+            this.btnAñadirDescripcionRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadirDescripcionRP.Name = "btnAñadirDescripcionRP";
-            this.btnAñadirDescripcionRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirDescripcionRP.Size = new System.Drawing.Size(66, 28);
             this.btnAñadirDescripcionRP.TabIndex = 7;
             this.btnAñadirDescripcionRP.Text = "AÑADIR";
             this.btnAñadirDescripcionRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,9 +166,10 @@
             // 
             this.labelDescripcionRP.AutoSize = true;
             this.labelDescripcionRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescripcionRP.Location = new System.Drawing.Point(63, 145);
+            this.labelDescripcionRP.Location = new System.Drawing.Point(42, 94);
+            this.labelDescripcionRP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescripcionRP.Name = "labelDescripcionRP";
-            this.labelDescripcionRP.Size = new System.Drawing.Size(144, 34);
+            this.labelDescripcionRP.Size = new System.Drawing.Size(98, 23);
             this.labelDescripcionRP.TabIndex = 8;
             this.labelDescripcionRP.Text = "DESCRIPCION :";
             // 
@@ -169,25 +177,28 @@
             // 
             this.labelPrecioRP.AutoSize = true;
             this.labelPrecioRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioRP.Location = new System.Drawing.Point(64, 212);
+            this.labelPrecioRP.Location = new System.Drawing.Point(43, 138);
+            this.labelPrecioRP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrecioRP.Name = "labelPrecioRP";
-            this.labelPrecioRP.Size = new System.Drawing.Size(140, 34);
+            this.labelPrecioRP.Size = new System.Drawing.Size(94, 23);
             this.labelPrecioRP.TabIndex = 9;
             this.labelPrecioRP.Text = "PRECIO         :";
             // 
             // txtPrecioRP
             // 
-            this.txtPrecioRP.Location = new System.Drawing.Point(226, 220);
+            this.txtPrecioRP.Location = new System.Drawing.Point(151, 143);
+            this.txtPrecioRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecioRP.Name = "txtPrecioRP";
-            this.txtPrecioRP.Size = new System.Drawing.Size(210, 26);
+            this.txtPrecioRP.Size = new System.Drawing.Size(141, 20);
             this.txtPrecioRP.TabIndex = 10;
             // 
             // cmbDescripcionRP
             // 
             this.cmbDescripcionRP.FormattingEnabled = true;
-            this.cmbDescripcionRP.Location = new System.Drawing.Point(226, 154);
+            this.cmbDescripcionRP.Location = new System.Drawing.Point(151, 100);
+            this.cmbDescripcionRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDescripcionRP.Name = "cmbDescripcionRP";
-            this.cmbDescripcionRP.Size = new System.Drawing.Size(210, 28);
+            this.cmbDescripcionRP.Size = new System.Drawing.Size(141, 21);
             this.cmbDescripcionRP.TabIndex = 11;
             // 
             // btnLimpiarRP
@@ -196,9 +207,10 @@
             this.btnLimpiarRP.FlatAppearance.BorderSize = 0;
             this.btnLimpiarRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarRP.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiarRP.Location = new System.Drawing.Point(680, 526);
+            this.btnLimpiarRP.Location = new System.Drawing.Point(715, 342);
+            this.btnLimpiarRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLimpiarRP.Name = "btnLimpiarRP";
-            this.btnLimpiarRP.Size = new System.Drawing.Size(111, 43);
+            this.btnLimpiarRP.Size = new System.Drawing.Size(74, 28);
             this.btnLimpiarRP.TabIndex = 13;
             this.btnLimpiarRP.Text = "LIMPIAR";
             this.btnLimpiarRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -211,9 +223,10 @@
             this.btnAñadirPrecioRP.FlatAppearance.BorderSize = 0;
             this.btnAñadirPrecioRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirPrecioRP.ForeColor = System.Drawing.Color.Black;
-            this.btnAñadirPrecioRP.Location = new System.Drawing.Point(461, 220);
+            this.btnAñadirPrecioRP.Location = new System.Drawing.Point(307, 143);
+            this.btnAñadirPrecioRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadirPrecioRP.Name = "btnAñadirPrecioRP";
-            this.btnAñadirPrecioRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirPrecioRP.Size = new System.Drawing.Size(66, 28);
             this.btnAñadirPrecioRP.TabIndex = 14;
             this.btnAñadirPrecioRP.Text = "AÑADIR";
             this.btnAñadirPrecioRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -226,9 +239,10 @@
             this.btnAñadirStockRP.FlatAppearance.BorderSize = 0;
             this.btnAñadirStockRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirStockRP.ForeColor = System.Drawing.Color.Black;
-            this.btnAñadirStockRP.Location = new System.Drawing.Point(461, 285);
+            this.btnAñadirStockRP.Location = new System.Drawing.Point(307, 185);
+            this.btnAñadirStockRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadirStockRP.Name = "btnAñadirStockRP";
-            this.btnAñadirStockRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirStockRP.Size = new System.Drawing.Size(66, 28);
             this.btnAñadirStockRP.TabIndex = 15;
             this.btnAñadirStockRP.Text = "AÑADIR";
             this.btnAñadirStockRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,9 +255,10 @@
             this.btnAñadirNombreRP.FlatAppearance.BorderSize = 0;
             this.btnAñadirNombreRP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirNombreRP.ForeColor = System.Drawing.Color.Black;
-            this.btnAñadirNombreRP.Location = new System.Drawing.Point(461, 82);
+            this.btnAñadirNombreRP.Location = new System.Drawing.Point(307, 53);
+            this.btnAñadirNombreRP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadirNombreRP.Name = "btnAñadirNombreRP";
-            this.btnAñadirNombreRP.Size = new System.Drawing.Size(99, 43);
+            this.btnAñadirNombreRP.Size = new System.Drawing.Size(66, 28);
             this.btnAñadirNombreRP.TabIndex = 16;
             this.btnAñadirNombreRP.Text = "AÑADIR";
             this.btnAñadirNombreRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,21 +267,31 @@
             // 
             // dgvRegistrarPlato
             // 
+            this.dgvRegistrarPlato.AllowUserToAddRows = false;
+            this.dgvRegistrarPlato.AllowUserToDeleteRows = false;
+            this.dgvRegistrarPlato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRegistrarPlato.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvRegistrarPlato.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRegistrarPlato.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvRegistrarPlato.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvRegistrarPlato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRegistrarPlato.Location = new System.Drawing.Point(12, 341);
+            this.dgvRegistrarPlato.Location = new System.Drawing.Point(8, 222);
+            this.dgvRegistrarPlato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvRegistrarPlato.Name = "dgvRegistrarPlato";
+            this.dgvRegistrarPlato.ReadOnly = true;
+            this.dgvRegistrarPlato.RowHeadersVisible = false;
             this.dgvRegistrarPlato.RowHeadersWidth = 62;
             this.dgvRegistrarPlato.RowTemplate.Height = 28;
-            this.dgvRegistrarPlato.Size = new System.Drawing.Size(779, 179);
+            this.dgvRegistrarPlato.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRegistrarPlato.Size = new System.Drawing.Size(781, 116);
             this.dgvRegistrarPlato.TabIndex = 17;
             // 
             // RegistrarPlato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(804, 660);
+            this.ClientSize = new System.Drawing.Size(800, 429);
             this.Controls.Add(this.dgvRegistrarPlato);
             this.Controls.Add(this.btnAñadirNombreRP);
             this.Controls.Add(this.btnAñadirStockRP);
@@ -284,6 +309,7 @@
             this.Controls.Add(this.labelNombreRP);
             this.Controls.Add(this.panelRegistrarPlato);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegistrarPlato";
             this.Text = "RegistrarPlato";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RegistrarPlato_MouseDown);
