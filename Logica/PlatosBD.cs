@@ -43,5 +43,15 @@ namespace Logica
             datos.EliminarPlato(idPlato);
         }
 
+        public List<PlatoIngrediente> ObtenerIngredientesDePlato(int idPlato)
+        {
+            return datos.ObtenerIngredientesDePlato(idPlato);
+        }
+
+        public void AsignarCantidadIngredientes(int idPlato, List<PlatoIngrediente> ingredientes)
+        {
+            datos.AsignarCantidadIngredientes(idPlato, ingredientes);
+        }
+
     }
 }

@@ -47,5 +47,11 @@ namespace Vista
             EliminarPlato eliminarPlato = new EliminarPlato(this);
             eliminarPlato.Show();
         }
+
+        private void btnAsignarValores_Click(object sender, EventArgs e)
+        {
+            AsignarValores asignarValores = new AsignarValores(this);
+            asignarValores.Show();
+        }
     }
 }

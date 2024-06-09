@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsignarValores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarValores.Designer.cs">
+      <DependentUpon>AsignarValores.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionIngredientes\EliminarIngrediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="GestionInventario\RegistroProductos.Designer.cs">
       <DependentUpon>RegistroProductos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AsignarValores.resx">
+      <DependentUpon>AsignarValores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionIngredientes\EliminarIngrediente.resx">
       <DependentUpon>EliminarIngrediente.cs</DependentUpon>
     </EmbeddedResource>

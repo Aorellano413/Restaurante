@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 using Entidades;
+using System.Data.SqlClient;
 
 namespace Persistencia
 {
@@ -65,10 +66,11 @@ namespace Persistencia
 
                     if (count > 0)
                     {
-                        MySqlCommand cmdIng = new MySqlCommand("INSERT INTO INGREDIENTES_PLATOS (id_ingrediente, id_plato) VALUES (@idIngrediente, @idPlato)", conn);
-                        cmdIng.Parameters.AddWithValue("@idIngrediente", ingrediente.Id);
-                        cmdIng.Parameters.AddWithValue("@idPlato", plato.Id);
-                        cmdIng.ExecuteNonQuery();
+                        cmd = new MySqlCommand("INSERT INTO restaurante.ingredientes_platos (id_plato, id_ingrediente, cantidad) VALUES (@id_plato, @id_ingrediente, @cantidad)", conn);
+                        cmd.Parameters.AddWithValue("@id_plato", plato.Id);
+                        cmd.Parameters.AddWithValue("@id_ingrediente", ingrediente.Id);
+                        cmd.Parameters.AddWithValue("@cantidad", ingrediente.Stock);
+                        cmd.ExecuteNonQuery();
                     }
                     else
                     {
@@ -143,6 +145,65 @@ namespace Persistencia
                 MySqlCommand cmdDeleteIngredientesPlatos = new MySqlCommand("DELETE FROM INGREDIENTES_PLATOS WHERE id_plato = @idPlato", conn);
                 cmdDeleteIngredientesPlatos.Parameters.AddWithValue("@idPlato", idPlato);
                 cmdDeleteIngredientesPlatos.ExecuteNonQuery();
+            }
+        }
+
+        public List<PlatoIngrediente> ObtenerIngredientesDePlato(int idPlato)
+        {
+            List<PlatoIngrediente> ingredientes = new List<PlatoIngrediente>();
+            using (MySqlConnection conn = conexion.AbrirConexion())
+            {
+                string query = "SELECT i.id_ingrediente, i.nombre AS nombre_ingrediente, ip.cantidad FROM Ingredientes i JOIN INGREDIENTES_PLATOS ip ON i.id_ingrediente = ip.id_ingrediente WHERE ip.id_plato = @idPlato";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idPlato", idPlato);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ingredientes.Add(new PlatoIngrediente
+                            {
+                                IdIngrediente = reader.GetInt32(reader.GetOrdinal("id_ingrediente")),
+                                NombreIngrediente = reader.GetString(reader.GetOrdinal("nombre_ingrediente")),
+                                Cantidad = reader.GetInt32(reader.GetOrdinal("cantidad"))
+                            });
+                        }
+                    }
+                }
+            }
+            return ingredientes;
+        }
+
+        public void AsignarCantidadIngredientes(int idPlato, List<PlatoIngrediente> ingredientes)
+        {
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                foreach (var platoIngrediente in ingredientes)
+                {
+                    string query = @"
+                        UPDATE INGREDIENTES_PLATOS 
+                        SET cantidad = @cantidad 
+                        WHERE id_ingrediente = @idIngrediente AND id_plato = @idPlato;";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@cantidad", platoIngrediente.Cantidad);
+                        cmd.Parameters.AddWithValue("@idIngrediente", platoIngrediente.IdIngrediente);
+                        cmd.Parameters.AddWithValue("@idPlato", idPlato);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Update ingredient stock in inventory
+                    query = @"
+                        UPDATE INGREDIENTES 
+                        SET stock = stock - @cantidad 
+                        WHERE id_ingrediente = @idIngrediente;";
+                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@cantidad", platoIngrediente.Cantidad);
+                        cmd.Parameters.AddWithValue("@idIngrediente", platoIngrediente.IdIngrediente);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
             }
         }
     }
