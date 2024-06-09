@@ -38,5 +38,10 @@ namespace Logica
             datos.ModificarPlato(plato);
         }
 
+        public void EliminarPlato(int idPlato)
+        {
+            datos.EliminarPlato(idPlato);
+        }
+
     }
 }

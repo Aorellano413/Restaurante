@@ -283,7 +283,7 @@
             this.btnLimpiarNombreMP.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarNombreMP.Location = new System.Drawing.Point(565, 340);
             this.btnLimpiarNombreMP.Name = "btnLimpiarNombreMP";
-            this.btnLimpiarNombreMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarNombreMP.Size = new System.Drawing.Size(109, 43);
             this.btnLimpiarNombreMP.TabIndex = 25;
             this.btnLimpiarNombreMP.Text = "LIMPIAR";
             this.btnLimpiarNombreMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -298,7 +298,7 @@
             this.btnLimpiarDescripcionMP.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarDescripcionMP.Location = new System.Drawing.Point(565, 399);
             this.btnLimpiarDescripcionMP.Name = "btnLimpiarDescripcionMP";
-            this.btnLimpiarDescripcionMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarDescripcionMP.Size = new System.Drawing.Size(109, 43);
             this.btnLimpiarDescripcionMP.TabIndex = 26;
             this.btnLimpiarDescripcionMP.Text = "LIMPIAR";
             this.btnLimpiarDescripcionMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -313,7 +313,7 @@
             this.btnLimpiarPrecioMP.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarPrecioMP.Location = new System.Drawing.Point(565, 463);
             this.btnLimpiarPrecioMP.Name = "btnLimpiarPrecioMP";
-            this.btnLimpiarPrecioMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarPrecioMP.Size = new System.Drawing.Size(109, 43);
             this.btnLimpiarPrecioMP.TabIndex = 27;
             this.btnLimpiarPrecioMP.Text = "LIMPIAR";
             this.btnLimpiarPrecioMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -328,7 +328,7 @@
             this.btnLimpiarStockMP.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarStockMP.Location = new System.Drawing.Point(565, 525);
             this.btnLimpiarStockMP.Name = "btnLimpiarStockMP";
-            this.btnLimpiarStockMP.Size = new System.Drawing.Size(99, 43);
+            this.btnLimpiarStockMP.Size = new System.Drawing.Size(109, 43);
             this.btnLimpiarStockMP.TabIndex = 28;
             this.btnLimpiarStockMP.Text = "LIMPIAR";
             this.btnLimpiarStockMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

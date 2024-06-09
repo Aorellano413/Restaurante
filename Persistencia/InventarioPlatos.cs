@@ -130,5 +130,20 @@ namespace Persistencia
                 }
             }
         }
+
+        public void EliminarPlato(int idPlato)
+        {
+            using (MySqlConnection conn = conexion.AbrirConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM PLATOS WHERE id_plato = @idPlato", conn);
+                cmd.Parameters.AddWithValue("@idPlato", idPlato);
+                cmd.ExecuteNonQuery();
+
+                // También eliminar las relaciones de ingredientes con el plato
+                MySqlCommand cmdDeleteIngredientesPlatos = new MySqlCommand("DELETE FROM INGREDIENTES_PLATOS WHERE id_plato = @idPlato", conn);
+                cmdDeleteIngredientesPlatos.Parameters.AddWithValue("@idPlato", idPlato);
+                cmdDeleteIngredientesPlatos.ExecuteNonQuery();
+            }
+        }
     }
 }
