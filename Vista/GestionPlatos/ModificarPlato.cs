@@ -16,12 +16,14 @@ namespace Vista.GestionPlatos
     public partial class ModificarPlato : Form
     {
         private RegistroProductos registroProductos;
-        PlatosBD platosBD = new PlatosBD();
+        private PlatosBD platosBD = new PlatosBD();
+
         public ModificarPlato(RegistroProductos registroProductos)
         {
             InitializeComponent();
             this.registroProductos = registroProductos;
             CargarIngredientes();
+            CargarPlatos();
         }
 
         private void CargarIngredientes()
@@ -32,16 +34,22 @@ namespace Vista.GestionPlatos
             cmbDescripcionMP.ValueMember = "Id";
         }
 
+        private void CargarPlatos()
+        {
+            DataTable dt = platosBD.MostrarNuevaTabla();
+            dgvModificarPlato.DataSource = dt;
+        }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void btnCerrarRegistrarIngrediente_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void ModificarPlato_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -56,16 +64,7 @@ namespace Vista.GestionPlatos
 
         private void btnBuscarMP_Click(object sender, EventArgs e)
         {
-            string nombrePlato = txtBuscarPlatoMP.Text.Trim();
-            if (!string.IsNullOrEmpty(nombrePlato))
-            {
-                DataTable dt = platosBD.BuscarInventarioPlatosNombre(nombrePlato);
-                dgvModificarPlato.DataSource = dt;
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese el nombre de un plato para buscar.");
-            }
+            FiltrarPlatos();
         }
 
         private void dgvModificarPlato_SelectionChanged(object sender, EventArgs e)
@@ -199,6 +198,28 @@ namespace Vista.GestionPlatos
             {
                 MessageBox.Show("Por favor, seleccione un plato para modificar.");
             }
+        }
+
+        private void txtBuscarPlatoMP_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarPlatos();
+        }
+
+        private void FiltrarPlatos()
+        {
+            string nombrePlato = txtBuscarPlatoMP.Text.Trim();
+            DataTable dt;
+
+            if (!string.IsNullOrEmpty(nombrePlato))
+            {
+                dt = platosBD.BuscarInventarioPlatosNombre(nombrePlato);
+            }
+            else
+            {
+                dt = platosBD.MostrarNuevaTabla();
+            }
+
+            dgvModificarPlato.DataSource = dt;
         }
     }
 }

@@ -23,8 +23,6 @@ namespace Vista
             dataGridView2.DataSource = platosBD.MostrarNuevaTabla();
         }
 
-       
-
         private void btnRegresar5_Click(object sender, EventArgs e)
         {
             menuGeneral.Show();
@@ -38,12 +36,7 @@ namespace Vista
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre = txtBuscar.Text.Trim();
-            if (!string.IsNullOrEmpty(nombre))
-            {
-                DataTable dt = platosBD.BuscarInventarioPlatosNombre(nombre);
-                dataGridView2.DataSource = dt;  
-            }
+            FiltrarPlatos();
         }
 
         private void InventarioForm_Load(object sender, EventArgs e)
@@ -56,6 +49,26 @@ namespace Vista
         {
             DataTable dt = platosBD.MostrarNuevaTabla();
             dataGridView2.DataSource = dt;
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarPlatos();
+        }
+
+        private void FiltrarPlatos()
+        {
+            string nombre = txtBuscar.Text.Trim();
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                DataTable dt = platosBD.BuscarInventarioPlatosNombre(nombre);
+                dataGridView2.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = platosBD.MostrarNuevaTabla();
+                dataGridView2.DataSource = dt;
+            }
         }
     }
 }

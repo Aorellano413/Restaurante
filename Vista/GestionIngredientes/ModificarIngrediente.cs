@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using Entidades;
 using Logica;
 
@@ -18,11 +12,13 @@ namespace Vista.GestionIngredientes
         private RegistoGramos registoGramos;
         InventarioBD inventario = new InventarioBD();
 
-
         public ModificarIngrediente(RegistoGramos registoGramos)
         {
             InitializeComponent();
             this.registoGramos = registoGramos;
+
+            // Cargar datos del inventario al iniciar el formulario
+            CargarInventario();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -49,15 +45,7 @@ namespace Vista.GestionIngredientes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre = txtBuscar.Text.Trim();
-            DataTable dt = inventario.BuscarIngredientePorNombre(nombre);
-            dgvModificarIngrediente.DataSource = dt;
-
-            // Hacer que la columna id_ingrediente sea de solo lectura para que no se pueda modificar
-            if (dgvModificarIngrediente.Columns["id_ingrediente"] != null)
-            {
-                dgvModificarIngrediente.Columns["id_ingrediente"].ReadOnly = true;
-            }
+            FiltrarIngredientes();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -72,7 +60,7 @@ namespace Vista.GestionIngredientes
 
                 Ingrediente ingrediente = new Ingrediente
                 {
-                    Id = idIngrediente, 
+                    Id = idIngrediente,
                     Nombre = nombre,
                     Stock = stock
                 };
@@ -90,6 +78,46 @@ namespace Vista.GestionIngredientes
             else
             {
                 MessageBox.Show("Por favor, seleccione un ingrediente para modificar.");
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarIngredientes();
+        }
+
+        private void CargarInventario()
+        {
+            DataTable dt = inventario.MostrarInventario();
+            dgvModificarIngrediente.DataSource = dt;
+
+            // Hacer que la columna id_ingrediente sea de solo lectura para que no se pueda modificar
+            if (dgvModificarIngrediente.Columns["id_ingrediente"] != null)
+            {
+                dgvModificarIngrediente.Columns["id_ingrediente"].ReadOnly = true;
+            }
+        }
+
+        private void FiltrarIngredientes()
+        {
+            string nombre = txtBuscar.Text.Trim();
+            DataTable dt;
+
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                dt = inventario.BuscarIngredientePorNombre(nombre);
+            }
+            else
+            {
+                dt = inventario.MostrarInventario();
+            }
+
+            dgvModificarIngrediente.DataSource = dt;
+
+            // Hacer que la columna id_ingrediente sea de solo lectura para que no se pueda modificar
+            if (dgvModificarIngrediente.Columns["id_ingrediente"] != null)
+            {
+                dgvModificarIngrediente.Columns["id_ingrediente"].ReadOnly = true;
             }
         }
     }

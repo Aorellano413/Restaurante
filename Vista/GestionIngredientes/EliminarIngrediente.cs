@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using Logica;
 
 namespace Vista.GestionIngredientes
@@ -15,10 +9,13 @@ namespace Vista.GestionIngredientes
     public partial class EliminarIngrediente : Form
     {
         private RegistoGramos registoGramos;
+
         public EliminarIngrediente(RegistoGramos registoGramos)
         {
             InitializeComponent();
             this.registoGramos = registoGramos;
+
+            CargarInventario();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -45,17 +42,7 @@ namespace Vista.GestionIngredientes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombre = txtBuscar.Text.Trim();
-            if (!string.IsNullOrEmpty(nombre))
-            {
-                InventarioBD inventarioBD = new InventarioBD();
-                DataTable dt = inventarioBD.BuscarInventarioPorNombre(nombre);
-                dgvEliminarIngrediente.DataSource = dt;
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un nombre para buscar.");
-            }
+            FiltrarIngredientes();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -68,14 +55,42 @@ namespace Vista.GestionIngredientes
                 MessageBox.Show("Ingrediente eliminado correctamente.");
 
                 // Actualizar el DataGridView después de eliminar
-                string nombre = txtBuscar.Text.Trim();
-                DataTable dt = inventarioBD.BuscarInventarioPorNombre(nombre);
-                dgvEliminarIngrediente.DataSource = dt;
+                FiltrarIngredientes();
             }
             else
             {
                 MessageBox.Show("Por favor, seleccione un ingrediente para eliminar.");
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarIngredientes();
+        }
+
+        private void CargarInventario()
+        {
+            InventarioBD inventarioBD = new InventarioBD();
+            DataTable dt = inventarioBD.MostrarInventario();
+            dgvEliminarIngrediente.DataSource = dt;
+        }
+
+        private void FiltrarIngredientes()
+        {
+            string nombre = txtBuscar.Text.Trim();
+            InventarioBD inventarioBD = new InventarioBD();
+            DataTable dt;
+
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                dt = inventarioBD.BuscarInventarioPorNombre(nombre);
+            }
+            else
+            {
+                dt = inventarioBD.MostrarInventario();
+            }
+
+            dgvEliminarIngrediente.DataSource = dt;
         }
     }
 }
