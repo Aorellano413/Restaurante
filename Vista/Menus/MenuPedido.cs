@@ -27,6 +27,10 @@ namespace Vista.Menus
 
             dgvMenuPedido.RowsAdded += dgvMenuPedido_RowsAdded;
             dgvMenuPedido.RowsRemoved += dgvMenuPedido_RowsRemoved;
+            dgvMenuPedido.CellValueChanged += dgvMenuPedido_CellValueChanged;
+            dgvMenuPedido.UserDeletedRow += dgvMenuPedido_UserDeletedRow;
+            dgvMenuPedido.CellEndEdit += dgvMenuPedido_CellEndEdit;
+
             this.txtEfectivoMP.TextChanged += new System.EventHandler(this.txtEfectivoMP_TextChanged);
             this.btnPagarMP.Click += new System.EventHandler(this.btnPagarMP_Click);
             this.btnLimpiarMP.Click += new System.EventHandler(this.btnLimpiarMP_Click);
@@ -42,7 +46,7 @@ namespace Vista.Menus
             dgvMenuPedido.Columns.Add("Id", "ID");
             dgvMenuPedido.Columns.Add("Nombre", "Nombre");
             dgvMenuPedido.Columns.Add("Descripcion", "Descripción");
-            dgvMenuPedido.Columns.Add("Precio", "Precio Unitario");
+            dgvMenuPedido.Columns.Add("PrecioUnitario", "Precio Unitario");
             dgvMenuPedido.Columns.Add("Cantidad", "Cantidad");
             dgvMenuPedido.Columns.Add("PrecioTotal", "Precio Total");
 
@@ -70,13 +74,8 @@ namespace Vista.Menus
                 Plato plato = cmbPlatosMP.SelectedItem as Plato;
                 if (plato != null)
                 {
-                    // Agrega el plato al DataGridView
-                    dgvMenuPedido.Rows.Add(plato.Id, plato.Nombre, plato.Descripcion, plato.Precio, 1, plato.Precio);
-
-                    // Actualizar total
+                    AñadirPlatoAlDataGridView(plato);
                     ActualizarTotalPedido();
-
-                    // Limpiar ComboBox
                     cmbPlatosMP.SelectedIndex = -1;
                 }
             }
@@ -91,7 +90,7 @@ namespace Vista.Menus
         {
             if (dgvMenuPedido.Columns.Count == 0)
             {
-                ConfigurarDataGridView(); // Configurar columnas si no se han configurado
+                ConfigurarDataGridView();
             }
 
             // Comprobar si el plato ya está en el DataGridView
@@ -99,10 +98,9 @@ namespace Vista.Menus
             {
                 if (row.Cells["Id"].Value != null && (int)row.Cells["Id"].Value == plato.Id)
                 {
-                    // Actualizar cantidad y precio si el plato ya está en el DataGridView
                     int cantidadActual = Convert.ToInt32(row.Cells["Cantidad"].Value);
                     row.Cells["Cantidad"].Value = cantidadActual + 1;
-                    row.Cells["Precio"].Value = (cantidadActual + 1) * plato.Precio;
+                    row.Cells["PrecioTotal"].Value = (cantidadActual + 1) * plato.Precio;
                     return;
                 }
             }
@@ -118,20 +116,39 @@ namespace Vista.Menus
                 DataGridViewRow row = dgvMenuPedido.Rows[e.RowIndex];
                 int cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value);
                 decimal precioUnitario = Convert.ToDecimal(row.Cells["PrecioUnitario"].Value);
-                row.Cells["Precio"].Value = cantidad * precioUnitario;
+                row.Cells["PrecioTotal"].Value = cantidad * precioUnitario;
+                ActualizarTotalPedido();
+            }
+        }
+
+        private void dgvMenuPedido_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvMenuPedido.Columns["Cantidad"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvMenuPedido.Rows[e.RowIndex];
+                if (int.TryParse(row.Cells["Cantidad"].Value.ToString(), out int cantidad) && cantidad > 0)
+                {
+                    decimal precioUnitario = Convert.ToDecimal(row.Cells["PrecioUnitario"].Value);
+                    row.Cells["PrecioTotal"].Value = cantidad * precioUnitario;
+                    ActualizarTotalPedido();
+                }
+                else
+                {
+                    row.Cells["Cantidad"].Value = 1;
+                    row.Cells["PrecioTotal"].Value = row.Cells["PrecioUnitario"].Value;
+                    ActualizarTotalPedido();
+                }
             }
         }
 
         private void btnConfirmarMP_Click(object sender, EventArgs e)
         {
-            // Validar si hay al menos un plato en el pedido
             if (dgvMenuPedido.Rows.Count == 0)
             {
                 MessageBox.Show("Debe agregar al menos un plato al pedido antes de confirmar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Crear el pedido
             Pedido pedido = new Pedido
             {
                 FechaPedido = DateTime.Now,
@@ -140,7 +157,6 @@ namespace Vista.Menus
 
             int idPedido = pedidosBD.CrearPedido(pedido);
 
-            // Agregar detalles del pedido
             foreach (DataGridViewRow row in dgvMenuPedido.Rows)
             {
                 if (row.Cells["Id"].Value != null)
@@ -158,13 +174,11 @@ namespace Vista.Menus
 
             MessageBox.Show("Pedido confirmado con éxito");
 
-            // Limpiar formulario
             dgvMenuPedido.Rows.Clear();
             labelTotalMP.Text = "0";
             txtEfectivoMP.Clear();
             labelCambioMP.Text = "0";
             btnConfirmarMP.Enabled = false;
-
         }
 
         private void ActualizarTotalPedido()
@@ -216,7 +230,7 @@ namespace Vista.Menus
                 return;
             }
 
-            ValidarCondicionesParaConfirmar(); // Llamo aquí para validar las condiciones
+            ValidarCondicionesParaConfirmar();
 
             if (decimal.TryParse(labelTotalMP.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal totalPedido))
             {
@@ -238,13 +252,10 @@ namespace Vista.Menus
 
         private void ValidarCondicionesParaConfirmar()
         {
-            // Verificar si hay al menos un plato en el DataGridView
             bool hayPlatos = dgvMenuPedido.Rows.Count > 0;
 
-            // Habilitar o deshabilitar txtEfectivoMP según el número de platos
             txtEfectivoMP.Enabled = hayPlatos;
 
-            // Verificar si el valor del efectivo es igual o superior al total del pedido
             bool efectivoSuficiente = false;
             if (decimal.TryParse(labelTotalMP.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal totalPedido) &&
                 decimal.TryParse(txtEfectivoMP.Text, out decimal efectivo))
@@ -252,7 +263,6 @@ namespace Vista.Menus
                 efectivoSuficiente = efectivo >= totalPedido;
             }
 
-            // Habilitar el botón Confirmar solo si ambas condiciones se cumplen
             btnConfirmarMP.Enabled = hayPlatos && efectivoSuficiente;
         }
 
@@ -273,7 +283,6 @@ namespace Vista.Menus
         private void btnPagarMP_Click(object sender, EventArgs e)
         {
 
-            // Verificar si el valor ingresado es numérico y positivo
             if (decimal.TryParse(labelTotalMP.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal totalPedido) &&
                 decimal.TryParse(txtEfectivoMP.Text, out decimal efectivo) && efectivo >= totalPedido)
             {
@@ -291,16 +300,11 @@ namespace Vista.Menus
         private void btnLimpiarMP_Click(object sender, EventArgs e)
         {
             dgvMenuPedido.Rows.Clear();
-
             labelTotalMP.Text = "0";
             labelCambioMP.Text = "0";
-
             txtEfectivoMP.Clear();
-
             cmbPlatosMP.SelectedIndex = -1;
-
             txtEfectivoMP.Enabled = false;
-
             btnConfirmarMP.Enabled = false;
         }
     }

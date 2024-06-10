@@ -32,5 +32,7 @@ namespace Logica
         {
             return datos.ObtenerDetallesPedido(idPedido);
         }
+
+
     }
 }
