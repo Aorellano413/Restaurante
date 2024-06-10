@@ -53,5 +53,11 @@ namespace Logica
             datos.AsignarCantidadIngredientes(idPlato, ingredientes);
         }
 
+        //MENU PEDIDO
+        public List<Plato> ObtenerTodosLosPlatos()
+        {
+            return datos.ObtenerTodosLosPlatos();
+        }
+
     }
 }

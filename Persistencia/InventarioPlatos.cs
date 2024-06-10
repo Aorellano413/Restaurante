@@ -194,5 +194,30 @@ namespace Persistencia
                 }
             }
         }
+
+        public List<Plato> ObtenerTodosLosPlatos()
+        {
+            List<Plato> platos = new List<Plato>();
+            using (MySqlConnection conn = conexion.AbrirConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT id_plato, nombre, descripcion, precio, stock FROM PLATOS", conn);
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Plato plato = new Plato
+                        {
+                            Id = reader.GetInt32("id_plato"),
+                            Nombre = reader.GetString("nombre"),
+                            Descripcion = reader.GetString("descripcion"),
+                            Precio = reader.GetDecimal("precio"),
+                            Stock = reader.GetInt32("stock")
+                        };
+                        platos.Add(plato);
+                    }
+                }
+            }
+            return platos;
+        }
     }
 }

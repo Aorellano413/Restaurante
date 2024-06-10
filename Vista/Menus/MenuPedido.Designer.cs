@@ -42,8 +42,8 @@
             this.txtEfectivoMP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelCambioMP = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnAñadirPlatoMP = new System.Windows.Forms.Button();
+            this.btnPagarMP = new System.Windows.Forms.Button();
             this.panelMenuPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuPedido)).BeginInit();
             this.SuspendLayout();
@@ -114,13 +114,14 @@
             this.btnConfirmarMP.ForeColor = System.Drawing.Color.Black;
             this.btnConfirmarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmarMP.Image")));
             this.btnConfirmarMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmarMP.Location = new System.Drawing.Point(503, 604);
+            this.btnConfirmarMP.Location = new System.Drawing.Point(778, 604);
             this.btnConfirmarMP.Name = "btnConfirmarMP";
             this.btnConfirmarMP.Size = new System.Drawing.Size(234, 101);
             this.btnConfirmarMP.TabIndex = 12;
             this.btnConfirmarMP.Text = "CONFIRMAR";
             this.btnConfirmarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfirmarMP.UseVisualStyleBackColor = false;
+            this.btnConfirmarMP.Click += new System.EventHandler(this.btnConfirmarMP_Click);
             // 
             // btnLimpiarMP
             // 
@@ -131,13 +132,14 @@
             this.btnLimpiarMP.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarMP.Image")));
             this.btnLimpiarMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarMP.Location = new System.Drawing.Point(783, 604);
+            this.btnLimpiarMP.Location = new System.Drawing.Point(1058, 604);
             this.btnLimpiarMP.Name = "btnLimpiarMP";
             this.btnLimpiarMP.Size = new System.Drawing.Size(234, 101);
             this.btnLimpiarMP.TabIndex = 13;
             this.btnLimpiarMP.Text = "LIMPIAR";
             this.btnLimpiarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarMP.UseVisualStyleBackColor = false;
+            this.btnLimpiarMP.Click += new System.EventHandler(this.btnLimpiarMP_Click);
             // 
             // labelTotalAPagar
             // 
@@ -196,23 +198,6 @@
             this.labelCambioMP.TabIndex = 19;
             this.labelCambioMP.Text = "0";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1058, 604);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 101);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "FACTURA";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // btnAñadirPlatoMP
             // 
             this.btnAñadirPlatoMP.BackColor = System.Drawing.Color.Transparent;
@@ -226,6 +211,23 @@
             this.btnAñadirPlatoMP.Text = "AÑADIR";
             this.btnAñadirPlatoMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAñadirPlatoMP.UseVisualStyleBackColor = false;
+            this.btnAñadirPlatoMP.Click += new System.EventHandler(this.btnAñadirPlatoMP_Click);
+            // 
+            // btnPagarMP
+            // 
+            this.btnPagarMP.BackColor = System.Drawing.Color.Transparent;
+            this.btnPagarMP.FlatAppearance.BorderSize = 0;
+            this.btnPagarMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagarMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagarMP.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPagarMP.Location = new System.Drawing.Point(470, 650);
+            this.btnPagarMP.Name = "btnPagarMP";
+            this.btnPagarMP.Size = new System.Drawing.Size(99, 43);
+            this.btnPagarMP.TabIndex = 23;
+            this.btnPagarMP.Text = "PAGAR";
+            this.btnPagarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPagarMP.UseVisualStyleBackColor = false;
+            this.btnPagarMP.Click += new System.EventHandler(this.btnPagarMP_Click);
             // 
             // MenuPedido
             // 
@@ -233,8 +235,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1317, 767);
+            this.Controls.Add(this.btnPagarMP);
             this.Controls.Add(this.btnAñadirPlatoMP);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelCambioMP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEfectivoMP);
@@ -272,7 +274,7 @@
         private System.Windows.Forms.TextBox txtEfectivoMP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCambioMP;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAñadirPlatoMP;
+        private System.Windows.Forms.Button btnPagarMP;
     }
 }

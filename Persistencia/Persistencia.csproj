@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="ConexionDAL.cs" />
     <Compile Include="DatosInventario.cs" />
+    <Compile Include="DatosPedido.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="InventarioPlatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetallePedido.cs" />
     <Compile Include="Ingrediente.cs" />
+    <Compile Include="Pedido.cs" />
     <Compile Include="Plato.cs" />
     <Compile Include="PlatoIngrediente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
