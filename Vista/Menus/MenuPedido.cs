@@ -10,6 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
 
 namespace Vista.Menus
 {
@@ -158,6 +163,8 @@ namespace Vista.Menus
 
             int idPedido = pedidosBD.CrearPedido(pedido);
 
+            List<DetallePedido> detallesPedido = new List<DetallePedido>();
+
             foreach (DataGridViewRow row in dgvMenuPedido.Rows)
             {
                 if (row.Cells["Id"].Value != null)
@@ -170,6 +177,7 @@ namespace Vista.Menus
                         IdPlato = Convert.ToInt32(row.Cells["Id"].Value)
                     };
                     pedidosBD.AgregarDetallePedido(detalle);
+                    detallesPedido.Add(detalle);
 
                     // Descontar ingredientes del inventario
                     List<PlatoIngrediente> ingredientes = platosBD.ObtenerIngredientesDePlato(detalle.IdPlato);
@@ -182,6 +190,30 @@ namespace Vista.Menus
             }
 
             MessageBox.Show("Pedido confirmado con éxito");
+
+            // Generar la factura PDF
+            Factura factura = new Factura
+            {
+                NombreCajero = "Nombre del Cajero", // Aquí debes usar el nombre del cajero autenticado
+                FechaFactura = DateTime.Now,
+                Total = decimal.Parse(labelTotalMP.Text, NumberStyles.Currency, CultureInfo.CurrentCulture),
+                Detalles = detallesPedido.Select(detalle => new DetallePedido
+                {
+                    Cantidad = detalle.Cantidad,
+                    Plato = platosBD.ObtenerPlatoPorId(detalle.IdPlato), // Ajusta según cómo obtienes los platos
+                }).ToList()
+            };
+
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Factura_{idPedido}.pdf");
+            FacturaPDFGenerator generator = new FacturaPDFGenerator();
+            generator.GenerarFacturaPDF(factura, filePath);
+
+            // Abrir el archivo PDF
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = filePath,
+                UseShellExecute = true
+            });
 
             dgvMenuPedido.Rows.Clear();
             labelTotalMP.Text = "0";

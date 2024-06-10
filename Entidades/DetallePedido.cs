@@ -13,6 +13,7 @@ namespace Entidades
         public decimal Precio { get; set; }
         public int IdPedido { get; set; }
         public int IdPlato { get; set; }
+        public Plato Plato { get; set; }
 
     }
 }
