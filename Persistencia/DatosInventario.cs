@@ -131,6 +131,20 @@ namespace Persistencia
             }
         }
 
+        public void DescontarStockIngrediente(int idIngrediente, int cantidad)
+        {
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = "UPDATE INGREDIENTES SET stock = stock - @cantidad WHERE id_ingrediente = @idIngrediente";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@cantidad", cantidad);
+                    cmd.Parameters.AddWithValue("@idIngrediente", idIngrediente);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
 

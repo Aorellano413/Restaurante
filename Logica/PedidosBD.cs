@@ -21,6 +21,7 @@ namespace Logica
         public void AgregarDetallePedido(DetallePedido detalle)
         {
             datos.InsertarDetallePedido(detalle);
+            datos.ActualizarStockPlato(detalle.IdPlato, detalle.Cantidad);
         }
 
         public DataTable ObtenerPedidos()

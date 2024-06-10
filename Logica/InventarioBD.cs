@@ -56,5 +56,10 @@ namespace Logica
         {
             datos.EliminarIngrediente(id);
         }
+
+        public void DescontarStockIngrediente(int idIngrediente, int cantidad)
+        {
+            datos.DescontarStockIngrediente(idIngrediente, cantidad);
+        }
     }
 }

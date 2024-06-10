@@ -112,5 +112,19 @@ namespace Persistencia
             }
             return dt;
         }
+
+        public void ActualizarStockPlato(int idPlato, int cantidad)
+        {
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = "UPDATE PLATOS SET stock = stock - @cantidad WHERE id_plato = @idPlato";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@cantidad", cantidad);
+                    cmd.Parameters.AddWithValue("@idPlato", idPlato);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

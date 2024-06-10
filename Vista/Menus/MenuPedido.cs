@@ -18,6 +18,7 @@ namespace Vista.Menus
         private Login login;
         private PlatosBD platosBD = new PlatosBD();
         private PedidosBD pedidosBD = new PedidosBD();
+        private InventarioBD inventarioBD = new InventarioBD();
         public MenuPedido(Login login)
         {
             InitializeComponent();
@@ -169,6 +170,14 @@ namespace Vista.Menus
                         IdPlato = Convert.ToInt32(row.Cells["Id"].Value)
                     };
                     pedidosBD.AgregarDetallePedido(detalle);
+
+                    // Descontar ingredientes del inventario
+                    List<PlatoIngrediente> ingredientes = platosBD.ObtenerIngredientesDePlato(detalle.IdPlato);
+                    foreach (var ingrediente in ingredientes)
+                    {
+                        int cantidadTotal = ingrediente.Cantidad * detalle.Cantidad;
+                        inventarioBD.DescontarStockIngrediente(ingrediente.IdIngrediente, cantidadTotal);
+                    }
                 }
             }
 
