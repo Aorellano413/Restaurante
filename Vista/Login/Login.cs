@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vista.Menus;
 
 namespace Vista
 {
@@ -78,8 +79,8 @@ namespace Vista
                 }
                 else if (usuario.Rol == "Cliente")
                 {
-                    MenuPlatos menuProductos = new MenuPlatos(this);
-                    menuProductos.Show();
+                    MenuPedido menuPedido = new MenuPedido(this);
+                    menuPedido.Show();
                     this.Hide();
                 }
                 this.Hide();

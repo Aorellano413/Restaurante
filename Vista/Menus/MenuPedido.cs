@@ -8,29 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista
+namespace Vista.Menus
 {
-    public partial class MenuPlatos : Form
+    public partial class MenuPedido : Form
     {
         private Login login;
-        public MenuPlatos(Login login)
+        public MenuPedido(Login login)
         {
             InitializeComponent();
-            this.CenterToScreen();
             this.login = login;
         }
 
-        private void btnCerrarMenuProductos_Click(object sender, EventArgs e)
+        private void btnCerrarMP_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            login.Show();
-            this.Close();
-        }
-
-        
     }
 }

@@ -40,11 +40,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelfecha = new System.Windows.Forms.Label();
             this.labelHora = new System.Windows.Forms.Label();
             this.Horafecha = new System.Windows.Forms.Timer(this.components);
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelfecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +53,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(443, 163);
+            this.label1.Location = new System.Drawing.Point(664, 251);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.Size = new System.Drawing.Size(106, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "USUARIO:";
             // 
@@ -63,24 +64,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(443, 201);
+            this.label2.Location = new System.Drawing.Point(664, 309);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(155, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "CONTRASEÑA:";
             // 
             // textUsuario
             // 
-            this.textUsuario.Location = new System.Drawing.Point(555, 163);
+            this.textUsuario.Location = new System.Drawing.Point(832, 251);
+            this.textUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(141, 20);
+            this.textUsuario.Size = new System.Drawing.Size(210, 26);
             this.textUsuario.TabIndex = 3;
             // 
             // textContraseña
             // 
-            this.textContraseña.Location = new System.Drawing.Point(555, 201);
+            this.textContraseña.Location = new System.Drawing.Point(832, 309);
+            this.textContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textContraseña.Name = "textContraseña";
-            this.textContraseña.Size = new System.Drawing.Size(141, 20);
+            this.textContraseña.Size = new System.Drawing.Size(210, 26);
             this.textContraseña.TabIndex = 4;
             // 
             // buttonContinuar
@@ -89,9 +93,10 @@
             this.buttonContinuar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonContinuar.Image = ((System.Drawing.Image)(resources.GetObject("buttonContinuar.Image")));
-            this.buttonContinuar.Location = new System.Drawing.Point(567, 244);
+            this.buttonContinuar.Location = new System.Drawing.Point(850, 375);
+            this.buttonContinuar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonContinuar.Name = "buttonContinuar";
-            this.buttonContinuar.Size = new System.Drawing.Size(46, 45);
+            this.buttonContinuar.Size = new System.Drawing.Size(69, 69);
             this.buttonContinuar.TabIndex = 5;
             this.buttonContinuar.UseVisualStyleBackColor = false;
             this.buttonContinuar.Click += new System.EventHandler(this.buttonContinuar_Click);
@@ -103,9 +108,10 @@
             this.buttonCancelar.FlatAppearance.BorderSize = 0;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.Location = new System.Drawing.Point(639, 244);
+            this.buttonCancelar.Location = new System.Drawing.Point(958, 375);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(46, 45);
+            this.buttonCancelar.Size = new System.Drawing.Size(74, 69);
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -116,9 +122,10 @@
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
-            this.buttonClose.Location = new System.Drawing.Point(757, 3);
+            this.buttonClose.Location = new System.Drawing.Point(1136, 5);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(31, 27);
+            this.buttonClose.Size = new System.Drawing.Size(46, 42);
             this.buttonClose.TabIndex = 7;
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -126,9 +133,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 82);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 126);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(297, 277);
+            this.pictureBox2.Size = new System.Drawing.Size(446, 426);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -138,9 +146,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label3.Location = new System.Drawing.Point(545, 9);
+            this.label3.Location = new System.Drawing.Point(818, 14);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 77);
+            this.label3.Size = new System.Drawing.Size(225, 115);
             this.label3.TabIndex = 9;
             this.label3.Text = "LOGIN";
             // 
@@ -152,18 +161,32 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 450);
+            this.panel1.Size = new System.Drawing.Size(458, 692);
             this.panel1.TabIndex = 10;
+            // 
+            // labelfecha
+            // 
+            this.labelfecha.AutoSize = true;
+            this.labelfecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfecha.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelfecha.Location = new System.Drawing.Point(32, 578);
+            this.labelfecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelfecha.Name = "labelfecha";
+            this.labelfecha.Size = new System.Drawing.Size(109, 53);
+            this.labelfecha.TabIndex = 10;
+            this.labelfecha.Text = "Fecha";
             // 
             // labelHora
             // 
             this.labelHora.AutoSize = true;
             this.labelHora.Font = new System.Drawing.Font("Bahnschrift Condensed", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHora.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelHora.Location = new System.Drawing.Point(87, 9);
+            this.labelHora.Location = new System.Drawing.Point(130, 14);
+            this.labelHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(67, 40);
+            this.labelHora.Size = new System.Drawing.Size(101, 60);
             this.labelHora.TabIndex = 9;
             this.labelHora.Text = "Hora";
             // 
@@ -178,39 +201,28 @@
             this.cmbRol.Items.AddRange(new object[] {
             "Administrador",
             "Cliente"});
-            this.cmbRol.Location = new System.Drawing.Point(555, 124);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbRol.Location = new System.Drawing.Point(832, 191);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(141, 21);
+            this.cmbRol.Size = new System.Drawing.Size(210, 28);
             this.cmbRol.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(443, 124);
+            this.label4.Location = new System.Drawing.Point(664, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 25);
+            this.label4.Size = new System.Drawing.Size(73, 39);
             this.label4.TabIndex = 12;
             this.label4.Text = "TIIPO:";
             // 
-            // labelfecha
-            // 
-            this.labelfecha.AutoSize = true;
-            this.labelfecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfecha.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelfecha.Location = new System.Drawing.Point(21, 376);
-            this.labelfecha.Name = "labelfecha";
-            this.labelfecha.Size = new System.Drawing.Size(72, 35);
-            this.labelfecha.TabIndex = 10;
-            this.labelfecha.Text = "Fecha";
-            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.panel1);
@@ -223,6 +235,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
