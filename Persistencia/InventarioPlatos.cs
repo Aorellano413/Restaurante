@@ -137,14 +137,33 @@ namespace Persistencia
         {
             using (MySqlConnection conn = conexion.AbrirConexion())
             {
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM PLATOS WHERE id_plato = @idPlato", conn);
-                cmd.Parameters.AddWithValue("@idPlato", idPlato);
-                cmd.ExecuteNonQuery();
+                using (MySqlTransaction transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Eliminar las relaciones de ingredientes con el plato
+                        MySqlCommand cmdDeleteIngredientesPlatos = new MySqlCommand("DELETE FROM INGREDIENTES_PLATOS WHERE id_plato = @idPlato", conn, transaction);
+                        cmdDeleteIngredientesPlatos.Parameters.AddWithValue("@idPlato", idPlato);
+                        cmdDeleteIngredientesPlatos.ExecuteNonQuery();
 
-                // También eliminar las relaciones de ingredientes con el plato
-                MySqlCommand cmdDeleteIngredientesPlatos = new MySqlCommand("DELETE FROM INGREDIENTES_PLATOS WHERE id_plato = @idPlato", conn);
-                cmdDeleteIngredientesPlatos.Parameters.AddWithValue("@idPlato", idPlato);
-                cmdDeleteIngredientesPlatos.ExecuteNonQuery();
+                        // Eliminar las relaciones en detalle_pedidos
+                        MySqlCommand cmdDeleteDetallePedidos = new MySqlCommand("DELETE FROM detalle_pedidos WHERE id_plato = @idPlato", conn, transaction);
+                        cmdDeleteDetallePedidos.Parameters.AddWithValue("@idPlato", idPlato);
+                        cmdDeleteDetallePedidos.ExecuteNonQuery();
+
+                        // Eliminar el plato
+                        MySqlCommand cmdDeletePlato = new MySqlCommand("DELETE FROM PLATOS WHERE id_plato = @idPlato", conn, transaction);
+                        cmdDeletePlato.Parameters.AddWithValue("@idPlato", idPlato);
+                        cmdDeletePlato.ExecuteNonQuery();
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
         }
 
