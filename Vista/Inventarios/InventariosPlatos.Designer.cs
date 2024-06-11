@@ -76,7 +76,7 @@
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(776, 315);
+            this.dataGridView2.Size = new System.Drawing.Size(1272, 514);
             this.dataGridView2.TabIndex = 0;
             // 
             // panel1
@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 53);
+            this.panel1.Size = new System.Drawing.Size(1386, 42);
             this.panel1.TabIndex = 1;
             // 
             // btnCerrarInventarioPlatos
@@ -98,7 +98,7 @@
             this.btnCerrarInventarioPlatos.FlatAppearance.BorderSize = 0;
             this.btnCerrarInventarioPlatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarInventarioPlatos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarInventarioPlatos.Image")));
-            this.btnCerrarInventarioPlatos.Location = new System.Drawing.Point(765, 9);
+            this.btnCerrarInventarioPlatos.Location = new System.Drawing.Point(1325, 9);
             this.btnCerrarInventarioPlatos.Name = "btnCerrarInventarioPlatos";
             this.btnCerrarInventarioPlatos.Size = new System.Drawing.Size(23, 23);
             this.btnCerrarInventarioPlatos.TabIndex = 30;
@@ -112,7 +112,7 @@
             this.btnRegresar5.FlatAppearance.BorderSize = 0;
             this.btnRegresar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar5.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar5.Image")));
-            this.btnRegresar5.Location = new System.Drawing.Point(715, 3);
+            this.btnRegresar5.Location = new System.Drawing.Point(1274, 4);
             this.btnRegresar5.Name = "btnRegresar5";
             this.btnRegresar5.Size = new System.Drawing.Size(45, 35);
             this.btnRegresar5.TabIndex = 29;
@@ -123,7 +123,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 11);
+            this.label1.Location = new System.Drawing.Point(650, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 27);
             this.label1.TabIndex = 0;
@@ -145,7 +145,7 @@
             this.buttonRestablecer.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRestablecer.Image = ((System.Drawing.Image)(resources.GetObject("buttonRestablecer.Image")));
             this.buttonRestablecer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRestablecer.Location = new System.Drawing.Point(650, 59);
+            this.buttonRestablecer.Location = new System.Drawing.Point(313, 59);
             this.buttonRestablecer.Name = "buttonRestablecer";
             this.buttonRestablecer.Size = new System.Drawing.Size(138, 45);
             this.buttonRestablecer.TabIndex = 8;
@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonRestablecer);
             this.Controls.Add(this.txtBuscar);

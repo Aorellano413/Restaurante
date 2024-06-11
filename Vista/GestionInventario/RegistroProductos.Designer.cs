@@ -53,9 +53,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(436, 0);
+            this.label2.Location = new System.Drawing.Point(610, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 43);
+            this.label2.Size = new System.Drawing.Size(166, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "GESTION DE PLATOS";
             // 
@@ -66,7 +66,7 @@
             this.btnCerrarRegistroProducto.FlatAppearance.BorderSize = 0;
             this.btnCerrarRegistroProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarRegistroProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarRegistroProducto.Image")));
-            this.btnCerrarRegistroProducto.Location = new System.Drawing.Point(1038, 5);
+            this.btnCerrarRegistroProducto.Location = new System.Drawing.Point(1291, 5);
             this.btnCerrarRegistroProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrarRegistroProducto.Name = "btnCerrarRegistroProducto";
             this.btnCerrarRegistroProducto.Size = new System.Drawing.Size(34, 35);
@@ -83,7 +83,7 @@
             this.panelGestionPlatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelGestionPlatos.Location = new System.Drawing.Point(0, 0);
             this.panelGestionPlatos.Name = "panelGestionPlatos";
-            this.panelGestionPlatos.Size = new System.Drawing.Size(1085, 43);
+            this.panelGestionPlatos.Size = new System.Drawing.Size(1386, 43);
             this.panelGestionPlatos.TabIndex = 16;
             // 
             // btnRegresar
@@ -95,7 +95,7 @@
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.ForeColor = System.Drawing.Color.Black;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(988, 3);
+            this.btnRegresar.Location = new System.Drawing.Point(1241, 3);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(42, 37);
@@ -108,7 +108,7 @@
             this.btnModificarPlato.BackColor = System.Drawing.Color.Khaki;
             this.btnModificarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnModificarPlato.Location = new System.Drawing.Point(313, 283);
+            this.btnModificarPlato.Location = new System.Drawing.Point(457, 419);
             this.btnModificarPlato.Name = "btnModificarPlato";
             this.btnModificarPlato.Size = new System.Drawing.Size(200, 84);
             this.btnModificarPlato.TabIndex = 19;
@@ -121,7 +121,7 @@
             this.btnEliminarPlato.BackColor = System.Drawing.Color.Khaki;
             this.btnEliminarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnEliminarPlato.Location = new System.Drawing.Point(588, 283);
+            this.btnEliminarPlato.Location = new System.Drawing.Point(732, 419);
             this.btnEliminarPlato.Name = "btnEliminarPlato";
             this.btnEliminarPlato.Size = new System.Drawing.Size(200, 84);
             this.btnEliminarPlato.TabIndex = 21;
@@ -132,7 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 115);
+            this.pictureBox1.Location = new System.Drawing.Point(166, 251);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +142,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(313, 115);
+            this.pictureBox2.Location = new System.Drawing.Point(457, 251);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 162);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(587, 115);
+            this.pictureBox3.Location = new System.Drawing.Point(731, 251);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 162);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +164,7 @@
             this.btnRegistrarPlato.BackColor = System.Drawing.Color.Khaki;
             this.btnRegistrarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPlato.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnRegistrarPlato.Location = new System.Drawing.Point(26, 283);
+            this.btnRegistrarPlato.Location = new System.Drawing.Point(170, 419);
             this.btnRegistrarPlato.Name = "btnRegistrarPlato";
             this.btnRegistrarPlato.Size = new System.Drawing.Size(200, 84);
             this.btnRegistrarPlato.TabIndex = 20;
@@ -177,7 +177,7 @@
             this.btnAsignarValores.BackColor = System.Drawing.Color.Khaki;
             this.btnAsignarValores.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarValores.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnAsignarValores.Location = new System.Drawing.Point(865, 283);
+            this.btnAsignarValores.Location = new System.Drawing.Point(1009, 419);
             this.btnAsignarValores.Name = "btnAsignarValores";
             this.btnAsignarValores.Size = new System.Drawing.Size(200, 84);
             this.btnAsignarValores.TabIndex = 26;
@@ -188,7 +188,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(865, 115);
+            this.pictureBox4.Location = new System.Drawing.Point(1009, 251);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 162);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -197,10 +197,10 @@
             // 
             // RegistroProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(1085, 450);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnAsignarValores);
             this.Controls.Add(this.pictureBox3);

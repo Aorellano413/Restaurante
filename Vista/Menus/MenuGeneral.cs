@@ -22,25 +22,23 @@ namespace Vista
 
         private void buttonClose2_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
-
-
-       
 
         private void btnRegistrarGramos_Click(object sender, EventArgs e)
         {
             RegistoGramos registoGramos = new RegistoGramos(this);
             registoGramos.Show();
-            this.Hide();
-            
+            this.Enabled = false;  
+            registoGramos.FormClosed += (s, args) => this.Enabled = true;  
         }
 
         private void btnRegistrarProductos_Click(object sender, EventArgs e)
         {
-            RegistroProductos registroProductos = new RegistroProductos(this);  
+            RegistroProductos registroProductos = new RegistroProductos(this);
             registroProductos.Show();
-            this.Hide();
+            this.Enabled = false; 
+            registroProductos.FormClosed += (s, args) => this.Enabled = true;  
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -57,17 +55,20 @@ namespace Vista
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            Inventario inventario= new Inventario(this);
+            Inventario inventario = new Inventario(this);
             inventario.Show();
-            this.Hide();
-
+            this.Enabled = false;  
+            inventario.FormClosed += (s, args) => this.Enabled = true;  
         }
 
         private void btnInventariosPlatos_Click(object sender, EventArgs e)
         {
             InventariosPlatos inventtariosplatos = new InventariosPlatos(this);
             inventtariosplatos.Show();
-            this.Hide();
+            this.Enabled = false; 
+            inventtariosplatos.FormClosed += (s, args) => this.Enabled = true;  
         }
     }
 }
+
+
