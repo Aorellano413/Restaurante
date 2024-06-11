@@ -66,10 +66,11 @@ namespace Persistencia
 
                     if (count > 0)
                     {
+                        // Inserta en la tabla INGREDIENTES_PLATOS con la cantidad
                         cmd = new MySqlCommand("INSERT INTO restaurante.ingredientes_platos (id_plato, id_ingrediente, cantidad) VALUES (@id_plato, @id_ingrediente, @cantidad)", conn);
                         cmd.Parameters.AddWithValue("@id_plato", plato.Id);
                         cmd.Parameters.AddWithValue("@id_ingrediente", ingrediente.Id);
-                        cmd.Parameters.AddWithValue("@cantidad", ingrediente.Stock);
+                        cmd.Parameters.AddWithValue("@cantidad", ingrediente.Stock); // Asume que 'Stock' representa la cantidad utilizada del ingrediente en el plato
                         cmd.ExecuteNonQuery();
                     }
                     else
@@ -122,12 +123,13 @@ namespace Persistencia
                 cmdDeleteIngredientes.Parameters.AddWithValue("@idPlato", plato.Id);
                 cmdDeleteIngredientes.ExecuteNonQuery();
 
-                // Insertar los nuevos ingredientes
+                // Insertar los nuevos ingredientes con cantidad
                 foreach (var ingrediente in plato.Ingredientes)
                 {
-                    MySqlCommand cmdIng = new MySqlCommand("INSERT INTO INGREDIENTES_PLATOS (id_ingrediente, id_plato) VALUES (@idIngrediente, @idPlato)", conn);
+                    MySqlCommand cmdIng = new MySqlCommand("INSERT INTO INGREDIENTES_PLATOS (id_ingrediente, id_plato, cantidad) VALUES (@idIngrediente, @idPlato, @cantidad)", conn);
                     cmdIng.Parameters.AddWithValue("@idIngrediente", ingrediente.Id);
                     cmdIng.Parameters.AddWithValue("@idPlato", plato.Id);
+                    cmdIng.Parameters.AddWithValue("@cantidad", ingrediente.Stock); // Asume que 'Stock' representa la cantidad utilizada del ingrediente en el plato
                     cmdIng.ExecuteNonQuery();
                 }
             }

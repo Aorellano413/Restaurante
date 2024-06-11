@@ -26,6 +26,14 @@ namespace Logica
         public void InsertarPlato(Plato plato)
         {
             datos.InsertarPlato(plato);
+            // Actualiza las cantidades de ingredientes en INGREDIENTES_PLATOS
+            List<PlatoIngrediente> ingredientes = plato.Ingredientes.Select(i => new PlatoIngrediente
+            {
+                IdIngrediente = i.Id,
+                NombreIngrediente = i.Nombre,
+                Cantidad = i.Stock
+            }).ToList();
+            datos.AsignarCantidadIngredientes(plato.Id, ingredientes);
         }
 
         public List<Ingrediente> ObtenerIngredientes()
@@ -36,6 +44,14 @@ namespace Logica
         public void ModificarPlato(Plato plato)
         {
             datos.ModificarPlato(plato);
+            // Actualiza las cantidades de ingredientes en INGREDIENTES_PLATOS
+            List<PlatoIngrediente> ingredientes = plato.Ingredientes.Select(i => new PlatoIngrediente
+            {
+                IdIngrediente = i.Id,
+                NombreIngrediente = i.Nombre,
+                Cantidad = i.Stock
+            }).ToList();
+            datos.AsignarCantidadIngredientes(plato.Id, ingredientes);
         }
 
         public void EliminarPlato(int idPlato)
