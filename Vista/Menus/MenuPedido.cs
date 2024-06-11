@@ -191,20 +191,12 @@ namespace Vista.Menus
 
             MessageBox.Show("Pedido confirmado con éxito");
 
-            // Generar la factura PDF
-            Factura factura = new Factura
-            {
-                NombreCajero = "Nombre del Cajero", // Aquí debes usar el nombre del cajero autenticado
-                FechaFactura = DateTime.Now,
-                Total = decimal.Parse(labelTotalMP.Text, NumberStyles.Currency, CultureInfo.CurrentCulture),
-                Detalles = detallesPedido.Select(detalle => new DetallePedido
-                {
-                    Cantidad = detalle.Cantidad,
-                    Plato = platosBD.ObtenerPlatoPorId(detalle.IdPlato), // Ajusta según cómo obtienes los platos
-                }).ToList()
-            };
+            // Generar la factura usando FacturaManager
+            FacturaManager facturaManager = new FacturaManager();
+            Factura factura = facturaManager.CrearFactura(idPedido); // Creación de la factura
 
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Factura_{idPedido}.pdf");
+            // Generar el archivo PDF
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Factura_{factura.Id}.pdf");
             FacturaPDFGenerator generator = new FacturaPDFGenerator();
             generator.GenerarFacturaPDF(factura, filePath);
 

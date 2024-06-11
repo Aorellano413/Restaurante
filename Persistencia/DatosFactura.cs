@@ -88,42 +88,20 @@ namespace Persistencia
             return detalles;
         }
 
-        public string ObtenerNombreCajeroPorId(int idCajero)
-        {
-            string nombreCajero = null;
-
-            using (MySqlConnection connection = conexion.AbrirConexion())
-            {
-                string query = "SELECT nombre FROM CAJEROS WHERE id_cajero = @idCajero;";
-                using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@idCajero", idCajero);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            nombreCajero = reader.GetString("nombre");
-                        }
-                    }
-                }
-            }
-
-            return nombreCajero;
-        }
-
         public void InsertarFactura(Factura factura)
         {
             using (MySqlConnection connection = conexion.AbrirConexion())
             {
-                string query = "INSERT INTO FACTURAS (total, id_pedido) VALUES (@total, @idPedido);";
+                string query = @"INSERT INTO FACTURAS (fecha_factura, total, id_pedido) 
+                                 VALUES (@fechaFactura, @total, @idPedido);";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
+                    cmd.Parameters.AddWithValue("@fechaFactura", factura.FechaFactura);
                     cmd.Parameters.AddWithValue("@total", factura.Total);
                     cmd.Parameters.AddWithValue("@idPedido", factura.IdPedido);
                     cmd.ExecuteNonQuery();
 
-                    factura.Id = (int)cmd.LastInsertedId;
+                    factura.Id = (int)cmd.LastInsertedId; // Obtener el ID autogenerado
                 }
             }
         }

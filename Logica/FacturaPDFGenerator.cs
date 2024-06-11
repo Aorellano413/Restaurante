@@ -24,7 +24,6 @@ namespace Logica
                 Document document = new Document(pdf);
 
                 document.Add(new Paragraph("Factura"));
-                document.Add(new Paragraph($"Nombre del Cajero: {factura.NombreCajero}"));
                 document.Add(new Paragraph($"Fecha: {factura.FechaFactura}"));
                 document.Add(new Paragraph($"Total: {factura.Total}"));
 
@@ -35,7 +34,6 @@ namespace Logica
 
                 document.Close();
             }
-
         }
     }
 }

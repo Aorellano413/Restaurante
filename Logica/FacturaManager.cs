@@ -12,9 +12,8 @@ namespace Logica
     {
         DatosFactura datosFactura = new DatosFactura();
 
-        public void CrearFactura(int idPedido)
+        public Factura CrearFactura(int idPedido)
         {
-            // Obtener detalles del pedido
             Pedido pedido = datosFactura.ObtenerPedidoPorId(idPedido);
             if (pedido == null)
             {
@@ -31,26 +30,17 @@ namespace Logica
                 Plato = dp.Plato
             }).ToList();
 
-            // Obtener nombre del cajero
-            string nombreCajero = datosFactura.ObtenerNombreCajeroPorId(pedido.IdCajero);
-
-            // Crear factura
             Factura factura = new Factura
             {
                 FechaFactura = DateTime.Now,
                 IdPedido = pedido.Id,
-                NombreCajero = nombreCajero,
                 Detalles = detallesPedido,
                 Total = detallesPedido.Sum(d => d.Cantidad * d.Plato.Precio)
             };
 
-            // Insertar factura en la base de datos
-            datosFactura.InsertarFactura(factura);
+            datosFactura.InsertarFactura(factura); // Insertar la factura
 
-            // Generar el PDF
-            FacturaPDFGenerator generadorPDF = new FacturaPDFGenerator();
-            string filePath = $"factura_{factura.Id}.pdf";
-            generadorPDF.GenerarFacturaPDF(factura, filePath);
+            return factura; // Retornar la factura completa con ID
         }
     }
 }
