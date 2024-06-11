@@ -65,25 +65,22 @@ namespace Vista
             string contraseña = textContraseña.Text;
             string rolSeleccionado = cmbRol.SelectedItem.ToString();
 
-            Usuario usuario =  servicioUsuario.Autenticar(nombreUsuario, contraseña, rolSeleccionado);
-
+            var usuario = servicioUsuario.Autenticar(nombreUsuario, contraseña, rolSeleccionado);
 
             if (usuario != null)
             {
-                if (usuario.Rol == "Administrador")
+                if (rolSeleccionado == "Administrador")
                 {
                     MenuGeneral menuGeneral = new MenuGeneral(this);
                     menuGeneral.Show();
                     this.Hide();
-
                 }
-                else if (usuario.Rol == "Cliente")
+                else if (rolSeleccionado == "Cajero")
                 {
                     MenuPedido menuPedido = new MenuPedido(this);
                     menuPedido.Show();
                     this.Hide();
                 }
-                this.Hide();
             }
             else
             {

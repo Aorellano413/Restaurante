@@ -49,9 +49,8 @@
             this.PanelModificarIngrediente.Controls.Add(this.labelModificarIngrediente);
             this.PanelModificarIngrediente.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelModificarIngrediente.Location = new System.Drawing.Point(0, 0);
-            this.PanelModificarIngrediente.Margin = new System.Windows.Forms.Padding(2);
             this.PanelModificarIngrediente.Name = "PanelModificarIngrediente";
-            this.PanelModificarIngrediente.Size = new System.Drawing.Size(479, 33);
+            this.PanelModificarIngrediente.Size = new System.Drawing.Size(718, 51);
             this.PanelModificarIngrediente.TabIndex = 0;
             this.PanelModificarIngrediente.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelModificarIngrediente_MouseDown);
             // 
@@ -62,9 +61,10 @@
             this.btnCerrarRegistrarIngrediente.FlatAppearance.BorderSize = 0;
             this.btnCerrarRegistrarIngrediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarRegistrarIngrediente.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarRegistrarIngrediente.Image")));
-            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(448, 3);
+            this.btnCerrarRegistrarIngrediente.Location = new System.Drawing.Point(672, 5);
+            this.btnCerrarRegistrarIngrediente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrarRegistrarIngrediente.Name = "btnCerrarRegistrarIngrediente";
-            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(23, 23);
+            this.btnCerrarRegistrarIngrediente.Size = new System.Drawing.Size(34, 35);
             this.btnCerrarRegistrarIngrediente.TabIndex = 16;
             this.btnCerrarRegistrarIngrediente.UseVisualStyleBackColor = false;
             this.btnCerrarRegistrarIngrediente.Click += new System.EventHandler(this.btnCerrarRegistrarIngrediente_Click);
@@ -73,19 +73,17 @@
             // 
             this.labelModificarIngrediente.AutoSize = true;
             this.labelModificarIngrediente.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModificarIngrediente.Location = new System.Drawing.Point(124, 3);
-            this.labelModificarIngrediente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelModificarIngrediente.Location = new System.Drawing.Point(186, 5);
             this.labelModificarIngrediente.Name = "labelModificarIngrediente";
-            this.labelModificarIngrediente.Size = new System.Drawing.Size(202, 29);
+            this.labelModificarIngrediente.Size = new System.Drawing.Size(301, 43);
             this.labelModificarIngrediente.TabIndex = 0;
             this.labelModificarIngrediente.Text = "MODIFICAR INGREDIENTE";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(64, 54);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Location = new System.Drawing.Point(96, 83);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(192, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(286, 26);
             this.txtBuscar.TabIndex = 8;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -107,15 +105,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvModificarIngrediente.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvModificarIngrediente.Location = new System.Drawing.Point(9, 88);
-            this.dgvModificarIngrediente.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvModificarIngrediente.Location = new System.Drawing.Point(14, 135);
             this.dgvModificarIngrediente.Name = "dgvModificarIngrediente";
-            this.dgvModificarIngrediente.ReadOnly = true;
             this.dgvModificarIngrediente.RowHeadersVisible = false;
             this.dgvModificarIngrediente.RowHeadersWidth = 62;
             this.dgvModificarIngrediente.RowTemplate.Height = 28;
             this.dgvModificarIngrediente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModificarIngrediente.Size = new System.Drawing.Size(463, 164);
+            this.dgvModificarIngrediente.Size = new System.Drawing.Size(694, 252);
             this.dgvModificarIngrediente.TabIndex = 9;
             // 
             // btnRegistrar
@@ -127,10 +123,9 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(150, 266);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrar.Location = new System.Drawing.Point(225, 409);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(162, 80);
+            this.btnRegistrar.Size = new System.Drawing.Size(243, 123);
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "MODIFICAR";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -140,26 +135,26 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // ModificarIngrediente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(479, 366);
+            this.ClientSize = new System.Drawing.Size(718, 563);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dgvModificarIngrediente);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.PanelModificarIngrediente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModificarIngrediente";
             this.Text = "ModificarIngrediente";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ModificarIngrediente_MouseDown);

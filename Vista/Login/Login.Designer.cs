@@ -200,7 +200,7 @@
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Items.AddRange(new object[] {
             "Administrador",
-            "Cliente"});
+            "Cajero"});
             this.cmbRol.Location = new System.Drawing.Point(832, 191);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(210, 28);
