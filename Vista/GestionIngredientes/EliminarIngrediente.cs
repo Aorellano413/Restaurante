@@ -49,13 +49,17 @@ namespace Vista.GestionIngredientes
         {
             if (dgvEliminarIngrediente.SelectedRows.Count > 0)
             {
-                int id = Convert.ToInt32(dgvEliminarIngrediente.SelectedRows[0].Cells["id_ingrediente"].Value);
-                InventarioBD inventarioBD = new InventarioBD();
-                inventarioBD.EliminarIngrediente(id);
-                MessageBox.Show("Ingrediente eliminado correctamente.");
+                DialogResult dialogResult = MessageBox.Show("ESTA SEGURO QUE DESEA ELIMINAR ESTE INGREDIENTE? ESTA ELIMINACION PUEDE INTERFERIR CON LOS PLATOS QUE YA CONTENGAN ESTE INGREDIENTE", "Confirmar Eliminación", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(dgvEliminarIngrediente.SelectedRows[0].Cells["id_ingrediente"].Value);
+                    PlatosBD platosBD = new PlatosBD();
+                    platosBD.EliminarIngredienteYActualizarPlatos(id);
+                    MessageBox.Show("Ingrediente eliminado correctamente.");
 
-                // Actualizar el DataGridView después de eliminar
-                FiltrarIngredientes();
+                    // Actualizar el DataGridView después de eliminar
+                    FiltrarIngredientes();
+                }
             }
             else
             {

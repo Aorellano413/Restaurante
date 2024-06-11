@@ -247,5 +247,63 @@ namespace Persistencia
             }
             return plato;
         }
+
+        public void EliminarIngredienteYActualizarPlatos(int idIngrediente)
+        {
+            using (MySqlConnection conn = conexion.AbrirConexion())
+            {
+                using (MySqlTransaction transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        // Obtener el nombre del ingrediente a eliminar
+                        string nombreIngrediente = "";
+                        string queryGetNombreIngrediente = "SELECT nombre FROM INGREDIENTES WHERE id_ingrediente = @idIngrediente;";
+                        using (MySqlCommand cmdGetNombreIngrediente = new MySqlCommand(queryGetNombreIngrediente, conn, transaction))
+                        {
+                            cmdGetNombreIngrediente.Parameters.AddWithValue("@idIngrediente", idIngrediente);
+                            using (MySqlDataReader reader = cmdGetNombreIngrediente.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    nombreIngrediente = reader.GetString("nombre");
+                                }
+                            }
+                        }
+
+                        // Eliminar el ingrediente de INGREDIENTES_PLATOS
+                        string queryDeleteFromIngredientesPlatos = "DELETE FROM INGREDIENTES_PLATOS WHERE id_ingrediente = @idIngrediente;";
+                        using (MySqlCommand cmdDeleteFromIngredientesPlatos = new MySqlCommand(queryDeleteFromIngredientesPlatos, conn, transaction))
+                        {
+                            cmdDeleteFromIngredientesPlatos.Parameters.AddWithValue("@idIngrediente", idIngrediente);
+                            cmdDeleteFromIngredientesPlatos.ExecuteNonQuery();
+                        }
+
+                        // Actualizar las descripciones de los platos que contienen el ingrediente
+                        string queryUpdatePlatoDescripcion = "UPDATE PLATOS SET descripcion = REPLACE(descripcion, @nombreIngrediente, '') WHERE descripcion LIKE CONCAT('%', @nombreIngrediente, '%');";
+                        using (MySqlCommand cmdUpdatePlatoDescripcion = new MySqlCommand(queryUpdatePlatoDescripcion, conn, transaction))
+                        {
+                            cmdUpdatePlatoDescripcion.Parameters.AddWithValue("@nombreIngrediente", nombreIngrediente);
+                            cmdUpdatePlatoDescripcion.ExecuteNonQuery();
+                        }
+
+                        // Eliminar el ingrediente de INGREDIENTES
+                        string queryDeleteFromIngredientes = "DELETE FROM INGREDIENTES WHERE id_ingrediente = @idIngrediente;";
+                        using (MySqlCommand cmdDeleteFromIngredientes = new MySqlCommand(queryDeleteFromIngredientes, conn, transaction))
+                        {
+                            cmdDeleteFromIngredientes.Parameters.AddWithValue("@idIngrediente", idIngrediente);
+                            cmdDeleteFromIngredientes.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
     }
 }

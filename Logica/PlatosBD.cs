@@ -58,6 +58,11 @@ namespace Logica
             return datos.ObtenerPlatoPorId(idPlato);
         }
 
+        public void EliminarIngredienteYActualizarPlatos(int idIngrediente)
+        {
+            datos.EliminarIngredienteYActualizarPlatos(idIngrediente);
+        }
+
         //MENU PEDIDO
         public List<Plato> ObtenerTodosLosPlatos()
         {
