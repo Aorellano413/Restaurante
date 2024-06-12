@@ -369,6 +369,8 @@ namespace Vista.Menus
         {
             RegistroPedido registroPedido = new RegistroPedido(this);
             registroPedido.Show();
+            this.Enabled = false;
+            registroPedido.FormClosed += (s, args) => this.Enabled = true;
         }
 
         

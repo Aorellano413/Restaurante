@@ -13,7 +13,7 @@ namespace Persistencia
 
         public ConexionDAL()
         {
-            connectionString = "server=localhost;database=restaurante;uid=root;pwd=andres0509;";
+            connectionString = "server=localhost;database=restaurante;uid=root;pwd=cubos123;";
         }
 
         public MySqlConnection AbrirConexion()
