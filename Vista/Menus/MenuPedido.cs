@@ -364,5 +364,16 @@ namespace Vista.Menus
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnRegistroPedido_Click(object sender, EventArgs e)
+        {
+            RegistroPedido registroPedido = new RegistroPedido(this);
+            registroPedido.Show();
+        }
+
+        private void MenuPedido_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

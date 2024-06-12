@@ -46,6 +46,16 @@ namespace Logica
             return datos.ObtenerDetallesPedido(idPedido);
         }
 
+        public DataTable ObtenerPedidosConDetalles()
+        {
+            return datos.ObtenerPedidosConDetalles();
+        }
+
+        public DataTable ObtenerPedidosPorFecha(DateTime fecha)
+        {
+            return datos.ObtenerPedidosPorFecha(fecha);
+        }
+
 
     }
 }

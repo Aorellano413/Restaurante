@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPedido));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenuPedido = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.labelMenuPedido = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.labelCambioMP = new System.Windows.Forms.Label();
             this.btnAñadirPlatoMP = new System.Windows.Forms.Button();
             this.btnPagarMP = new System.Windows.Forms.Button();
+            this.btnRegistroPedido = new System.Windows.Forms.Button();
             this.panelMenuPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuPedido)).BeginInit();
             this.SuspendLayout();
@@ -58,9 +59,8 @@
             this.panelMenuPedido.Controls.Add(this.btnCerrarMP);
             this.panelMenuPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenuPedido.Location = new System.Drawing.Point(0, 0);
-            this.panelMenuPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenuPedido.Name = "panelMenuPedido";
-            this.panelMenuPedido.Size = new System.Drawing.Size(1386, 33);
+            this.panelMenuPedido.Size = new System.Drawing.Size(1946, 51);
             this.panelMenuPedido.TabIndex = 0;
             this.panelMenuPedido.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenuPedido_MouseDown);
             // 
@@ -72,9 +72,10 @@
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.ForeColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(1281, 0);
+            this.btnRegresar.Location = new System.Drawing.Point(1922, 0);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(31, 31);
+            this.btnRegresar.Size = new System.Drawing.Size(46, 48);
             this.btnRegresar.TabIndex = 28;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -84,9 +85,10 @@
             this.labelMenuPedido.AutoSize = true;
             this.labelMenuPedido.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMenuPedido.ForeColor = System.Drawing.Color.Black;
-            this.labelMenuPedido.Location = new System.Drawing.Point(623, 3);
+            this.labelMenuPedido.Location = new System.Drawing.Point(934, 5);
+            this.labelMenuPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuPedido.Name = "labelMenuPedido";
-            this.labelMenuPedido.Size = new System.Drawing.Size(116, 29);
+            this.labelMenuPedido.Size = new System.Drawing.Size(175, 43);
             this.labelMenuPedido.TabIndex = 27;
             this.labelMenuPedido.Text = "MENU PEDIDO";
             // 
@@ -97,9 +99,10 @@
             this.btnCerrarMP.FlatAppearance.BorderSize = 0;
             this.btnCerrarMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarMP.Image")));
-            this.btnCerrarMP.Location = new System.Drawing.Point(1318, 4);
+            this.btnCerrarMP.Location = new System.Drawing.Point(1977, 6);
+            this.btnCerrarMP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrarMP.Name = "btnCerrarMP";
-            this.btnCerrarMP.Size = new System.Drawing.Size(23, 23);
+            this.btnCerrarMP.Size = new System.Drawing.Size(34, 35);
             this.btnCerrarMP.TabIndex = 3;
             this.btnCerrarMP.UseVisualStyleBackColor = false;
             this.btnCerrarMP.Click += new System.EventHandler(this.btnCerrarMP_Click);
@@ -107,10 +110,9 @@
             // cmbPlatosMP
             // 
             this.cmbPlatosMP.FormattingEnabled = true;
-            this.cmbPlatosMP.Location = new System.Drawing.Point(22, 53);
-            this.cmbPlatosMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPlatosMP.Location = new System.Drawing.Point(33, 82);
             this.cmbPlatosMP.Name = "cmbPlatosMP";
-            this.cmbPlatosMP.Size = new System.Drawing.Size(197, 21);
+            this.cmbPlatosMP.Size = new System.Drawing.Size(294, 28);
             this.cmbPlatosMP.TabIndex = 1;
             // 
             // dgvMenuPedido
@@ -123,21 +125,20 @@
             this.dgvMenuPedido.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvMenuPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvMenuPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMenuPedido.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMenuPedido.Location = new System.Drawing.Point(22, 105);
-            this.dgvMenuPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMenuPedido.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvMenuPedido.Location = new System.Drawing.Point(33, 162);
             this.dgvMenuPedido.Name = "dgvMenuPedido";
             this.dgvMenuPedido.RowHeadersVisible = false;
             this.dgvMenuPedido.RowHeadersWidth = 62;
             this.dgvMenuPedido.RowTemplate.Height = 28;
-            this.dgvMenuPedido.Size = new System.Drawing.Size(1257, 508);
+            this.dgvMenuPedido.Size = new System.Drawing.Size(1886, 782);
             this.dgvMenuPedido.TabIndex = 2;
             // 
             // btnConfirmarMP
@@ -149,10 +150,9 @@
             this.btnConfirmarMP.ForeColor = System.Drawing.Color.Black;
             this.btnConfirmarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmarMP.Image")));
             this.btnConfirmarMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmarMP.Location = new System.Drawing.Point(512, 678);
-            this.btnConfirmarMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmarMP.Location = new System.Drawing.Point(768, 1043);
             this.btnConfirmarMP.Name = "btnConfirmarMP";
-            this.btnConfirmarMP.Size = new System.Drawing.Size(156, 66);
+            this.btnConfirmarMP.Size = new System.Drawing.Size(234, 102);
             this.btnConfirmarMP.TabIndex = 12;
             this.btnConfirmarMP.Text = "CONFIRMAR";
             this.btnConfirmarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -168,10 +168,9 @@
             this.btnLimpiarMP.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarMP.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiarMP.Image")));
             this.btnLimpiarMP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarMP.Location = new System.Drawing.Point(804, 678);
-            this.btnLimpiarMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiarMP.Location = new System.Drawing.Point(1206, 1043);
             this.btnLimpiarMP.Name = "btnLimpiarMP";
-            this.btnLimpiarMP.Size = new System.Drawing.Size(156, 66);
+            this.btnLimpiarMP.Size = new System.Drawing.Size(234, 102);
             this.btnLimpiarMP.TabIndex = 13;
             this.btnLimpiarMP.Text = "LIMPIAR";
             this.btnLimpiarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,10 +181,9 @@
             // 
             this.labelTotalAPagar.AutoSize = true;
             this.labelTotalAPagar.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalAPagar.Location = new System.Drawing.Point(17, 641);
-            this.labelTotalAPagar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTotalAPagar.Location = new System.Drawing.Point(26, 986);
             this.labelTotalAPagar.Name = "labelTotalAPagar";
-            this.labelTotalAPagar.Size = new System.Drawing.Size(140, 29);
+            this.labelTotalAPagar.Size = new System.Drawing.Size(206, 43);
             this.labelTotalAPagar.TabIndex = 14;
             this.labelTotalAPagar.Text = "TOTAL A PAGAR :";
             // 
@@ -193,10 +191,9 @@
             // 
             this.labelTotalMP.AutoSize = true;
             this.labelTotalMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalMP.Location = new System.Drawing.Point(158, 641);
-            this.labelTotalMP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTotalMP.Location = new System.Drawing.Point(237, 986);
             this.labelTotalMP.Name = "labelTotalMP";
-            this.labelTotalMP.Size = new System.Drawing.Size(23, 29);
+            this.labelTotalMP.Size = new System.Drawing.Size(34, 43);
             this.labelTotalMP.TabIndex = 15;
             this.labelTotalMP.Text = "0";
             // 
@@ -204,29 +201,26 @@
             // 
             this.labelEfectivo.AutoSize = true;
             this.labelEfectivo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEfectivo.Location = new System.Drawing.Point(17, 678);
-            this.labelEfectivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEfectivo.Location = new System.Drawing.Point(26, 1043);
             this.labelEfectivo.Name = "labelEfectivo";
-            this.labelEfectivo.Size = new System.Drawing.Size(142, 29);
+            this.labelEfectivo.Size = new System.Drawing.Size(209, 43);
             this.labelEfectivo.TabIndex = 16;
             this.labelEfectivo.Text = "EFECTIVO           :";
             // 
             // txtEfectivoMP
             // 
-            this.txtEfectivoMP.Location = new System.Drawing.Point(156, 689);
-            this.txtEfectivoMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEfectivoMP.Location = new System.Drawing.Point(234, 1060);
             this.txtEfectivoMP.Name = "txtEfectivoMP";
-            this.txtEfectivoMP.Size = new System.Drawing.Size(133, 20);
+            this.txtEfectivoMP.Size = new System.Drawing.Size(198, 26);
             this.txtEfectivoMP.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 716);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(26, 1102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
+            this.label1.Size = new System.Drawing.Size(211, 43);
             this.label1.TabIndex = 18;
             this.label1.Text = "CAMBIO              :";
             // 
@@ -234,10 +228,9 @@
             // 
             this.labelCambioMP.AutoSize = true;
             this.labelCambioMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCambioMP.Location = new System.Drawing.Point(158, 716);
-            this.labelCambioMP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCambioMP.Location = new System.Drawing.Point(237, 1102);
             this.labelCambioMP.Name = "labelCambioMP";
-            this.labelCambioMP.Size = new System.Drawing.Size(23, 29);
+            this.labelCambioMP.Size = new System.Drawing.Size(34, 43);
             this.labelCambioMP.TabIndex = 19;
             this.labelCambioMP.Text = "0";
             // 
@@ -247,10 +240,9 @@
             this.btnAñadirPlatoMP.FlatAppearance.BorderSize = 0;
             this.btnAñadirPlatoMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirPlatoMP.ForeColor = System.Drawing.Color.Black;
-            this.btnAñadirPlatoMP.Location = new System.Drawing.Point(239, 44);
-            this.btnAñadirPlatoMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadirPlatoMP.Location = new System.Drawing.Point(358, 68);
             this.btnAñadirPlatoMP.Name = "btnAñadirPlatoMP";
-            this.btnAñadirPlatoMP.Size = new System.Drawing.Size(65, 30);
+            this.btnAñadirPlatoMP.Size = new System.Drawing.Size(98, 46);
             this.btnAñadirPlatoMP.TabIndex = 22;
             this.btnAñadirPlatoMP.Text = "AÑADIR";
             this.btnAñadirPlatoMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -264,22 +256,37 @@
             this.btnPagarMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagarMP.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagarMP.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPagarMP.Location = new System.Drawing.Point(313, 422);
-            this.btnPagarMP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPagarMP.Location = new System.Drawing.Point(470, 649);
             this.btnPagarMP.Name = "btnPagarMP";
-            this.btnPagarMP.Size = new System.Drawing.Size(66, 28);
+            this.btnPagarMP.Size = new System.Drawing.Size(99, 43);
             this.btnPagarMP.TabIndex = 23;
             this.btnPagarMP.Text = "PAGAR";
             this.btnPagarMP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPagarMP.UseVisualStyleBackColor = false;
             this.btnPagarMP.Click += new System.EventHandler(this.btnPagarMP_Click);
             // 
+            // btnRegistroPedido
+            // 
+            this.btnRegistroPedido.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistroPedido.FlatAppearance.BorderSize = 0;
+            this.btnRegistroPedido.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistroPedido.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistroPedido.Location = new System.Drawing.Point(977, 67);
+            this.btnRegistroPedido.Name = "btnRegistroPedido";
+            this.btnRegistroPedido.Size = new System.Drawing.Size(211, 43);
+            this.btnRegistroPedido.TabIndex = 26;
+            this.btnRegistroPedido.Text = "REGISTRO PEDIDOS";
+            this.btnRegistroPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistroPedido.UseVisualStyleBackColor = false;
+            this.btnRegistroPedido.Click += new System.EventHandler(this.btnRegistroPedido_Click);
+            // 
             // MenuPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.Controls.Add(this.btnRegistroPedido);
             this.Controls.Add(this.btnPagarMP);
             this.Controls.Add(this.btnAñadirPlatoMP);
             this.Controls.Add(this.labelCambioMP);
@@ -294,9 +301,9 @@
             this.Controls.Add(this.cmbPlatosMP);
             this.Controls.Add(this.panelMenuPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuPedido";
             this.Text = "MenuPedido";
+            this.Load += new System.EventHandler(this.MenuPedido_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MenuPedido_MouseMove);
             this.panelMenuPedido.ResumeLayout(false);
             this.panelMenuPedido.PerformLayout();
@@ -324,5 +331,6 @@
         private System.Windows.Forms.Button btnAñadirPlatoMP;
         private System.Windows.Forms.Button btnPagarMP;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnRegistroPedido;
     }
 }

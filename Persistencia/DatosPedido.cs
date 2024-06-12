@@ -113,6 +113,36 @@ namespace Persistencia
             return dt;
         }
 
+        public DataTable ObtenerPedidosConDetalles()
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = @"
+            SELECT 
+                p.id_pedido AS 'ID Pedido', 
+                p.fecha_pedido AS 'Fecha Pedido', 
+                p.id_cajero AS 'ID Cajero', 
+                dp.cantidad AS 'Cantidad', 
+                dp.precio AS 'Precio', 
+                pl.nombre AS 'Nombre Plato'
+            FROM PEDIDOS p
+            JOIN DETALLE_PEDIDOS dp ON p.id_pedido = dp.id_pedido
+            JOIN PLATOS pl ON dp.id_plato = pl.id_plato;
+        ";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
+
+
         public void ActualizarStockPlato(int idPlato, int cantidad)
         {
             using (MySqlConnection connection = conexion.AbrirConexion())
@@ -126,5 +156,36 @@ namespace Persistencia
                 }
             }
         }
+
+        public DataTable ObtenerPedidosPorFecha(DateTime fecha)
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = @"
+            SELECT 
+                p.id_pedido AS 'ID Pedido', 
+                p.fecha_pedido AS 'Fecha Pedido', 
+                p.id_cajero AS 'ID Cajero', 
+                dp.cantidad AS 'Cantidad', 
+                dp.precio AS 'Precio', 
+                pl.nombre AS 'Nombre Plato'
+            FROM PEDIDOS p
+            JOIN DETALLE_PEDIDOS dp ON p.id_pedido = dp.id_pedido
+            JOIN PLATOS pl ON dp.id_plato = pl.id_plato
+            WHERE DATE(p.fecha_pedido) = @fechaPedido;
+        ";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@fechaPedido", fecha.Date);
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
     }
 }
