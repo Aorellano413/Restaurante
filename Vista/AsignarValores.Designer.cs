@@ -61,7 +61,7 @@
             this.btnCerrarAsignarValores.FlatAppearance.BorderSize = 0;
             this.btnCerrarAsignarValores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarAsignarValores.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAsignarValores.Image")));
-            this.btnCerrarAsignarValores.Location = new System.Drawing.Point(767, 5);
+            this.btnCerrarAsignarValores.Location = new System.Drawing.Point(766, 6);
             this.btnCerrarAsignarValores.Name = "btnCerrarAsignarValores";
             this.btnCerrarAsignarValores.Size = new System.Drawing.Size(23, 23);
             this.btnCerrarAsignarValores.TabIndex = 18;

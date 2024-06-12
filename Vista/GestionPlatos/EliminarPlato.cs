@@ -97,5 +97,6 @@ namespace Vista.GestionPlatos
 
             dgvEliminarPlato.DataSource = dt;
         }
+
     }
 }

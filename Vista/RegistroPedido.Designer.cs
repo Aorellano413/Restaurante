@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroPedido));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelRegistroPedido = new System.Windows.Forms.Panel();
+            this.btnCerrarPedidos = new System.Windows.Forms.Button();
             this.labelModificarPlato = new System.Windows.Forms.Label();
             this.dgvRegistroPedido = new System.Windows.Forms.DataGridView();
             this.dataTimeRegistroPedido = new System.Windows.Forms.DateTimePicker();
@@ -42,13 +43,29 @@
             // panelRegistroPedido
             // 
             this.panelRegistroPedido.BackColor = System.Drawing.Color.Khaki;
+            this.panelRegistroPedido.Controls.Add(this.btnCerrarPedidos);
             this.panelRegistroPedido.Controls.Add(this.labelModificarPlato);
             this.panelRegistroPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRegistroPedido.Location = new System.Drawing.Point(0, 0);
-            this.panelRegistroPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelRegistroPedido.Margin = new System.Windows.Forms.Padding(2);
             this.panelRegistroPedido.Name = "panelRegistroPedido";
             this.panelRegistroPedido.Size = new System.Drawing.Size(830, 33);
             this.panelRegistroPedido.TabIndex = 0;
+            this.panelRegistroPedido.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRegistroPedido_MouseDown);
+            // 
+            // btnCerrarPedidos
+            // 
+            this.btnCerrarPedidos.BackColor = System.Drawing.Color.Khaki;
+            this.btnCerrarPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarPedidos.FlatAppearance.BorderSize = 0;
+            this.btnCerrarPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarPedidos.Image")));
+            this.btnCerrarPedidos.Location = new System.Drawing.Point(798, 3);
+            this.btnCerrarPedidos.Name = "btnCerrarPedidos";
+            this.btnCerrarPedidos.Size = new System.Drawing.Size(23, 23);
+            this.btnCerrarPedidos.TabIndex = 19;
+            this.btnCerrarPedidos.UseVisualStyleBackColor = false;
+            this.btnCerrarPedidos.Click += new System.EventHandler(this.btnCerrarPedidos_Click);
             // 
             // labelModificarPlato
             // 
@@ -71,20 +88,20 @@
             this.dgvRegistroPedido.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvRegistroPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvRegistroPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRegistroPedido.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRegistroPedido.EnableHeadersVisualStyles = false;
-            this.dgvRegistroPedido.GridColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRegistroPedido.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRegistroPedido.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvRegistroPedido.Location = new System.Drawing.Point(8, 101);
-            this.dgvRegistroPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRegistroPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRegistroPedido.Name = "dgvRegistroPedido";
             this.dgvRegistroPedido.ReadOnly = true;
+            this.dgvRegistroPedido.RowHeadersVisible = false;
             this.dgvRegistroPedido.RowHeadersWidth = 62;
             this.dgvRegistroPedido.RowTemplate.Height = 28;
             this.dgvRegistroPedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -94,7 +111,7 @@
             // dataTimeRegistroPedido
             // 
             this.dataTimeRegistroPedido.Location = new System.Drawing.Point(8, 67);
-            this.dataTimeRegistroPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataTimeRegistroPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dataTimeRegistroPedido.Name = "dataTimeRegistroPedido";
             this.dataTimeRegistroPedido.Size = new System.Drawing.Size(216, 20);
             this.dataTimeRegistroPedido.TabIndex = 2;
@@ -127,9 +144,10 @@
             this.Controls.Add(this.dgvRegistroPedido);
             this.Controls.Add(this.panelRegistroPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegistroPedido";
             this.Text = "RegistroPedido";
+            this.Load += new System.EventHandler(this.RegistroPedido_Load);
             this.panelRegistroPedido.ResumeLayout(false);
             this.panelRegistroPedido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPedido)).EndInit();
@@ -144,5 +162,6 @@
         private System.Windows.Forms.DataGridView dgvRegistroPedido;
         private System.Windows.Forms.DateTimePicker dataTimeRegistroPedido;
         private System.Windows.Forms.Button btnRestablecerRegistroPedido;
+        private System.Windows.Forms.Button btnCerrarPedidos;
     }
 }

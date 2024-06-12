@@ -281,7 +281,7 @@
             this.btnRegistroPedido.FlatAppearance.BorderSize = 0;
             this.btnRegistroPedido.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroPedido.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistroPedido.Location = new System.Drawing.Point(651, 44);
+            this.btnRegistroPedido.Location = new System.Drawing.Point(1102, 46);
             this.btnRegistroPedido.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistroPedido.Name = "btnRegistroPedido";
             this.btnRegistroPedido.Size = new System.Drawing.Size(141, 28);
