@@ -15,6 +15,7 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using System.Runtime.InteropServices;
 
 namespace Vista.Menus
 {
@@ -45,6 +46,11 @@ namespace Vista.Menus
             btnPagarMP.Visible = false;
             txtEfectivoMP.Enabled = false;
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void ConfigurarDataGridView()
         {
@@ -345,6 +351,18 @@ namespace Vista.Menus
         {
             login.Show();
             this.Close();
+        }
+
+        private void panelMenuPedido_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void MenuPedido_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
