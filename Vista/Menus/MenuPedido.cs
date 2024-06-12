@@ -340,5 +340,11 @@ namespace Vista.Menus
             txtEfectivoMP.Enabled = false;
             btnConfirmarMP.Enabled = false;
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            login.Show();
+            this.Close();
+        }
     }
 }
