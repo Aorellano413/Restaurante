@@ -371,9 +371,6 @@ namespace Vista.Menus
             registroPedido.Show();
         }
 
-        private void MenuPedido_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
