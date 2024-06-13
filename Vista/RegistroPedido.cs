@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Menus;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using iText.Kernel.Pdf;
 
 namespace Vista
 {
@@ -38,26 +42,16 @@ namespace Vista
 
         private void CargarPedidosConDetallesEnGrid()
         {
-            // Obtener los datos de los pedidos con detalles
             DataTable dtPedidosConDetalles = pedidosBD.ObtenerPedidosConDetalles();
-
-            // Asignar el DataTable al DataGridView
             dgvRegistroPedido.DataSource = dtPedidosConDetalles;
-
-            // Opcional: Ajusta el formato de la tabla, columnas, etc.
             dgvRegistroPedido.AutoResizeColumns();
             dgvRegistroPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void FiltrarPedidosPorFecha(DateTime fecha)
         {
-            // Obtener los datos filtrados por fecha
             DataTable dtPedidosFiltrados = pedidosBD.ObtenerPedidosPorFecha(fecha);
-
-            // Asignar el DataTable filtrado al DataGridView
             dgvRegistroPedido.DataSource = dtPedidosFiltrados;
-
-            // Opcional: Ajusta el formato de la tabla, columnas, etc.
             dgvRegistroPedido.AutoResizeColumns();
             dgvRegistroPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
@@ -67,10 +61,13 @@ namespace Vista
             DateTime fechaSeleccionada = dataTimeRegistroPedido.Value;
             FiltrarPedidosPorFecha(fechaSeleccionada);
         }
+        private void dataTimeRegistroPedido2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnRestablecerRegistroPedido_Click_1(object sender, EventArgs e)
         {
-            // Restablecer la vista a todos los pedidos
             CargarPedidosConDetallesEnGrid();
         }
 
@@ -90,5 +87,91 @@ namespace Vista
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+                saveFileDialog.Title = "Guardar archivo PDF";
+                saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+
+                    string filePath = saveFileDialog.FileName;
+
+
+                    try
+                    {
+                        GenerarPDFDesdeDataGridView(filePath);
+                        MessageBox.Show("PDF generado correctamente en: " + filePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ocurrió un error al generar el PDF: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void GenerarPDFDesdeDataGridView(string filePath)
+        {
+            Document document = new Document();
+            try
+            {
+                iTextSharp.text.pdf.PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+                document.Open();
+
+
+                PdfPTable pdfTable = new PdfPTable(dgvRegistroPedido.ColumnCount);
+
+
+                foreach (DataGridViewColumn column in dgvRegistroPedido.Columns)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                    pdfTable.AddCell(cell);
+                }
+
+
+                foreach (DataGridViewRow row in dgvRegistroPedido.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null)
+                        {
+                            string cellValue = cell.Value.ToString();
+
+                            if (cell.Value is DateTime dateTimeValue)
+                            {
+                                cellValue = dateTimeValue.ToString("dd/MM/yyyy"); 
+                            }
+                            pdfTable.AddCell(cellValue);
+                        }
+                        else
+                        {
+                            pdfTable.AddCell(string.Empty);
+                        }
+                    }
+                }
+
+                document.Add(pdfTable);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al generar el PDF: " + ex.Message);
+            }
+            finally
+            {
+                if (document.IsOpen())
+                {
+                    document.Close();
+                }
+            }
+        }
+
+
+
+
     }
 }

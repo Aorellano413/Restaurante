@@ -36,6 +36,8 @@
             this.dgvRegistroPedido = new System.Windows.Forms.DataGridView();
             this.dataTimeRegistroPedido = new System.Windows.Forms.DateTimePicker();
             this.btnRestablecerRegistroPedido = new System.Windows.Forms.Button();
+            this.dataTimeRegistroPedido2 = new System.Windows.Forms.DateTimePicker();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.panelRegistroPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPedido)).BeginInit();
             this.SuspendLayout();
@@ -133,12 +135,37 @@
             this.btnRestablecerRegistroPedido.UseVisualStyleBackColor = true;
             this.btnRestablecerRegistroPedido.Click += new System.EventHandler(this.btnRestablecerRegistroPedido_Click_1);
             // 
+            // dataTimeRegistroPedido2
+            // 
+            this.dataTimeRegistroPedido2.Location = new System.Drawing.Point(346, 67);
+            this.dataTimeRegistroPedido2.Name = "dataTimeRegistroPedido2";
+            this.dataTimeRegistroPedido2.Size = new System.Drawing.Size(216, 20);
+            this.dataTimeRegistroPedido2.TabIndex = 6;
+            this.dataTimeRegistroPedido2.ValueChanged += new System.EventHandler(this.dataTimeRegistroPedido2_ValueChanged);
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.FlatAppearance.BorderSize = 0;
+            this.btnPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDF.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPDF.Location = new System.Drawing.Point(12, 377);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(131, 45);
+            this.btnPDF.TabIndex = 7;
+            this.btnPDF.Text = "GENERAR FACTURA";
+            this.btnPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
             // RegistroPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(830, 450);
+            this.Controls.Add(this.btnPDF);
+            this.Controls.Add(this.dataTimeRegistroPedido2);
             this.Controls.Add(this.btnRestablecerRegistroPedido);
             this.Controls.Add(this.dataTimeRegistroPedido);
             this.Controls.Add(this.dgvRegistroPedido);
@@ -163,5 +190,7 @@
         private System.Windows.Forms.DateTimePicker dataTimeRegistroPedido;
         private System.Windows.Forms.Button btnRestablecerRegistroPedido;
         private System.Windows.Forms.Button btnCerrarPedidos;
+        private System.Windows.Forms.DateTimePicker dataTimeRegistroPedido2;
+        private System.Windows.Forms.Button btnPDF;
     }
 }
