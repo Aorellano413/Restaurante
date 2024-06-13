@@ -140,16 +140,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsignarValores\AsignarValores.cs">
+    <Compile Include="GestionPlatos\AsignarValores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AsignarValores\AsignarValores.Designer.cs">
+    <Compile Include="GestionPlatos\AsignarValores.Designer.cs">
       <DependentUpon>AsignarValores.cs</DependentUpon>
     </Compile>
-    <Compile Include="DisponibilidadPlatos.cs">
+    <Compile Include="Menus\MenuPedido\DisponibilidadPlatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DisponibilidadPlatos.Designer.cs">
+    <Compile Include="Menus\MenuPedido\DisponibilidadPlatos.Designer.cs">
       <DependentUpon>DisponibilidadPlatos.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionIngredientes\EliminarIngrediente.cs">
@@ -232,16 +232,16 @@
     <Compile Include="GestionInventario\RegistroProductos.Designer.cs">
       <DependentUpon>RegistroProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroPedido\RegistroPedido.cs">
+    <Compile Include="Menus\MenuPedido\RegistroPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroPedido\RegistroPedido.Designer.cs">
+    <Compile Include="Menus\MenuPedido\RegistroPedido.Designer.cs">
       <DependentUpon>RegistroPedido.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AsignarValores\AsignarValores.resx">
+    <EmbeddedResource Include="GestionPlatos\AsignarValores.resx">
       <DependentUpon>AsignarValores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DisponibilidadPlatos.resx">
+    <EmbeddedResource Include="Menus\MenuPedido\DisponibilidadPlatos.resx">
       <DependentUpon>DisponibilidadPlatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionIngredientes\EliminarIngrediente.resx">
@@ -292,7 +292,7 @@
     <EmbeddedResource Include="GestionInventario\RegistroProductos.resx">
       <DependentUpon>RegistroProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroPedido\RegistroPedido.resx">
+    <EmbeddedResource Include="Menus\MenuPedido\RegistroPedido.resx">
       <DependentUpon>RegistroPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
