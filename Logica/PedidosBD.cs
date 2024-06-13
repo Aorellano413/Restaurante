@@ -12,7 +12,7 @@ namespace Logica
     public class PedidosBD
     {
         DatosPedido datos = new DatosPedido();
-        PlatosBD platosBD = new PlatosBD(); // Añadimos esto para obtener información de los platos
+        PlatosBD platosBD = new PlatosBD();
         InventarioBD inventarioBD = new InventarioBD();
 
         public int CrearPedido(Pedido pedido)
@@ -25,10 +25,8 @@ namespace Logica
             datos.InsertarDetallePedido(detalle);
             datos.ActualizarStockPlato(detalle.IdPlato, detalle.Cantidad);
 
-            // Obtener los ingredientes del plato
             List<PlatoIngrediente> ingredientesDelPlato = platosBD.ObtenerIngredientesDePlato(detalle.IdPlato);
 
-            // Descontar los ingredientes utilizados en el plato
             foreach (var ingredientePlato in ingredientesDelPlato)
             {
                 int cantidadTotalADescontar = ingredientePlato.Cantidad * detalle.Cantidad;
@@ -51,11 +49,11 @@ namespace Logica
             return datos.ObtenerPedidosConDetalles();
         }
 
-        public DataTable ObtenerPedidosPorFecha(DateTime fecha)
+        
+
+        public DataTable ObtenerPedidosPorRangoFechas(DateTime fechaInicio, DateTime fechaFin)
         {
-            return datos.ObtenerPedidosPorFecha(fecha);
+            return datos.ObtenerPedidosPorRangoFechas(fechaInicio, fechaFin);
         }
-
-
     }
 }

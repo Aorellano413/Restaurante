@@ -98,7 +98,7 @@ namespace Vista
 
             foreach (DataGridViewRow row in dgvAsignarValores.Rows)
             {
-                // Ignorar filas nuevas o filas con celdas vacías en "NombreIngrediente" y "Cantidad"
+
                 if (row.IsNewRow || string.IsNullOrWhiteSpace(row.Cells["NombreIngrediente"].Value?.ToString()))
                 {
                     continue;

@@ -26,7 +26,7 @@ namespace Vista.Menus
         private PedidosBD pedidosBD = new PedidosBD();
         private InventarioBD inventarioBD = new InventarioBD();
         public MenuPedido(Login login)
-        {
+        {   
             InitializeComponent();
             this.login = login;
             CargarPlatosEnComboBox();
@@ -43,6 +43,8 @@ namespace Vista.Menus
             this.btnLimpiarMP.Click += new System.EventHandler(this.btnLimpiarMP_Click);
 
             btnConfirmarMP.Enabled = false;
+            btnRegistroPedido.Visible = false;
+            btnDisponibilidadPlatos.Visible = false;
             btnPagarMP.Visible = false;
             txtEfectivoMP.Enabled = false;
         }
@@ -373,6 +375,13 @@ namespace Vista.Menus
             registroPedido.FormClosed += (s, args) => this.Enabled = true;
         }
 
-        
+        private void btnDisponibilidadPlatos_Click(object sender, EventArgs e)
+        {
+            DisponibilidadPlatos disponibilidadPlatos = new DisponibilidadPlatos(this);
+            disponibilidadPlatos.Show();
+            this.Enabled = false;
+            disponibilidadPlatos.FormClosed += (s, args) => this.Enabled = true;
+        }
+
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroPedido));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelRegistroPedido = new System.Windows.Forms.Panel();
             this.btnCerrarPedidos = new System.Windows.Forms.Button();
             this.labelModificarPlato = new System.Windows.Forms.Label();
@@ -38,6 +38,8 @@
             this.btnRestablecerRegistroPedido = new System.Windows.Forms.Button();
             this.dataTimeRegistroPedido2 = new System.Windows.Forms.DateTimePicker();
             this.btnPDF = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelRegistroPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPedido)).BeginInit();
             this.SuspendLayout();
@@ -90,14 +92,14 @@
             this.dgvRegistroPedido.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvRegistroPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvRegistroPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRegistroPedido.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRegistroPedido.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRegistroPedido.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvRegistroPedido.Location = new System.Drawing.Point(8, 101);
             this.dgvRegistroPedido.Margin = new System.Windows.Forms.Padding(2);
@@ -112,12 +114,11 @@
             // 
             // dataTimeRegistroPedido
             // 
-            this.dataTimeRegistroPedido.Location = new System.Drawing.Point(8, 67);
+            this.dataTimeRegistroPedido.Location = new System.Drawing.Point(50, 64);
             this.dataTimeRegistroPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dataTimeRegistroPedido.Name = "dataTimeRegistroPedido";
             this.dataTimeRegistroPedido.Size = new System.Drawing.Size(216, 20);
             this.dataTimeRegistroPedido.TabIndex = 2;
-            this.dataTimeRegistroPedido.ValueChanged += new System.EventHandler(this.dataTimeRegistroPedido_ValueChanged_1);
             // 
             // btnRestablecerRegistroPedido
             // 
@@ -133,15 +134,13 @@
             this.btnRestablecerRegistroPedido.Text = "RESTABLECER";
             this.btnRestablecerRegistroPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRestablecerRegistroPedido.UseVisualStyleBackColor = true;
-            this.btnRestablecerRegistroPedido.Click += new System.EventHandler(this.btnRestablecerRegistroPedido_Click_1);
             // 
             // dataTimeRegistroPedido2
             // 
-            this.dataTimeRegistroPedido2.Location = new System.Drawing.Point(346, 67);
+            this.dataTimeRegistroPedido2.Location = new System.Drawing.Point(355, 64);
             this.dataTimeRegistroPedido2.Name = "dataTimeRegistroPedido2";
             this.dataTimeRegistroPedido2.Size = new System.Drawing.Size(216, 20);
             this.dataTimeRegistroPedido2.TabIndex = 6;
-            this.dataTimeRegistroPedido2.ValueChanged += new System.EventHandler(this.dataTimeRegistroPedido2_ValueChanged);
             // 
             // btnPDF
             // 
@@ -158,12 +157,34 @@
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "DESDE :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(313, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "HASTA:";
+            // 
             // RegistroPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(830, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPDF);
             this.Controls.Add(this.dataTimeRegistroPedido2);
             this.Controls.Add(this.btnRestablecerRegistroPedido);
@@ -179,6 +200,7 @@
             this.panelRegistroPedido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPedido)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,5 +214,7 @@
         private System.Windows.Forms.Button btnCerrarPedidos;
         private System.Windows.Forms.DateTimePicker dataTimeRegistroPedido2;
         private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

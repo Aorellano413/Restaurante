@@ -157,7 +157,7 @@ namespace Persistencia
             }
         }
 
-        public DataTable ObtenerPedidosPorFecha(DateTime fecha)
+        public DataTable ObtenerPedidosPorRangoFechas(DateTime fechaInicio, DateTime fechaFin)
         {
             DataTable dt = new DataTable();
             using (MySqlConnection connection = conexion.AbrirConexion())
@@ -173,11 +173,12 @@ namespace Persistencia
             FROM PEDIDOS p
             JOIN DETALLE_PEDIDOS dp ON p.id_pedido = dp.id_pedido
             JOIN PLATOS pl ON dp.id_plato = pl.id_plato
-            WHERE DATE(p.fecha_pedido) = @fechaPedido;
+            WHERE p.fecha_pedido BETWEEN @fechaInicio AND @fechaFin;
         ";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@fechaPedido", fecha.Date);
+                    cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.Date);
+                    cmd.Parameters.AddWithValue("@fechaFin", fechaFin.Date);
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                     {
                         adapter.Fill(dt);
@@ -188,4 +189,6 @@ namespace Persistencia
         }
 
     }
+
 }
+

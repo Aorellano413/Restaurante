@@ -1,42 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vista.Menus;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
-using iText.Kernel.Pdf;
+using System.Runtime.InteropServices;
+using Logica;
 
 namespace Vista
 {
     public partial class RegistroPedido : Form
     {
         private MenuPedido menuPedido;
-        private Logica.PedidosBD pedidosBD;
+        private PedidosBD pedidosBD;
 
         public RegistroPedido(MenuPedido menuPedido)
         {
             InitializeComponent();
             this.menuPedido = menuPedido;
-            this.pedidosBD = new Logica.PedidosBD();
+            this.pedidosBD = new PedidosBD();
             CargarPedidosConDetallesEnGrid();
 
-            // Event handler para el DateTimePicker
-            dataTimeRegistroPedido.ValueChanged += dataTimeRegistroPedido_ValueChanged_1;
 
-            // Event handler para el botón de restablecer
-            btnRestablecerRegistroPedido.Click += btnRestablecerRegistroPedido_Click_1;
+            dataTimeRegistroPedido.ValueChanged += dataTimeRegistroPedido_ValueChanged;
+
+
+            dataTimeRegistroPedido2.ValueChanged += dataTimeRegistroPedido2_ValueChanged;
+
+
+            btnRestablecerRegistroPedido.Click += btnRestablecerRegistroPedido_Click;
+
+
+            btnPDF.Click += btnPDF_Click;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
@@ -48,25 +49,33 @@ namespace Vista
             dgvRegistroPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
-        private void FiltrarPedidosPorFecha(DateTime fecha)
+        
+
+        private void FiltrarPedidosPorRangoFechas(DateTime fechaInicio, DateTime fechaFin)
         {
-            DataTable dtPedidosFiltrados = pedidosBD.ObtenerPedidosPorFecha(fecha);
+            DataTable dtPedidosFiltrados = pedidosBD.ObtenerPedidosPorRangoFechas(fechaInicio, fechaFin);
             dgvRegistroPedido.DataSource = dtPedidosFiltrados;
             dgvRegistroPedido.AutoResizeColumns();
             dgvRegistroPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
-        private void dataTimeRegistroPedido_ValueChanged_1(object sender, EventArgs e)
+        private void dataTimeRegistroPedido_ValueChanged(object sender, EventArgs e)
         {
-            DateTime fechaSeleccionada = dataTimeRegistroPedido.Value;
-            FiltrarPedidosPorFecha(fechaSeleccionada);
+            DateTime fechaInicio = dataTimeRegistroPedido.Value.Date;
+            DateTime fechaFin = dataTimeRegistroPedido2.Value.Date;
+
+            FiltrarPedidosPorRangoFechas(fechaInicio, fechaFin);
         }
+
         private void dataTimeRegistroPedido2_ValueChanged(object sender, EventArgs e)
         {
+            DateTime fechaInicio = dataTimeRegistroPedido.Value.Date;
+            DateTime fechaFin = dataTimeRegistroPedido2.Value.Date;
 
+            FiltrarPedidosPorRangoFechas(fechaInicio, fechaFin);
         }
 
-        private void btnRestablecerRegistroPedido_Click_1(object sender, EventArgs e)
+        private void btnRestablecerRegistroPedido_Click(object sender, EventArgs e)
         {
             CargarPedidosConDetallesEnGrid();
         }
@@ -98,18 +107,16 @@ namespace Vista
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-
                     string filePath = saveFileDialog.FileName;
-
 
                     try
                     {
                         GenerarPDFDesdeDataGridView(filePath);
-                        MessageBox.Show("PDF generado correctamente en: " + filePath);
+                        MessageBox.Show("PDF generado correctamente en: " + filePath, "PDF Generado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Ocurrió un error al generar el PDF: " + ex.Message);
+                        MessageBox.Show("Ocurrió un error al generar el PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -123,17 +130,16 @@ namespace Vista
                 iTextSharp.text.pdf.PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
                 document.Open();
 
-
                 PdfPTable pdfTable = new PdfPTable(dgvRegistroPedido.ColumnCount);
 
-
+                // Agregar encabezados
                 foreach (DataGridViewColumn column in dgvRegistroPedido.Columns)
                 {
                     PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                     pdfTable.AddCell(cell);
                 }
 
-
+                // Agregar filas
                 foreach (DataGridViewRow row in dgvRegistroPedido.Rows)
                 {
                     foreach (DataGridViewCell cell in row.Cells)
@@ -142,10 +148,12 @@ namespace Vista
                         {
                             string cellValue = cell.Value.ToString();
 
+                            // Convertir fechas al formato deseado
                             if (cell.Value is DateTime dateTimeValue)
                             {
-                                cellValue = dateTimeValue.ToString("dd/MM/yyyy"); 
+                                cellValue = dateTimeValue.ToString("dd/MM/yyyy");
                             }
+
                             pdfTable.AddCell(cellValue);
                         }
                         else
@@ -169,9 +177,5 @@ namespace Vista
                 }
             }
         }
-
-
-
-
     }
 }

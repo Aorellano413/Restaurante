@@ -1,10 +1,7 @@
-﻿using Entidades;
+﻿using Entidades; 
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistencia
 {
@@ -12,6 +9,7 @@ namespace Persistencia
     {
         ConexionDAL conexion = new ConexionDAL();
 
+        // Método para obtener un pedido por su ID
         public Pedido ObtenerPedidoPorId(int idPedido)
         {
             Pedido pedido = null;
@@ -45,6 +43,7 @@ namespace Persistencia
 
             return pedido;
         }
+
 
         public List<DetallePedido> ObtenerDetallesPedido(int idPedido)
         {
@@ -88,6 +87,7 @@ namespace Persistencia
             return detalles;
         }
 
+
         public void InsertarFactura(Factura factura)
         {
             using (MySqlConnection connection = conexion.AbrirConexion())
@@ -104,6 +104,45 @@ namespace Persistencia
                     factura.Id = (int)cmd.LastInsertedId; // Obtener el ID autogenerado
                 }
             }
+        }
+
+
+        public List<Pedido> ObtenerPedidosPorRangoFecha(DateTime fechaInicio, DateTime fechaFin)
+        {
+            List<Pedido> pedidos = new List<Pedido>();
+
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = @"
+                    SELECT * 
+                    FROM PEDIDOS 
+                    WHERE fecha_pedido BETWEEN @fechaInicio AND @fechaFin;";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+                    cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Pedido pedido = new Pedido
+                            {
+                                Id = reader.GetInt32("id_pedido"),
+                                FechaPedido = reader.GetDateTime("fecha_pedido"),
+                                IdCajero = reader.GetInt32("id_cajero")
+                            };
+
+
+                            // pedido.Detalles = ObtenerDetallesPedido(pedido.Id);
+
+                            pedidos.Add(pedido);
+                        }
+                    }
+                }
+            }
+
+            return pedidos;
         }
     }
 }

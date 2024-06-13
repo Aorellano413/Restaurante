@@ -126,6 +126,7 @@
     <Compile Include="FacturaManager.cs" />
     <Compile Include="FacturaPDFGenerator.cs" />
     <Compile Include="InventarioBD.cs" />
+    <Compile Include="LogicaFactura.cs" />
     <Compile Include="PedidosBD.cs" />
     <Compile Include="PlatosBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

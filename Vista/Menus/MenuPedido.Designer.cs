@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPedido));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenuPedido = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.labelMenuPedido = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.btnAñadirPlatoMP = new System.Windows.Forms.Button();
             this.btnPagarMP = new System.Windows.Forms.Button();
             this.btnRegistroPedido = new System.Windows.Forms.Button();
+            this.btnDisponibilidadPlatos = new System.Windows.Forms.Button();
             this.panelMenuPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuPedido)).BeginInit();
             this.SuspendLayout();
@@ -124,14 +125,14 @@
             this.dgvMenuPedido.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvMenuPedido.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvMenuPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMenuPedido.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMenuPedido.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMenuPedido.Location = new System.Drawing.Point(22, 105);
             this.dgvMenuPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMenuPedido.Name = "dgvMenuPedido";
@@ -291,12 +292,29 @@
             this.btnRegistroPedido.UseVisualStyleBackColor = false;
             this.btnRegistroPedido.Click += new System.EventHandler(this.btnRegistroPedido_Click);
             // 
+            // btnDisponibilidadPlatos
+            // 
+            this.btnDisponibilidadPlatos.BackColor = System.Drawing.Color.Transparent;
+            this.btnDisponibilidadPlatos.FlatAppearance.BorderSize = 0;
+            this.btnDisponibilidadPlatos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisponibilidadPlatos.ForeColor = System.Drawing.Color.Black;
+            this.btnDisponibilidadPlatos.Location = new System.Drawing.Point(855, 46);
+            this.btnDisponibilidadPlatos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDisponibilidadPlatos.Name = "btnDisponibilidadPlatos";
+            this.btnDisponibilidadPlatos.Size = new System.Drawing.Size(176, 28);
+            this.btnDisponibilidadPlatos.TabIndex = 27;
+            this.btnDisponibilidadPlatos.Text = "Disponibilidad de platos";
+            this.btnDisponibilidadPlatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDisponibilidadPlatos.UseVisualStyleBackColor = false;
+            this.btnDisponibilidadPlatos.Click += new System.EventHandler(this.btnDisponibilidadPlatos_Click);
+            // 
             // MenuPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1363, 788);
+            this.Controls.Add(this.btnDisponibilidadPlatos);
             this.Controls.Add(this.btnRegistroPedido);
             this.Controls.Add(this.btnPagarMP);
             this.Controls.Add(this.btnAñadirPlatoMP);
@@ -343,5 +361,6 @@
         private System.Windows.Forms.Button btnPagarMP;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnRegistroPedido;
+        private System.Windows.Forms.Button btnDisponibilidadPlatos;
     }
 }

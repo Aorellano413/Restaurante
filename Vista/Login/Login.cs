@@ -25,6 +25,9 @@ namespace Vista
             textContraseña.UseSystemPasswordChar = true;
             this.StartPosition = FormStartPosition.CenterScreen;
 
+
+            labelHora.Visible = false;
+            labelfecha.Visible = false; 
         }   
 
         private void buttonClose_Click(object sender, EventArgs e)

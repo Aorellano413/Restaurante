@@ -140,11 +140,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsignarValores.cs">
+    <Compile Include="AsignarValores\AsignarValores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AsignarValores.Designer.cs">
+    <Compile Include="AsignarValores\AsignarValores.Designer.cs">
       <DependentUpon>AsignarValores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisponibilidadPlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisponibilidadPlatos.Designer.cs">
+      <DependentUpon>DisponibilidadPlatos.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionIngredientes\EliminarIngrediente.cs">
       <SubType>Form</SubType>
@@ -226,14 +232,17 @@
     <Compile Include="GestionInventario\RegistroProductos.Designer.cs">
       <DependentUpon>RegistroProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroPedido.cs">
+    <Compile Include="RegistroPedido\RegistroPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroPedido.Designer.cs">
+    <Compile Include="RegistroPedido\RegistroPedido.Designer.cs">
       <DependentUpon>RegistroPedido.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AsignarValores.resx">
+    <EmbeddedResource Include="AsignarValores\AsignarValores.resx">
       <DependentUpon>AsignarValores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisponibilidadPlatos.resx">
+      <DependentUpon>DisponibilidadPlatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionIngredientes\EliminarIngrediente.resx">
       <DependentUpon>EliminarIngrediente.cs</DependentUpon>
@@ -283,7 +292,7 @@
     <EmbeddedResource Include="GestionInventario\RegistroProductos.resx">
       <DependentUpon>RegistroProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroPedido.resx">
+    <EmbeddedResource Include="RegistroPedido\RegistroPedido.resx">
       <DependentUpon>RegistroPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

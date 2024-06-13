@@ -40,11 +40,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelfecha = new System.Windows.Forms.Label();
-            this.labelHora = new System.Windows.Forms.Label();
             this.Horafecha = new System.Windows.Forms.Timer(this.components);
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelfecha = new System.Windows.Forms.Label();
+            this.labelHora = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -156,28 +156,6 @@
             this.panel1.Size = new System.Drawing.Size(309, 450);
             this.panel1.TabIndex = 10;
             // 
-            // labelfecha
-            // 
-            this.labelfecha.AutoSize = true;
-            this.labelfecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfecha.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelfecha.Location = new System.Drawing.Point(3, 375);
-            this.labelfecha.Name = "labelfecha";
-            this.labelfecha.Size = new System.Drawing.Size(72, 35);
-            this.labelfecha.TabIndex = 10;
-            this.labelfecha.Text = "Fecha";
-            // 
-            // labelHora
-            // 
-            this.labelHora.AutoSize = true;
-            this.labelHora.Font = new System.Drawing.Font("Bahnschrift Condensed", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelHora.Location = new System.Drawing.Point(87, 9);
-            this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(67, 40);
-            this.labelHora.TabIndex = 9;
-            this.labelHora.Text = "Hora";
-            // 
             // Horafecha
             // 
             this.Horafecha.Enabled = true;
@@ -204,6 +182,28 @@
             this.label4.Size = new System.Drawing.Size(53, 25);
             this.label4.TabIndex = 12;
             this.label4.Text = "TIIPO :";
+            // 
+            // labelfecha
+            // 
+            this.labelfecha.AutoSize = true;
+            this.labelfecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfecha.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelfecha.Location = new System.Drawing.Point(3, 375);
+            this.labelfecha.Name = "labelfecha";
+            this.labelfecha.Size = new System.Drawing.Size(72, 35);
+            this.labelfecha.TabIndex = 10;
+            this.labelfecha.Text = "Fecha";
+            // 
+            // labelHora
+            // 
+            this.labelHora.AutoSize = true;
+            this.labelHora.Font = new System.Drawing.Font("Bahnschrift Condensed", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelHora.Location = new System.Drawing.Point(87, 9);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(67, 40);
+            this.labelHora.TabIndex = 9;
+            this.labelHora.Text = "Hora";
             // 
             // Login
             // 
@@ -244,11 +244,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Timer Horafecha;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelfecha;
+        private System.Windows.Forms.Label labelHora;
     }
 }
 
