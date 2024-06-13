@@ -43,8 +43,8 @@ namespace Vista.Menus
             this.btnLimpiarMP.Click += new System.EventHandler(this.btnLimpiarMP_Click);
 
             btnConfirmarMP.Enabled = false;
-            btnRegistroPedido.Visible = false;
-            btnDisponibilidadPlatos.Visible = false;
+            btnRegistroPedido.Visible = true;
+            btnDisponibilidadPlatos.Visible = true;
             btnPagarMP.Visible = false;
             txtEfectivoMP.Enabled = false;
         }

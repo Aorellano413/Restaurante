@@ -163,17 +163,17 @@ namespace Persistencia
             using (MySqlConnection connection = conexion.AbrirConexion())
             {
                 string query = @"
-            SELECT 
-                p.id_pedido AS 'ID Pedido', 
-                p.fecha_pedido AS 'Fecha Pedido', 
-                p.id_cajero AS 'ID Cajero', 
-                dp.cantidad AS 'Cantidad', 
-                dp.precio AS 'Precio', 
-                pl.nombre AS 'Nombre Plato'
-            FROM PEDIDOS p
-            JOIN DETALLE_PEDIDOS dp ON p.id_pedido = dp.id_pedido
-            JOIN PLATOS pl ON dp.id_plato = pl.id_plato
-            WHERE p.fecha_pedido BETWEEN @fechaInicio AND @fechaFin;
+        SELECT 
+            p.id_pedido AS 'ID Pedido', 
+            p.fecha_pedido AS 'Fecha Pedido', 
+            p.id_cajero AS 'ID Cajero', 
+            dp.cantidad AS 'Cantidad', 
+            dp.precio AS 'Precio', 
+            pl.nombre AS 'Nombre Plato'
+        FROM PEDIDOS p
+        JOIN DETALLE_PEDIDOS dp ON p.id_pedido = dp.id_pedido
+        JOIN PLATOS pl ON dp.id_plato = pl.id_plato
+        WHERE p.fecha_pedido BETWEEN @fechaInicio AND @fechaFin;
         ";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
@@ -187,6 +187,8 @@ namespace Persistencia
             }
             return dt;
         }
+
+
 
     }
 

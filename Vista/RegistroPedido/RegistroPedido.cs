@@ -49,7 +49,7 @@ namespace Vista
             dgvRegistroPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
-        
+
 
         private void FiltrarPedidosPorRangoFechas(DateTime fechaInicio, DateTime fechaFin)
         {
@@ -77,6 +77,10 @@ namespace Vista
 
         private void btnRestablecerRegistroPedido_Click(object sender, EventArgs e)
         {
+            dataTimeRegistroPedido.Value = DateTime.Today;
+            dataTimeRegistroPedido2.Value = DateTime.Today; 
+
+            
             CargarPedidosConDetallesEnGrid();
         }
 

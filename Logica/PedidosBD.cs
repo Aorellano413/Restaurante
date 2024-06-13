@@ -49,11 +49,12 @@ namespace Logica
             return datos.ObtenerPedidosConDetalles();
         }
 
-        
+
 
         public DataTable ObtenerPedidosPorRangoFechas(DateTime fechaInicio, DateTime fechaFin)
         {
             return datos.ObtenerPedidosPorRangoFechas(fechaInicio, fechaFin);
         }
+
     }
 }
