@@ -49,6 +49,7 @@ namespace Vista
         {
             DataTable dt = platosBD.MostrarNuevaTabla();
             dataGridView2.DataSource = dt;
+            txtBuscar.Clear();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

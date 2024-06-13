@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDisponibilidadPlatos = new System.Windows.Forms.Button();
-            this.labelModificarPlato = new System.Windows.Forms.Label();
-            this.btnRestablecerRegistroPedido = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelDisponibilidadPlatos = new System.Windows.Forms.Label();
+            this.btnRestablecer = new System.Windows.Forms.Button();
+            this.dgvDisponibilidadPlatos = new System.Windows.Forms.DataGridView();
             this.txtDisponibilidadPlatos = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisponibilidadPlatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,11 +46,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Khaki;
             this.panel1.Controls.Add(this.btnDisponibilidadPlatos);
-            this.panel1.Controls.Add(this.labelModificarPlato);
+            this.panel1.Controls.Add(this.labelDisponibilidadPlatos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 38);
+            this.panel1.Size = new System.Drawing.Size(1107, 47);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -61,49 +62,51 @@
             this.btnDisponibilidadPlatos.FlatAppearance.BorderSize = 0;
             this.btnDisponibilidadPlatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisponibilidadPlatos.Image = ((System.Drawing.Image)(resources.GetObject("btnDisponibilidadPlatos.Image")));
-            this.btnDisponibilidadPlatos.Location = new System.Drawing.Point(795, 4);
+            this.btnDisponibilidadPlatos.Location = new System.Drawing.Point(1060, 5);
+            this.btnDisponibilidadPlatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisponibilidadPlatos.Name = "btnDisponibilidadPlatos";
-            this.btnDisponibilidadPlatos.Size = new System.Drawing.Size(23, 23);
+            this.btnDisponibilidadPlatos.Size = new System.Drawing.Size(31, 28);
             this.btnDisponibilidadPlatos.TabIndex = 20;
             this.btnDisponibilidadPlatos.UseVisualStyleBackColor = false;
             this.btnDisponibilidadPlatos.Click += new System.EventHandler(this.btnDisponibilidadPlatos_Click);
             // 
-            // labelModificarPlato
+            // labelDisponibilidadPlatos
             // 
-            this.labelModificarPlato.AutoSize = true;
-            this.labelModificarPlato.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModificarPlato.Location = new System.Drawing.Point(325, 4);
-            this.labelModificarPlato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelModificarPlato.Name = "labelModificarPlato";
-            this.labelModificarPlato.Size = new System.Drawing.Size(182, 29);
-            this.labelModificarPlato.TabIndex = 3;
-            this.labelModificarPlato.Text = "Disponibilidad Platos";
+            this.labelDisponibilidadPlatos.AutoSize = true;
+            this.labelDisponibilidadPlatos.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisponibilidadPlatos.Location = new System.Drawing.Point(433, 5);
+            this.labelDisponibilidadPlatos.Name = "labelDisponibilidadPlatos";
+            this.labelDisponibilidadPlatos.Size = new System.Drawing.Size(245, 36);
+            this.labelDisponibilidadPlatos.TabIndex = 3;
+            this.labelDisponibilidadPlatos.Text = "DISPONIBILIDAD PLATOS";
             // 
-            // btnRestablecerRegistroPedido
+            // btnRestablecer
             // 
-            this.btnRestablecerRegistroPedido.FlatAppearance.BorderSize = 0;
-            this.btnRestablecerRegistroPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestablecerRegistroPedido.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestablecerRegistroPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnRestablecerRegistroPedido.Image")));
-            this.btnRestablecerRegistroPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRestablecerRegistroPedido.Location = new System.Drawing.Point(663, 56);
-            this.btnRestablecerRegistroPedido.Name = "btnRestablecerRegistroPedido";
-            this.btnRestablecerRegistroPedido.Size = new System.Drawing.Size(138, 45);
-            this.btnRestablecerRegistroPedido.TabIndex = 21;
-            this.btnRestablecerRegistroPedido.Text = "RESTABLECER";
-            this.btnRestablecerRegistroPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRestablecerRegistroPedido.UseVisualStyleBackColor = true;
+            this.btnRestablecer.FlatAppearance.BorderSize = 0;
+            this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestablecer.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestablecer.Image = ((System.Drawing.Image)(resources.GetObject("btnRestablecer.Image")));
+            this.btnRestablecer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestablecer.Location = new System.Drawing.Point(884, 69);
+            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestablecer.Name = "btnRestablecer";
+            this.btnRestablecer.Size = new System.Drawing.Size(184, 55);
+            this.btnRestablecer.TabIndex = 21;
+            this.btnRestablecer.Text = "RESTABLECER";
+            this.btnRestablecer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRestablecer.UseVisualStyleBackColor = true;
+            this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);
             // 
-            // dataGridView1
+            // dgvDisponibilidadPlatos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDisponibilidadPlatos.AllowUserToAddRows = false;
+            this.dgvDisponibilidadPlatos.AllowUserToDeleteRows = false;
+            this.dgvDisponibilidadPlatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDisponibilidadPlatos.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvDisponibilidadPlatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDisponibilidadPlatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvDisponibilidadPlatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDisponibilidadPlatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,51 +114,56 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(789, 246);
-            this.dataGridView1.TabIndex = 22;
+            this.dgvDisponibilidadPlatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDisponibilidadPlatos.Location = new System.Drawing.Point(16, 139);
+            this.dgvDisponibilidadPlatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDisponibilidadPlatos.Name = "dgvDisponibilidadPlatos";
+            this.dgvDisponibilidadPlatos.ReadOnly = true;
+            this.dgvDisponibilidadPlatos.RowHeadersVisible = false;
+            this.dgvDisponibilidadPlatos.RowHeadersWidth = 51;
+            this.dgvDisponibilidadPlatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDisponibilidadPlatos.Size = new System.Drawing.Size(1075, 303);
+            this.dgvDisponibilidadPlatos.TabIndex = 22;
             // 
             // txtDisponibilidadPlatos
             // 
-            this.txtDisponibilidadPlatos.Location = new System.Drawing.Point(105, 72);
-            this.txtDisponibilidadPlatos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDisponibilidadPlatos.Location = new System.Drawing.Point(140, 89);
+            this.txtDisponibilidadPlatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDisponibilidadPlatos.Name = "txtDisponibilidadPlatos";
-            this.txtDisponibilidadPlatos.Size = new System.Drawing.Size(192, 20);
+            this.txtDisponibilidadPlatos.Size = new System.Drawing.Size(309, 22);
             this.txtDisponibilidadPlatos.TabIndex = 23;
+            this.txtDisponibilidadPlatos.TextChanged += new System.EventHandler(this.txtDisponibilidadPlatos_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
             // DisponibilidadPlatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(830, 450);
+            this.ClientSize = new System.Drawing.Size(1107, 554);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtDisponibilidadPlatos);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnRestablecerRegistroPedido);
+            this.Controls.Add(this.dgvDisponibilidadPlatos);
+            this.Controls.Add(this.btnRestablecer);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DisponibilidadPlatos";
             this.Text = "DisponibilidadPlatos";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DisponibilidadPlatos_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisponibilidadPlatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,10 +173,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelModificarPlato;
+        private System.Windows.Forms.Label labelDisponibilidadPlatos;
         private System.Windows.Forms.Button btnDisponibilidadPlatos;
-        private System.Windows.Forms.Button btnRestablecerRegistroPedido;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnRestablecer;
+        private System.Windows.Forms.DataGridView dgvDisponibilidadPlatos;
         private System.Windows.Forms.TextBox txtDisponibilidadPlatos;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

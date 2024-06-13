@@ -212,11 +212,16 @@ namespace Vista.GestionPlatos
         private void btnLimpiarRP_Click(object sender, EventArgs e)
         {
             LimpiarDataTable();
+            txtNombreRP.Clear();
+            txtPrecioRP.Clear();
+            txtStockRP.Clear();
         }
 
         private void LimpiarDataTable()
         {
             dt.Clear();
         }
+
+   
     }
 }

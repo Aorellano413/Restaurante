@@ -62,6 +62,7 @@ namespace Vista
         {
             DataTable dt = inventario.MostrarInventario();
             dataGridView1.DataSource = dt;
+            txtBuscar.Clear();
         }
 
         public void ActualizarInventario()
