@@ -201,12 +201,13 @@ namespace Vista.Menus
 
             // Generar la factura usando FacturaManager
             FacturaManager facturaManager = new FacturaManager();
-            Factura factura = facturaManager.CrearFactura(idPedido); // Creación de la factura
+            // Ruta donde deseas guardar el PDF de la factura
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Factura_{idPedido}.pdf");
+            // Ruta al archivo del logo
+            string logoPath = @"C:\Users\santi\Downloads\inventario-removebg-preview.png"; // Cambia esto a la ruta real de tu logo
 
-            // Generar el archivo PDF
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Factura_{factura.Id}.pdf");
-            FacturaPDFGenerator generator = new FacturaPDFGenerator();
-            generator.GenerarFacturaPDF(factura, filePath);
+            // Creación de la factura y generación del PDF
+            Factura factura = facturaManager.CrearFactura(idPedido, filePath, logoPath);
 
             // Abrir el archivo PDF
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo

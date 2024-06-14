@@ -188,6 +188,40 @@ namespace Persistencia
             return dt;
         }
 
+        public DataTable ObtenerPedidosPorAno(int ano)
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection connection = conexion.AbrirConexion())
+            {
+                string query = @"
+                SELECT 
+                m.Mes,
+                COALESCE(COUNT(p.id_pedido), 0) AS CantidadPedidos,
+                COALESCE(SUM(dp.precio), 0) AS TotalDinero
+                FROM (
+                SELECT 1 AS Mes UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL
+                SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL
+                SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL
+                SELECT 10 UNION ALL SELECT 11 UNION ALL SELECT 12
+                ) AS m
+                LEFT JOIN PEDIDOS p ON m.Mes = MONTH(p.fecha_pedido) AND YEAR(p.fecha_pedido) = @ano
+                LEFT JOIN DETALLE_PEDIDOS dp ON p.id_pedido = dp.id_pedido
+                GROUP BY m.Mes
+                ORDER BY m.Mes;
+                ";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@ano", ano);
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
+
 
 
     }

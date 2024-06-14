@@ -56,5 +56,10 @@ namespace Logica
             return datos.ObtenerPedidosPorRangoFechas(fechaInicio, fechaFin);
         }
 
+        public DataTable ObtenerPedidosPorAno(int ano)
+        {
+            return datos.ObtenerPedidosPorAno(ano);
+        }
+
     }
 }

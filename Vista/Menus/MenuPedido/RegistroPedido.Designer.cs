@@ -65,7 +65,7 @@
             this.btnCerrarPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarPedidos.Image")));
             this.btnCerrarPedidos.Location = new System.Drawing.Point(1064, 4);
-            this.btnCerrarPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarPedidos.Name = "btnCerrarPedidos";
             this.btnCerrarPedidos.Size = new System.Drawing.Size(31, 28);
             this.btnCerrarPedidos.TabIndex = 19;
@@ -128,7 +128,7 @@
             this.btnRestablecerRegistroPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnRestablecerRegistroPedido.Image")));
             this.btnRestablecerRegistroPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestablecerRegistroPedido.Location = new System.Drawing.Point(911, 63);
-            this.btnRestablecerRegistroPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestablecerRegistroPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestablecerRegistroPedido.Name = "btnRestablecerRegistroPedido";
             this.btnRestablecerRegistroPedido.Size = new System.Drawing.Size(184, 55);
             this.btnRestablecerRegistroPedido.TabIndex = 5;
@@ -139,7 +139,7 @@
             // dataTimeRegistroPedido2
             // 
             this.dataTimeRegistroPedido2.Location = new System.Drawing.Point(473, 79);
-            this.dataTimeRegistroPedido2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataTimeRegistroPedido2.Margin = new System.Windows.Forms.Padding(4);
             this.dataTimeRegistroPedido2.Name = "dataTimeRegistroPedido2";
             this.dataTimeRegistroPedido2.Size = new System.Drawing.Size(287, 22);
             this.dataTimeRegistroPedido2.TabIndex = 6;
@@ -150,7 +150,7 @@
             this.btnPDF.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPDF.Location = new System.Drawing.Point(16, 464);
-            this.btnPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPDF.Margin = new System.Windows.Forms.Padding(4);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(175, 55);
             this.btnPDF.TabIndex = 7;

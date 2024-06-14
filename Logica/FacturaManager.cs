@@ -12,7 +12,7 @@ namespace Logica
     {
         DatosFactura datosFactura = new DatosFactura();
 
-        public Factura CrearFactura(int idPedido)
+        public Factura CrearFactura(int idPedido, string filePath, string logoPath)
         {
             Pedido pedido = datosFactura.ObtenerPedidoPorId(idPedido);
             if (pedido == null)
@@ -39,6 +39,10 @@ namespace Logica
             };
 
             datosFactura.InsertarFactura(factura); // Insertar la factura
+
+            // Generar el PDF de la factura
+            FacturaPDFGenerator generator = new FacturaPDFGenerator();
+            generator.GenerarFacturaPDF(factura, filePath, logoPath);
 
             return factura; // Retornar la factura completa con ID
         }

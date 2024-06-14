@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuGeneral));
             this.panelGeneral = new System.Windows.Forms.Panel();
+            this.btnInforme = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnInventariosPlatos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@
             // panelGeneral
             // 
             this.panelGeneral.BackColor = System.Drawing.Color.Snow;
+            this.panelGeneral.Controls.Add(this.btnInforme);
             this.panelGeneral.Controls.Add(this.pictureBox1);
             this.panelGeneral.Controls.Add(this.btnInventariosPlatos);
             this.panelGeneral.Controls.Add(this.panel1);
@@ -66,18 +68,33 @@
             this.panelGeneral.Controls.Add(this.btnRegistrarProductos);
             this.panelGeneral.Controls.Add(this.btnRegistrarGramos);
             this.panelGeneral.Controls.Add(this.btnInventario);
-            this.panelGeneral.Location = new System.Drawing.Point(0, 32);
+            this.panelGeneral.Location = new System.Drawing.Point(0, 39);
+            this.panelGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.panelGeneral.Name = "panelGeneral";
-            this.panelGeneral.Size = new System.Drawing.Size(1370, 756);
+            this.panelGeneral.Size = new System.Drawing.Size(1827, 930);
             this.panelGeneral.TabIndex = 1;
+            // 
+            // btnInforme
+            // 
+            this.btnInforme.BackColor = System.Drawing.Color.Khaki;
+            this.btnInforme.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInforme.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnInforme.Location = new System.Drawing.Point(749, 615);
+            this.btnInforme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInforme.Name = "btnInforme";
+            this.btnInforme.Size = new System.Drawing.Size(267, 103);
+            this.btnInforme.TabIndex = 11;
+            this.btnInforme.Text = "INFORME";
+            this.btnInforme.UseVisualStyleBackColor = false;
+            this.btnInforme.Click += new System.EventHandler(this.btnInforme_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(423, 185);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(564, 228);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(267, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -87,10 +104,10 @@
             this.btnInventariosPlatos.BackColor = System.Drawing.Color.Khaki;
             this.btnInventariosPlatos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventariosPlatos.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnInventariosPlatos.Location = new System.Drawing.Point(423, 351);
-            this.btnInventariosPlatos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInventariosPlatos.Location = new System.Drawing.Point(564, 432);
+            this.btnInventariosPlatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInventariosPlatos.Name = "btnInventariosPlatos";
-            this.btnInventariosPlatos.Size = new System.Drawing.Size(200, 84);
+            this.btnInventariosPlatos.Size = new System.Drawing.Size(267, 103);
             this.btnInventariosPlatos.TabIndex = 9;
             this.btnInventariosPlatos.Text = "INVENTARIO PLATOS";
             this.btnInventariosPlatos.UseVisualStyleBackColor = false;
@@ -101,9 +118,10 @@
             this.panel1.BackColor = System.Drawing.Color.Khaki;
             this.panel1.Controls.Add(this.labelHora1);
             this.panel1.Controls.Add(this.labelDia);
-            this.panel1.Location = new System.Drawing.Point(0, 679);
+            this.panel1.Location = new System.Drawing.Point(0, 836);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1388, 77);
+            this.panel1.Size = new System.Drawing.Size(1851, 95);
             this.panel1.TabIndex = 8;
             // 
             // labelHora1
@@ -111,9 +129,10 @@
             this.labelHora1.AutoSize = true;
             this.labelHora1.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHora1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelHora1.Location = new System.Drawing.Point(1144, 8);
+            this.labelHora1.Location = new System.Drawing.Point(1525, 10);
+            this.labelHora1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHora1.Name = "labelHora1";
-            this.labelHora1.Size = new System.Drawing.Size(85, 45);
+            this.labelHora1.Size = new System.Drawing.Size(107, 57);
             this.labelHora1.TabIndex = 6;
             this.labelHora1.Text = "HORA";
             // 
@@ -122,19 +141,20 @@
             this.labelDia.AutoSize = true;
             this.labelDia.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDia.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelDia.Location = new System.Drawing.Point(15, 8);
+            this.labelDia.Location = new System.Drawing.Point(20, 10);
+            this.labelDia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDia.Name = "labelDia";
-            this.labelDia.Size = new System.Drawing.Size(59, 45);
+            this.labelDia.Size = new System.Drawing.Size(75, 57);
             this.labelDia.TabIndex = 7;
             this.labelDia.Text = "DIA";
             // 
             // pictureRegistrarProductos
             // 
             this.pictureRegistrarProductos.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegistrarProductos.Image")));
-            this.pictureRegistrarProductos.Location = new System.Drawing.Point(1011, 185);
-            this.pictureRegistrarProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureRegistrarProductos.Location = new System.Drawing.Point(1348, 228);
+            this.pictureRegistrarProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureRegistrarProductos.Name = "pictureRegistrarProductos";
-            this.pictureRegistrarProductos.Size = new System.Drawing.Size(200, 162);
+            this.pictureRegistrarProductos.Size = new System.Drawing.Size(267, 199);
             this.pictureRegistrarProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureRegistrarProductos.TabIndex = 5;
             this.pictureRegistrarProductos.TabStop = false;
@@ -142,10 +162,10 @@
             // pictureRegistrarGramos
             // 
             this.pictureRegistrarGramos.Image = ((System.Drawing.Image)(resources.GetObject("pictureRegistrarGramos.Image")));
-            this.pictureRegistrarGramos.Location = new System.Drawing.Point(718, 185);
-            this.pictureRegistrarGramos.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureRegistrarGramos.Location = new System.Drawing.Point(957, 228);
+            this.pictureRegistrarGramos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureRegistrarGramos.Name = "pictureRegistrarGramos";
-            this.pictureRegistrarGramos.Size = new System.Drawing.Size(200, 162);
+            this.pictureRegistrarGramos.Size = new System.Drawing.Size(267, 199);
             this.pictureRegistrarGramos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureRegistrarGramos.TabIndex = 4;
             this.pictureRegistrarGramos.TabStop = false;
@@ -153,10 +173,10 @@
             // pictureInventario
             // 
             this.pictureInventario.Image = ((System.Drawing.Image)(resources.GetObject("pictureInventario.Image")));
-            this.pictureInventario.Location = new System.Drawing.Point(140, 185);
-            this.pictureInventario.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureInventario.Location = new System.Drawing.Point(187, 228);
+            this.pictureInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureInventario.Name = "pictureInventario";
-            this.pictureInventario.Size = new System.Drawing.Size(200, 162);
+            this.pictureInventario.Size = new System.Drawing.Size(267, 199);
             this.pictureInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureInventario.TabIndex = 3;
             this.pictureInventario.TabStop = false;
@@ -166,10 +186,10 @@
             this.btnRegistrarProductos.BackColor = System.Drawing.Color.Khaki;
             this.btnRegistrarProductos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarProductos.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnRegistrarProductos.Location = new System.Drawing.Point(1011, 351);
-            this.btnRegistrarProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarProductos.Location = new System.Drawing.Point(1348, 432);
+            this.btnRegistrarProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarProductos.Name = "btnRegistrarProductos";
-            this.btnRegistrarProductos.Size = new System.Drawing.Size(200, 84);
+            this.btnRegistrarProductos.Size = new System.Drawing.Size(267, 103);
             this.btnRegistrarProductos.TabIndex = 2;
             this.btnRegistrarProductos.Text = "GESTIONAR PLATOS";
             this.btnRegistrarProductos.UseVisualStyleBackColor = false;
@@ -180,11 +200,11 @@
             this.btnRegistrarGramos.BackColor = System.Drawing.Color.Khaki;
             this.btnRegistrarGramos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarGramos.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnRegistrarGramos.Location = new System.Drawing.Point(718, 351);
-            this.btnRegistrarGramos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarGramos.Location = new System.Drawing.Point(957, 432);
+            this.btnRegistrarGramos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarGramos.Name = "btnRegistrarGramos";
             this.btnRegistrarGramos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnRegistrarGramos.Size = new System.Drawing.Size(200, 84);
+            this.btnRegistrarGramos.Size = new System.Drawing.Size(267, 103);
             this.btnRegistrarGramos.TabIndex = 1;
             this.btnRegistrarGramos.Text = "GESTIONAR INGREDIENTES";
             this.btnRegistrarGramos.UseVisualStyleBackColor = false;
@@ -195,10 +215,10 @@
             this.btnInventario.BackColor = System.Drawing.Color.Khaki;
             this.btnInventario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnInventario.Location = new System.Drawing.Point(140, 351);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInventario.Location = new System.Drawing.Point(187, 432);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(200, 84);
+            this.btnInventario.Size = new System.Drawing.Size(267, 103);
             this.btnInventario.TabIndex = 0;
             this.btnInventario.Text = "INVENTARIO INGREDIENTES";
             this.btnInventario.UseVisualStyleBackColor = false;
@@ -211,9 +231,10 @@
             this.buttonClose2.FlatAppearance.BorderSize = 0;
             this.buttonClose2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose2.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose2.Image")));
-            this.buttonClose2.Location = new System.Drawing.Point(1332, 3);
+            this.buttonClose2.Location = new System.Drawing.Point(1776, 4);
+            this.buttonClose2.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClose2.Name = "buttonClose2";
-            this.buttonClose2.Size = new System.Drawing.Size(23, 23);
+            this.buttonClose2.Size = new System.Drawing.Size(31, 28);
             this.buttonClose2.TabIndex = 2;
             this.buttonClose2.UseVisualStyleBackColor = false;
             this.buttonClose2.Click += new System.EventHandler(this.buttonClose2_Click);
@@ -226,9 +247,10 @@
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.ForeColor = System.Drawing.Color.Khaki;
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
-            this.btnRegresar.Location = new System.Drawing.Point(1286, 0);
+            this.btnRegresar.Location = new System.Drawing.Point(1715, 0);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(31, 31);
+            this.btnRegresar.Size = new System.Drawing.Size(41, 38);
             this.btnRegresar.TabIndex = 27;
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -243,23 +265,25 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(643, 0);
+            this.label3.Location = new System.Drawing.Point(857, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 29);
+            this.label3.Size = new System.Drawing.Size(159, 36);
             this.label3.TabIndex = 26;
             this.label3.Text = "MENU GENERAL";
             // 
             // MenuGeneral
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(1370, 788);
+            this.ClientSize = new System.Drawing.Size(1827, 970);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.buttonClose2);
             this.Controls.Add(this.panelGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuGeneral";
             this.Text = "MenuGeneral";
             this.panelGeneral.ResumeLayout(false);
@@ -291,5 +315,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnInventariosPlatos;
+        private System.Windows.Forms.Button btnInforme;
     }
 }

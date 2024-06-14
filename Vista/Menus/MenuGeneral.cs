@@ -68,6 +68,14 @@ namespace Vista
             this.Enabled = false; 
             inventtariosplatos.FormClosed += (s, args) => this.Enabled = true;  
         }
+
+        private void btnInforme_Click(object sender, EventArgs e)
+        {
+            Informe informe = new Informe(this);
+            informe.Show();
+            this.Enabled = false;
+            informe.FormClosed += (s, args) => this.Enabled = true;
+        }
     }
 }
 
