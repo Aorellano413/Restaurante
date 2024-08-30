@@ -1,17 +1,12 @@
-﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using iText.Kernel.Pdf;
+﻿using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using System.IO;
 using iText.Kernel.Geom;
 using iText.IO.Image;
+using Entidades;
+using System;
 
 namespace Logica
 {
@@ -28,6 +23,27 @@ namespace Logica
                 PageSize pageSize = new PageSize(8.5f * 72, 5.5f * 72); // Tamaño de factura comercial 8.5 x 5.5 pulgadas
                 Document document = new Document(pdf, pageSize);
                 document.SetMargins(20, 20, 20, 20);
+
+                // Agregar el logo al documento
+                try
+                {
+                    if (File.Exists(logoPath))
+                    {
+                        ImageData imageData = ImageDataFactory.Create(logoPath);
+                        Image logo = new Image(imageData);
+                        logo.SetHorizontalAlignment(HorizontalAlignment.CENTER);
+                        logo.ScaleToFit(100, 100); // Ajustar el tamaño según sea necesario
+                        document.Add(logo);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No se encontró la imagen en la ruta especificada.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al cargar la imagen: " + ex.Message);
+                }
 
                 // Centrar el título y agregar un estilo más destacado
                 Paragraph titulo = new Paragraph("Factura")
@@ -65,16 +81,6 @@ namespace Logica
                         .SetFontSize(10);
                     document.Add(detallePlato);
                 }
-
-                // Agregar un espacio antes del logo
-                document.Add(new Paragraph("\n\n"));
-
-                // Cargar y agregar el logo al final del documento
-                ImageData imageData = ImageDataFactory.Create(logoPath);
-                Image logo = new Image(imageData);
-                logo.SetHorizontalAlignment(HorizontalAlignment.CENTER);
-                logo.SetAutoScale(true);
-                document.Add(logo);
 
                 document.Close();
             }

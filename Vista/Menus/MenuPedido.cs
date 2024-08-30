@@ -203,8 +203,9 @@ namespace Vista.Menus
             FacturaManager facturaManager = new FacturaManager();
             // Ruta donde deseas guardar el PDF de la factura
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Factura_{idPedido}.pdf");
-            // Ruta al archivo del logo
-            string logoPath = @"C:\Users\santi\Downloads\inventario-removebg-preview.png"; // Cambia esto a la ruta real de tu logo
+
+            // Ruta del logo
+            string logoPath = "E:\\Otros\\logo.jpg";
 
             // Creación de la factura y generación del PDF
             Factura factura = facturaManager.CrearFactura(idPedido, filePath, logoPath);
@@ -222,6 +223,7 @@ namespace Vista.Menus
             labelCambioMP.Text = "0";
             btnConfirmarMP.Enabled = false;
         }
+
 
         private void ActualizarTotalPedido()
         {

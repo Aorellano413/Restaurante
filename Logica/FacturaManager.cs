@@ -42,7 +42,7 @@ namespace Logica
 
             // Generar el PDF de la factura
             FacturaPDFGenerator generator = new FacturaPDFGenerator();
-            generator.GenerarFacturaPDF(factura, filePath, logoPath);
+            generator.GenerarFacturaPDF(factura, filePath, logoPath); // Con logoPath
 
             return factura; // Retornar la factura completa con ID
         }
