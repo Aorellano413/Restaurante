@@ -87,7 +87,7 @@
             this.cmbBuscarPlatoAV.Name = "cmbBuscarPlatoAV";
             this.cmbBuscarPlatoAV.Size = new System.Drawing.Size(225, 21);
             this.cmbBuscarPlatoAV.TabIndex = 1;
-            this.cmbBuscarPlatoAV.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarPlatoAV_SelectedIndexChanged);
+
             // 
             // btnBuscarAV
             // 

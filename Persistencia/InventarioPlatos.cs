@@ -70,7 +70,7 @@ namespace Persistencia
                         cmd = new MySqlCommand("INSERT INTO restaurante.ingredientes_platos (id_plato, id_ingrediente, cantidad) VALUES (@id_plato, @id_ingrediente, @cantidad)", conn);
                         cmd.Parameters.AddWithValue("@id_plato", plato.Id);
                         cmd.Parameters.AddWithValue("@id_ingrediente", ingrediente.Id);
-                        cmd.Parameters.AddWithValue("@cantidad", ingrediente.Stock); // Asume que 'Stock' representa la cantidad utilizada del ingrediente en el plato
+                        cmd.Parameters.AddWithValue("@cantidad", ingrediente.Stock); 
                         cmd.ExecuteNonQuery();
                     }
                     else
