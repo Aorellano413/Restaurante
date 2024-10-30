@@ -26,7 +26,6 @@ namespace Logica
         public void InsertarPlato(Plato plato)
         {
             datos.InsertarPlato(plato);
-            // Actualiza las cantidades de ingredientes en INGREDIENTES_PLATOS
             List<PlatoIngrediente> ingredientes = plato.Ingredientes.Select(i => new PlatoIngrediente
             {
                 IdIngrediente = i.Id,

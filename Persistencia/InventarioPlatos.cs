@@ -59,14 +59,14 @@ namespace Persistencia
 
                 foreach (var ingrediente in plato.Ingredientes)
                 {
-                    // Verifica si el ingrediente existe en la tabla INGREDIENTES
+         
                     MySqlCommand cmdCheck = new MySqlCommand("SELECT COUNT(*) FROM INGREDIENTES WHERE id_ingrediente = @idIngrediente", conn);
                     cmdCheck.Parameters.AddWithValue("@idIngrediente", ingrediente.Id);
                     int count = Convert.ToInt32(cmdCheck.ExecuteScalar());
 
                     if (count > 0)
                     {
-                        // Inserta en la tabla INGREDIENTES_PLATOS con la cantidad
+                  
                         cmd = new MySqlCommand("INSERT INTO restaurante.ingredientes_platos (id_plato, id_ingrediente, cantidad) VALUES (@id_plato, @id_ingrediente, @cantidad)", conn);
                         cmd.Parameters.AddWithValue("@id_plato", plato.Id);
                         cmd.Parameters.AddWithValue("@id_ingrediente", ingrediente.Id);
